@@ -2,7 +2,7 @@ apiVersion: v2
 name: rabbitmq
 description: A Weaveworks Helm chart for the MongoDB Profile
 type: application
-version: 0.0.1
+version: 0.0.2
 dependencies:
   - name: mongodb
     version: "13.1.5"

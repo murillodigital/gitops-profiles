@@ -2,7 +2,7 @@ apiVersion: v2
 name: redis
 description: A Weaveworks Helm chart for the Redis Profile
 type: application
-version: 0.0.1
+version: 0.0.2
 dependencies:
   - name: redis
     version: "17.1.7"
