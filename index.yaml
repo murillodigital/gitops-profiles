@@ -1,6 +1,241 @@
 apiVersion: v1
 entries:
+  loki:
+  - annotations:
+      weave.works/category: observability
+      weave.works/layer: layer-0
+      weave.works/links: |
+        - name: Chart Sources
+          url: https://grafana.github.io/helm-charts
+        - name: Upstream Project
+          url: https://github.com/grafana/loki/blob/main/production/helm/loki
+      weave.works/operator: "true"
+      weave.works/profile: loki
+      weave.works/profile-ci: |
+        - "gke"
+        - "kind"
+        - "eks"
+    apiVersion: v2
+    created: "2022-09-20T22:46:54.329748987Z"
+    dependencies:
+    - name: loki
+      repository: https://grafana.github.io/helm-charts
+      version: 3.0.7
+    description: A Weaveworks Helm chart for the Loki Profile
+    digest: d84a4b02d36ec5547a5d2bf072d748f7809cb697a8f7fa57f37829985c352353
+    home: https://github.com/murillodigital/gitops-profiles
+    keywords:
+    - loki
+    - observability
+    - logging
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: support@weave.works
+      name: Weaveworks
+    name: loki
+    sources:
+    - https://grafana.github.io/helm-charts
+    type: application
+    urls:
+    - https://github.com/murillodigital/gitops-profiles/releases/download/loki-0.0.2/loki-0.0.2.tgz
+    version: 0.0.2
+  mariadb:
+  - annotations:
+      weave.works/category: data
+      weave.works/layer: layer-0
+      weave.works/links: |
+        - name: Chart Sources
+          url: https://charts.bitnami.com/bitnami
+        - name: Upstream Project
+          url: https://github.com/bitnami/charts/blob/master/bitnami/mariadb
+      weave.works/operator: "true"
+      weave.works/profile: mariadb
+      weave.works/profile-ci: |
+        - "gke"
+        - "kind"
+        - "eks"
+    apiVersion: v2
+    created: "2022-09-20T22:46:54.40420938Z"
+    dependencies:
+    - name: mariadb
+      repository: https://charts.bitnami.com/bitnami
+      version: 11.3.1
+    description: A Weaveworks Helm chart for the MariaDB Profile
+    digest: df28d065d551cb7de058eb48847e7004cfaa45ffa6d2cbe11871423a61373ae9
+    home: https://github.com/murillodigital/gitops-profiles
+    keywords:
+    - mariadb
+    - sql
+    - database
+    - mysql
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: support@weave.works
+      name: Weaveworks
+    name: mariadb
+    sources:
+    - https://charts.bitnami.com/bitnami
+    type: application
+    urls:
+    - https://github.com/murillodigital/gitops-profiles/releases/download/mariadb-0.0.2/mariadb-0.0.2.tgz
+    version: 0.0.2
+  rabbitmq:
+  - annotations:
+      weave.works/category: data
+      weave.works/layer: layer-0
+      weave.works/links: |
+        - name: Chart Sources
+          url: https://charts.bitnami.com/bitnami
+        - name: Upstream Project
+          url: https://github.com/bitnami/charts/tree/master/bitnami/rabbitmq
+      weave.works/operator: "true"
+      weave.works/profile: rabbitmq
+      weave.works/profile-ci: |
+        - "gke"
+        - "kind"
+        - "eks"
+    apiVersion: v2
+    created: "2022-09-20T22:46:54.484670112Z"
+    dependencies:
+    - name: rabbitmq
+      repository: https://charts.bitnami.com/bitnami
+      version: 10.3.5
+    description: A Weaveworks Helm chart for the RabbitMQ Profile
+    digest: c84d14dd21c5eb3994422ebd2980197f61cd0a55cdc64e7c274a67edc6badbf8
+    home: https://github.com/murillodigital/gitops-profiles
+    keywords:
+    - rabbitmq
+    - messagequeue
+    - queue
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: support@weave.works
+      name: Weaveworks
+    name: rabbitmq
+    sources:
+    - https://charts.bitnami.com/bitnami
+    type: application
+    urls:
+    - https://github.com/murillodigital/gitops-profiles/releases/download/rabbitmq-0.0.2/rabbitmq-0.0.2.tgz
+    version: 0.0.2
+  redis:
+  - annotations:
+      weave.works/category: data
+      weave.works/layer: layer-0
+      weave.works/links: |
+        - name: Chart Sources
+          url: https://bitnami.com/stack/redis/helm
+        - name: Upstream Project
+          url: https://bitnami.com/stack/redis/helm
+      weave.works/operator: "true"
+      weave.works/profile: redis
+      weave.works/profile-ci: |
+        - "gke"
+        - "kind"
+        - "eks"
+    apiVersion: v2
+    created: "2022-09-20T22:46:54.5884919Z"
+    dependencies:
+    - name: redis
+      repository: https://charts.bitnami.com/bitnami
+      version: 17.1.7
+    description: A Weaveworks Helm chart for the Redis Profile
+    digest: 32fa947e70c2d540c09f6a39850d173c49d41a34fa2dcd3e982187c137292755
+    home: https://github.com/murillodigital/gitops-profiles
+    keywords:
+    - tekton
+    - tekton-pipelines
+    - cicd
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: support@weave.works
+      name: Weaveworks
+    name: redis
+    sources:
+    - https://charts.bitnami.com/bitnami
+    type: application
+    urls:
+    - https://github.com/murillodigital/gitops-profiles/releases/download/redis-0.0.2/redis-0.0.2.tgz
+    version: 0.0.2
+  tekton-dashboard:
+  - annotations:
+      weave.works/category: CICD
+      weave.works/layer: layer-0
+      weave.works/links: |
+        - name: Chart Sources
+          url: https://eddycharly.github.io/tekton-helm
+        - name: Upstream Project
+          url: https://github.com/tektoncd/dashboard
+      weave.works/operator: "true"
+      weave.works/profile: tekton-dashboard
+      weave.works/profile-ci: |
+        - "gke"
+        - "kind"
+        - "eks"
+    apiVersion: v2
+    created: "2022-09-20T22:46:54.668096627Z"
+    dependencies:
+    - name: dashboard
+      repository: https://eddycharly.github.io/tekton-helm
+      version: 0.6.4
+    description: A Weaveworks Helm chart for the Tekton Dashboard Profile
+    digest: f1d847358ec77a1db6809299c75f0c1a50615c82c573d90e2f6efc8b71f6dcfb
+    home: https://github.com/murillodigital/gitops-profiles
+    keywords:
+    - tekton
+    - tekton-pipelines
+    - tekton-dashboard
+    - cicd
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: support@weave.works
+      name: Weaveworks
+    name: tekton-dashboard
+    sources:
+    - https://eddycharly.github.io/tekton-helm
+    type: application
+    urls:
+    - https://github.com/murillodigital/gitops-profiles/releases/download/tekton-dashboard-0.0.2/tekton-dashboard-0.0.2.tgz
+    version: 0.0.2
   tekton-pipeline:
+  - annotations:
+      weave.works/category: CICD
+      weave.works/layer: layer-0
+      weave.works/links: |
+        - name: Chart Sources
+          url: https://cdfoundation.github.io/tekton-helm-chart
+        - name: Upstream Project
+          url: https://github.com/tektoncd/pipeline
+      weave.works/operator: "true"
+      weave.works/profile: tekton-piepline
+      weave.works/profile-ci: |
+        - "gke"
+        - "kind"
+        - "eks"
+    apiVersion: v2
+    created: "2022-09-20T22:46:54.745321438Z"
+    dependencies:
+    - name: tekton-pipeline
+      repository: https://cdfoundation.github.io/tekton-helm-chart/
+      version: "0.29"
+    description: A Weaveworks Helm chart for the Tekton Pipeline Profile
+    digest: f4b076e4ec32b99b97901682a161abaa874f6bac05d4b857c4033dac40e7350d
+    home: https://github.com/murillodigital/gitops-profiles
+    keywords:
+    - tekton
+    - tekton-pipelines
+    - cicd
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: support@weave.works
+      name: Weaveworks
+    name: tekton-pipeline
+    sources:
+    - https://cdfoundation.github.io/tekton-helm-chart
+    type: application
+    urls:
+    - https://github.com/murillodigital/gitops-profiles/releases/download/tekton-pipeline-0.0.2/tekton-pipeline-0.0.2.tgz
+    version: 0.0.2
   - annotations:
       weave.works/category: CICD
       weave.works/layer: layer-0
@@ -39,4 +274,44 @@ entries:
     urls:
     - https://github.com/murillodigital/gitops-profiles/releases/download/tekton-pipeline-0.0.1/tekton-pipeline-0.0.1.tgz
     version: 0.0.1
+  tekton-triggers:
+  - annotations:
+      weave.works/category: CICD
+      weave.works/layer: layer-0
+      weave.works/links: |
+        - name: Chart Sources
+          url: https://eddycharly.github.io/tekton-helm
+        - name: Upstream Project
+          url: https://github.com/tektoncd/dashboard
+      weave.works/operator: "true"
+      weave.works/profile: tekton-triggers
+      weave.works/profile-ci: |
+        - "gke"
+        - "kind"
+        - "eks"
+    apiVersion: v2
+    created: "2022-09-20T22:46:54.822265348Z"
+    dependencies:
+    - name: triggers
+      repository: https://eddycharly.github.io/tekton-helm
+      version: 0.4.0
+    description: A Weaveworks Helm chart for the Tekton Triggers Profile
+    digest: 6a042ff592fcf4b4ac68bd1d8a14a7ff6db316ddf6ce7ca5962eec23ab23d5a0
+    home: https://github.com/murillodigital/gitops-profiles
+    keywords:
+    - tekton
+    - tekton-pipelines
+    - tekton-triggers
+    - cicd
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: support@weave.works
+      name: Weaveworks
+    name: tekton-triggers
+    sources:
+    - https://eddycharly.github.io/tekton-helm
+    type: application
+    urls:
+    - https://github.com/murillodigital/gitops-profiles/releases/download/tekton-triggers-0.0.2/tekton-triggers-0.0.2.tgz
+    version: 0.0.2
 generated: "2022-09-20T22:13:40.292449019Z"
