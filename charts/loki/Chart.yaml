@@ -6,11 +6,11 @@ version: 0.0.1
 dependencies:
   - name: loki
     version: "3.0.7"
-    repository: "https://grafana.github.io/loki/charts"
+    repository: "https://grafana.github.io/helm-charts"
 kubeVersion: ">=1.16.0-0"
 home: https://github.com/murillodigital/gitops-profiles
 sources:
-  - https://grafana.github.io/loki/charts
+  - https://grafana.github.io/helm-charts
 
 keywords:
 - loki
@@ -28,7 +28,7 @@ annotations:
   "weave.works/operator": "true"
   "weave.works/links": |
     - name: Chart Sources
-      url: https://grafana.github.io/loki/charts
+      url: https://grafana.github.io/helm-charts
     - name: Upstream Project
       url: https://github.com/grafana/loki/blob/main/production/helm/loki
   "weave.works/profile-ci": |
