@@ -1,0 +1,42 @@
+apiVersion: v1
+entries:
+  tekton-pipeline:
+  - annotations:
+      weave.works/category: CICD
+      weave.works/layer: layer-0
+      weave.works/links: |
+        - name: Chart Sources
+          url: https://cdfoundation.github.io/tekton-helm-chart
+        - name: Upstream Project
+          url: https://github.com/tektoncd/pipeline
+      weave.works/operator: "true"
+      weave.works/profile: cert-manager
+      weave.works/profile-ci: |
+        - "gke"
+        - "kind"
+        - "eks"
+    apiVersion: v2
+    created: "2022-09-20T22:13:40.398565106Z"
+    dependencies:
+    - name: tekton-pipeline
+      repository: https://cdfoundation.github.io/tekton-helm-chart/
+      version: "0.29"
+    description: A Weaveworks Helm chart for the Tekton Profile
+    digest: 5bfb45572bd5b2d01989b66c2c3b3e5472496b62ec8f7a73ec4f449edb1e5441
+    home: https://github.com/murillodigital/gitops-profiles
+    keywords:
+    - tekton
+    - tekton-pipelines
+    - cicd
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: support@weave.works
+      name: Weaveworks
+    name: tekton-pipeline
+    sources:
+    - https://cdfoundation.github.io/tekton-helm-chart
+    type: application
+    urls:
+    - https://github.com/murillodigital/gitops-profiles/releases/download/tekton-pipeline-0.0.1/tekton-pipeline-0.0.1.tgz
+    version: 0.0.1
+generated: "2022-09-20T22:13:40.292449019Z"
