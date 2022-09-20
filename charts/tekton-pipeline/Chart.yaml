@@ -1,6 +1,6 @@
 apiVersion: v2
 name: tekton-pipeline
-description: A Weaveworks Helm chart for the Tekton Profile
+description: A Weaveworks Helm chart for the Tekton Pipeline Profile
 type: application
 version: 0.0.1
 dependencies:
@@ -22,7 +22,7 @@ maintainers:
     email: support@weave.works
 
 annotations:
-  "weave.works/profile": cert-manager
+  "weave.works/profile": tekton-piepline
   "weave.works/category": CICD
   "weave.works/layer": layer-0
   "weave.works/operator": "true"
