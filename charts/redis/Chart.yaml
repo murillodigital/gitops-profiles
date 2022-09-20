@@ -5,7 +5,7 @@ type: application
 version: 0.0.1
 dependencies:
   - name: redis
-    version: "7.0.4"
+    version: "17.1.7"
     repository: "https://charts.bitnami.com/bitnami"
 kubeVersion: ">=1.16.0-0"
 home: https://github.com/murillodigital/gitops-profiles
