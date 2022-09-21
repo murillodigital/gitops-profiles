@@ -2,7 +2,7 @@ apiVersion: v2
 name: loki
 description: A Weaveworks Helm chart for the Loki Profile
 type: application
-version: 0.0.2
+version: 0.0.3
 dependencies:
   - name: loki
     version: "3.0.7"
