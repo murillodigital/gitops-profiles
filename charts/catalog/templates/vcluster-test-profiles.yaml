@@ -20,46 +20,46 @@ spec:
   resourcetemplates:
 
     - apiVersion: gitops.weave.works/v1alpha1
-        kind: GitopsCluster
-        metadata:
+      kind: GitopsCluster
+      metadata:
+      name: "${CLUSTER_NAME}"
+      namespace: default
+      labels:
+        weave.works/capi: bootstrap
+      spec:
+      capiClusterRef:
         name: "${CLUSTER_NAME}"
-        namespace: default
-        labels:
-            weave.works/capi: bootstrap
-        spec:
-        capiClusterRef:
-            name: "${CLUSTER_NAME}"
 
     - apiVersion: cluster.x-k8s.io/v1beta1
-        kind: Cluster
-        metadata:
-            name: "${CLUSTER_NAME}"
-            namespace: "${CLUSTER_NAMESPACE}"
-        spec:
-            controlPlaneRef:
-                apiVersion: infrastructure.cluster.x-k8s.io/v1alpha1
-                kind: VCluster
-                name: "${CLUSTER_NAME}"
-            infrastructureRef:
-                apiVersion: infrastructure.cluster.x-k8s.io/v1alpha1
-                kind: VCluster
-                name: "${CLUSTER_NAME}"
+      kind: Cluster
+      metadata:
+        name: "${CLUSTER_NAME}"
+        namespace: "${CLUSTER_NAMESPACE}"
+      spec:
+        controlPlaneRef:
+          apiVersion: infrastructure.cluster.x-k8s.io/v1alpha1
+          kind: VCluster
+          name: "${CLUSTER_NAME}"
+        infrastructureRef:
+          apiVersion: infrastructure.cluster.x-k8s.io/v1alpha1
+          kind: VCluster
+          name: "${CLUSTER_NAME}"
 
     - apiVersion: infrastructure.cluster.x-k8s.io/v1alpha1
-        kind: VCluster
-        metadata:
-            name: "${CLUSTER_NAME}"
-            namespace: "${CLUSTER_NAMESPACE}"
-        spec:
-            controlPlaneEndpoint:
-                host: ""
-                port: 0
-            helmRelease:
-                chart:
-                name: null
-                repo: null
-                version: null
-                values: |-
-                service:
-                    type: NodePort
+      kind: VCluster
+      metadata:
+        name: "${CLUSTER_NAME}"
+        namespace: "${CLUSTER_NAMESPACE}"
+      spec:
+        controlPlaneEndpoint:
+          host: ""
+          port: 0
+          helmRelease:
+            chart:
+            name: null
+            repo: null
+            version: null
+            values: |-
+              service:
+                type: NodePort
             kubernetesVersion: ${KUBERNETES_VERSION}
