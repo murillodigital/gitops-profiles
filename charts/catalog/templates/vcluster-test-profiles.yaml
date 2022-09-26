@@ -22,8 +22,8 @@ spec:
     - apiVersion: gitops.weave.works/v1alpha1
       kind: GitopsCluster
       metadata:
-      name: "${CLUSTER_NAME}"
-      namespace: default
+        name: "${CLUSTER_NAME}"
+        namespace: default
       labels:
         weave.works/capi: bootstrap
       spec:
