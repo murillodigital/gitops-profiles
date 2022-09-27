@@ -63,7 +63,7 @@ spec:
                     "--kubeconfig=/etc/gitops/value",
                     "--owner=${REPOSITORY_OWNER}",
                     "--repository=${REPOSITORY_NAME}",
-                    "--path=./clusters/default/${CLUSTER_NAME}",
+                    "--path=./cluster/default/${CLUSTER_NAME}",
                     "--personal",
                     "--insecure-skip-tls-verify"
                   ]
