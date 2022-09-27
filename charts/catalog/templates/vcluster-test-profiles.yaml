@@ -13,11 +13,67 @@ spec:
       description: The name for this cluster.
     - name: CLUSTER_NAMESPACE
       description: The namespace for this cluster.
+    - name: REPOSITORY_NAME
+      description: The name of the repository used to hold the state for the cluster created by this template.
+    - name: REPOSITORY_OWNER
+      description: The GitHub handle of the user that owns the repository.
+    - name: GITHUB_TOKEN
+      description: GitHub Token to insert in secret with access to repo above.
     - name: KUBERNETES_VERSION
       description: EKS Kubernetes version to use
       options: ['1.23.4']
 
   resourcetemplates:
+    - apiVersion: v1
+      kind: Secret
+      metadata:
+        name: "pat-${CLUSTER_NAME}"
+        namespace: default
+      type: Opaque
+      stringData:
+        GITHUB_TOKEN: "${GITHUB_TOKEN}"
+
+    - apiVersion: capi.weave.works/v1alpha1
+      kind: ClusterBootstrapConfig
+      metadata:
+        name: bootstrapper-${CLUSTER_NAME}
+        namespace: default 
+      spec:
+        clusterSelector:
+          matchLabels:
+            weave.works/capi: bootstrap-${CLUSTER_NAME}
+        clusterReadinessBackoff: 10s
+        jobTemplate:
+          generateName: "run-gitops-${CLUSTER_NAME}"
+          backoffLimit: 12
+          spec:
+            containers:
+              - image: ghcr.io/fluxcd/flux-cli:v0.33.0
+                imagePullPolicy: Always
+                name: flux-bootstrap-${CLUSTER_NAME}
+                resources: {}
+                volumeMounts:
+                  - name: kubeconfig
+                    mountPath: "/etc/gitops"
+                    readOnly: true
+                args:
+                  [
+                    "bootstrap",
+                    "github",
+                    "--kubeconfig=/etc/gitops/value",
+                    "--owner=${REPOSITORY_OWNER}",
+                    "--repository=${REPOSITORY_NAME}",
+                    "--path=./clusters/leaf/${CLUSTER_NAME}",
+                    "--personal"
+                  ]
+                envFrom:
+                  - secretRef:
+                      name: "pat-${CLUSTER_NAME}"
+            restartPolicy: Never
+            volumes:
+              - name: kubeconfig
+                secret:
+                  secretName: "${CLUSTER_NAME}-kubeconfig"
 
     - apiVersion: gitops.weave.works/v1alpha1
       kind: GitopsCluster
@@ -25,7 +81,7 @@ spec:
         name: "${CLUSTER_NAME}"
         namespace: default
         labels:
-          weave.works/capi: bootstrap
+          weave.works/capi: bootstrap-${CLUSTER_NAME}
       spec:
         capiClusterRef:
           name: "${CLUSTER_NAME}"
