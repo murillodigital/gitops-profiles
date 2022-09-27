@@ -64,7 +64,8 @@ spec:
                     "--owner=${REPOSITORY_OWNER}",
                     "--repository=${REPOSITORY_NAME}",
                     "--path=./clusters/leaf/${CLUSTER_NAME}",
-                    "--personal"
+                    "--personal",
+                    "--insecure-skip-tls-verify"
                   ]
                 envFrom:
                   - secretRef:
