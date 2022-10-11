@@ -1,13 +1,13 @@
 apiVersion: capi.weave.works/v1alpha1
 kind: CAPITemplate
 metadata:
-  name: vcluster-test-profile
+  name: aks-test-profile
   namespace: default
   annotations:
     #capi.weave.works/profile-0: '{"name": "cert-manager"}'
     #capi.weave.works/profile-1: '{"name": "weave-policy-agent", "editable": true, "version": "0.5.0", "namespace": "policy-system", "values": "policy-agent:\n  config:\n    AGENT_ENABLE_ADMISSION: \"0\"\n  accountId: sademo\n  clusterId: ${CLUSTER_NAME}" }'
 spec:
-  description: VCluster Environment For Profile Testing 
+  description: AKS Environment For Profile Testing 
   params:
     - name: CLUSTER_NAME
       description: The name for this cluster.
@@ -75,48 +75,3 @@ spec:
               - name: kubeconfig
                 secret:
                   secretName: "${CLUSTER_NAME}-kubeconfig"
-
-    - apiVersion: gitops.weave.works/v1alpha1
-      kind: GitopsCluster
-      metadata:
-        name: "${CLUSTER_NAME}"
-        namespace: default
-        labels:
-          weave.works/capi: bootstrap-${CLUSTER_NAME}
-      spec:
-        capiClusterRef:
-          name: "${CLUSTER_NAME}"
-
-    - apiVersion: cluster.x-k8s.io/v1beta1
-      kind: Cluster
-      metadata:
-        name: "${CLUSTER_NAME}"
-        namespace: "${CLUSTER_NAMESPACE}"
-      spec:
-        controlPlaneRef:
-          apiVersion: infrastructure.cluster.x-k8s.io/v1alpha1
-          kind: VCluster
-          name: "${CLUSTER_NAME}"
-        infrastructureRef:
-          apiVersion: infrastructure.cluster.x-k8s.io/v1alpha1
-          kind: VCluster
-          name: "${CLUSTER_NAME}"
-
-    - apiVersion: infrastructure.cluster.x-k8s.io/v1alpha1
-      kind: VCluster
-      metadata:
-        name: "${CLUSTER_NAME}"
-        namespace: "${CLUSTER_NAMESPACE}"
-      spec:
-        controlPlaneEndpoint:
-          host: ""
-          port: 0
-        helmRelease:
-          chart:
-            name: null
-            repo: null
-            version: null
-          values: |-
-            service:
-              type: NodePort
-        kubernetesVersion: ${KUBERNETES_VERSION}
