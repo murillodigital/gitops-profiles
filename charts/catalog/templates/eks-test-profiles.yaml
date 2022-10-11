@@ -89,7 +89,7 @@ spec:
         name: "${CLUSTER_NAME}"
         namespace: default
         labels:
-          weave.works/capi: bootstrap
+          weave.works/capi: bootstrap-${CLUSTER_NAME}
       spec:
         capiClusterRef:
           name: "${CLUSTER_NAME}"
