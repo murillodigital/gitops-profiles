@@ -155,11 +155,4 @@ spec:
       metadata:
         name: ${CLUSTER_NAME}-pool-0
         namespace: default
-      spec: 
-        scaling:
-          minSize: 1
-          maxSize: 8
-        updateConfig:
-          maxUnavailable: 1
-        remoteAccess: 
-          public: true 
+      spec: {}
