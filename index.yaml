@@ -1,5 +1,245 @@
 apiVersion: v1
 entries:
+  airflow:
+  - annotations:
+      weave.works/category: WorkFlow
+      weave.works/layer: layer-0
+      weave.works/links: |
+        - name: Chart Sources
+          url: https://charts.bitnami.com/bitnami
+        - name: Upstream Project
+          url: https://github.com/bitnami/containers/tree/main/bitnami/airflow
+      weave.works/operator: "true"
+      weave.works/profile: airflow
+      weave.works/profile-ci: |-
+        - "gke"
+        - "kind"
+        - "eks"
+    apiVersion: v2
+    created: "2022-10-17T20:08:22.199099101Z"
+    dependencies:
+    - name: airflow
+      repository: https://charts.bitnami.com/bitnami
+      version: 13.1.7
+    description: A Weaveworks Helm chart for the airflow Profile
+    digest: e59b37d6fa1f1a75c2b8aede775fd60fcc05d54221021a3429914b9694083a58
+    home: https://github.com/murillodigital/gitops-profiles
+    keywords:
+    - apache
+    - airflow
+    - workflow
+    - dag
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: support@weave.works
+      name: Weaveworks
+    name: airflow
+    sources:
+    - https://charts.bitnami.com/bitnami
+    type: application
+    urls:
+    - https://github.com/murillodigital/gitops-profiles/releases/download/airflow-0.0.1/airflow-0.0.1.tgz
+    version: 0.0.1
+  apache:
+  - annotations:
+      weave.works/category: Infrastructure
+      weave.works/layer: layer-0
+      weave.works/links: |
+        - name: Chart Sources
+          url: https://charts.bitnami.com/bitnami
+        - name: Upstream Project
+          url: https://github.com/bitnami/containers/tree/main/bitnami/apache
+      weave.works/operator: "true"
+      weave.works/profile: apache
+      weave.works/profile-ci: |-
+        - "gke"
+        - "kind"
+        - "eks"
+    apiVersion: v2
+    created: "2022-10-17T20:08:22.434938226Z"
+    dependencies:
+    - name: apache
+      repository: https://charts.bitnami.com/bitnami
+      version: 9.2.5
+    description: A Weaveworks Helm chart for the apache Profile
+    digest: f5485132cdd8e21553803e26cf4a5aed3daa214f3dfa3adddfc01e1cc2c21478
+    home: https://github.com/murillodigital/gitops-profiles
+    keywords:
+    - apache
+    - http
+    - https
+    - www
+    - web
+    - reverse proxy
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: support@weave.works
+      name: Weaveworks
+    name: apache
+    sources:
+    - https://charts.bitnami.com/bitnami
+    type: application
+    urls:
+    - https://github.com/murillodigital/gitops-profiles/releases/download/apache-0.0.1/apache-0.0.1.tgz
+    version: 0.0.1
+  argo-cd:
+  - annotations:
+      weave.works/category: Infrastructure
+      weave.works/layer: layer-0
+      weave.works/links: |
+        - name: Chart Sources
+          url: https://charts.bitnami.com/bitnami
+        - name: Upstream Project
+          url: https://github.com/bitnami/containers/tree/main/bitnami/argo-cd
+      weave.works/operator: "true"
+      weave.works/profile: argo-cd
+      weave.works/profile-ci: |-
+        - "gke"
+        - "kind"
+        - "eks"
+    apiVersion: v2
+    created: "2022-10-17T20:08:22.703332535Z"
+    dependencies:
+    - name: argo-cd
+      repository: https://charts.bitnami.com/bitnami
+      version: 4.2.4
+    description: A Weaveworks Helm chart for the argo-cd Profile
+    digest: 617862bb717fa423c66c070c1c6bbb67402dd5c8d14249f9c762e32af3e5ad0b
+    home: https://github.com/murillodigital/gitops-profiles
+    keywords:
+    - Continuous delivery
+    - Continuous deployment
+    - Devops
+    - Kubernetes
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: support@weave.works
+      name: Weaveworks
+    name: argo-cd
+    sources:
+    - https://charts.bitnami.com/bitnami
+    type: application
+    urls:
+    - https://github.com/murillodigital/gitops-profiles/releases/download/argo-cd-0.0.1/argo-cd-0.0.1.tgz
+    version: 0.0.1
+  argo-workflows:
+  - annotations:
+      weave.works/category: Infrastructure
+      weave.works/layer: layer-0
+      weave.works/links: |
+        - name: Chart Sources
+          url: https://charts.bitnami.com/bitnami
+        - name: Upstream Project
+          url: https://github.com/bitnami/containers/tree/main/bitnami/argo-workflow-cli
+      weave.works/operator: "true"
+      weave.works/profile: argo-workflows
+      weave.works/profile-ci: |-
+        - "gke"
+        - "kind"
+        - "eks"
+    apiVersion: v2
+    created: "2022-10-17T20:08:22.981919528Z"
+    dependencies:
+    - name: argo-workflows
+      repository: https://charts.bitnami.com/bitnami
+      version: 3.0.4
+    description: A Weaveworks Helm chart for the argo-workflows Profile
+    digest: 164844a51a137f0026ddeace3312ca3e8d05e156c9010f52de4b65c8070cb0c8
+    home: https://github.com/murillodigital/gitops-profiles
+    keywords:
+    - Devops
+    - Kubernetes
+    - Jobs
+    - Continuous delivery
+    - Continous deployment
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: support@weave.works
+      name: Weaveworks
+    name: argo-workflows
+    sources:
+    - https://charts.bitnami.com/bitnami
+    type: application
+    urls:
+    - https://github.com/murillodigital/gitops-profiles/releases/download/argo-workflows-0.0.1/argo-workflows-0.0.1.tgz
+    version: 0.0.1
+  aspnet-core:
+  - annotations:
+      weave.works/category: DeveloperTools
+      weave.works/layer: layer-0
+      weave.works/links: |
+        - name: Chart Sources
+          url: https://charts.bitnami.com/bitnami
+        - name: Upstream Project
+          url: https://github.com/bitnami/containers/tree/main/bitnami/aspnet-core
+      weave.works/operator: "true"
+      weave.works/profile: aspnet-core
+      weave.works/profile-ci: |-
+        - "gke"
+        - "kind"
+        - "eks"
+    apiVersion: v2
+    created: "2022-10-17T20:08:23.254962149Z"
+    dependencies:
+    - name: aspnet-core
+      repository: https://charts.bitnami.com/bitnami
+      version: 3.5.5
+    description: A Weaveworks Helm chart for the aspnet-core Profile
+    digest: fa83b7871878b87fa71bb8db64dc84541a3f64ca8e825bc302ee8f79918438e1
+    home: https://github.com/murillodigital/gitops-profiles
+    keywords:
+    - asp.net
+    - dotnet
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: support@weave.works
+      name: Weaveworks
+    name: aspnet-core
+    sources:
+    - https://charts.bitnami.com/bitnami
+    type: application
+    urls:
+    - https://github.com/murillodigital/gitops-profiles/releases/download/aspnet-core-0.0.1/aspnet-core-0.0.1.tgz
+    version: 0.0.1
+  cassandra:
+  - annotations:
+      weave.works/category: Database
+      weave.works/layer: layer-0
+      weave.works/links: |
+        - name: Chart Sources
+          url: https://charts.bitnami.com/bitnami
+        - name: Upstream Project
+          url: https://github.com/bitnami/containers/tree/main/bitnami/cassandra
+      weave.works/operator: "true"
+      weave.works/profile: cassandra
+      weave.works/profile-ci: |-
+        - "gke"
+        - "kind"
+        - "eks"
+    apiVersion: v2
+    created: "2022-10-17T20:08:23.513940126Z"
+    dependencies:
+    - name: cassandra
+      repository: https://charts.bitnami.com/bitnami
+      version: 9.7.2
+    description: A Weaveworks Helm chart for the cassandra Profile
+    digest: 4ccf6a8128a7b14192d2a4c63e406aef0dd1904cbcbca61d35096d12b09c33a4
+    home: https://github.com/murillodigital/gitops-profiles
+    keywords:
+    - cassandra
+    - database
+    - nosql
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: support@weave.works
+      name: Weaveworks
+    name: cassandra
+    sources:
+    - https://charts.bitnami.com/bitnami
+    type: application
+    urls:
+    - https://github.com/murillodigital/gitops-profiles/releases/download/cassandra-0.0.1/cassandra-0.0.1.tgz
+    version: 0.0.1
   catalog:
   - apiVersion: v2
     appVersion: 0.0.1
@@ -151,6 +391,1705 @@ entries:
     urls:
     - https://github.com/murillodigital/gitops-profiles/releases/download/catalog-0.0.1/catalog-0.0.1.tgz
     version: 0.0.1
+  cert-manager:
+  - annotations:
+      weave.works/category: CertificateAuthority
+      weave.works/layer: layer-0
+      weave.works/links: |
+        - name: Chart Sources
+          url: https://charts.bitnami.com/bitnami
+        - name: Upstream Project
+          url: https://github.com/bitnami/containers/tree/main/bitnami/cert-manager
+      weave.works/operator: "true"
+      weave.works/profile: cert-manager
+      weave.works/profile-ci: |-
+        - "gke"
+        - "kind"
+        - "eks"
+    apiVersion: v2
+    created: "2022-10-17T20:08:23.748637874Z"
+    dependencies:
+    - name: cert-manager
+      repository: https://charts.bitnami.com/bitnami
+      version: 0.8.5
+    description: A Weaveworks Helm chart for the cert-manager Profile
+    digest: 2a59b3df281bbfe050bdc8ac758032260381f0acc984adfa262896055216d76c
+    home: https://github.com/murillodigital/gitops-profiles
+    keywords:
+    - go
+    - security
+    - tls
+    - certificate
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: support@weave.works
+      name: Weaveworks
+    name: cert-manager
+    sources:
+    - https://charts.bitnami.com/bitnami
+    type: application
+    urls:
+    - https://github.com/murillodigital/gitops-profiles/releases/download/cert-manager-0.0.1/cert-manager-0.0.1.tgz
+    version: 0.0.1
+  clickhouse:
+  - annotations:
+      weave.works/category: Database
+      weave.works/layer: layer-0
+      weave.works/links: |
+        - name: Chart Sources
+          url: https://charts.bitnami.com/bitnami
+        - name: Upstream Project
+          url: https://github.com/bitnami/containers/tree/main/bitnami/clickhouse
+      weave.works/operator: "true"
+      weave.works/profile: clickhouse
+      weave.works/profile-ci: |-
+        - "gke"
+        - "kind"
+        - "eks"
+    apiVersion: v2
+    created: "2022-10-17T20:08:23.975499096Z"
+    dependencies:
+    - name: clickhouse
+      repository: https://charts.bitnami.com/bitnami
+      version: 1.0.0
+    description: A Weaveworks Helm chart for the clickhouse Profile
+    digest: 00af8f4879383ee617e644dd290a6f40138147a7e06425b494bd46cc8ebaf5e3
+    home: https://github.com/murillodigital/gitops-profiles
+    keywords:
+    - database
+    - sharding
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: support@weave.works
+      name: Weaveworks
+    name: clickhouse
+    sources:
+    - https://charts.bitnami.com/bitnami
+    type: application
+    urls:
+    - https://github.com/murillodigital/gitops-profiles/releases/download/clickhouse-0.0.1/clickhouse-0.0.1.tgz
+    version: 0.0.1
+  common:
+  - annotations:
+      weave.works/category: Infrastructure
+      weave.works/layer: layer-0
+      weave.works/links: |
+        - name: Chart Sources
+          url: https://charts.bitnami.com/bitnami
+        - name: Upstream Project
+          url: https://github.com/bitnami/charts
+      weave.works/operator: "true"
+      weave.works/profile: common
+      weave.works/profile-ci: |-
+        - "gke"
+        - "kind"
+        - "eks"
+    apiVersion: v2
+    created: "2022-10-17T20:08:24.220297122Z"
+    dependencies:
+    - name: common
+      repository: https://charts.bitnami.com/bitnami
+      version: 2.0.3
+    description: A Weaveworks Helm chart for the common Profile
+    digest: 936e84e7621939e82ccdc552483b5b7f5c77c20c0935fac03b2777b6a77ce063
+    home: https://github.com/murillodigital/gitops-profiles
+    keywords:
+    - common
+    - helper
+    - template
+    - function
+    - bitnami
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: support@weave.works
+      name: Weaveworks
+    name: common
+    sources:
+    - https://charts.bitnami.com/bitnami
+    type: application
+    urls:
+    - https://github.com/murillodigital/gitops-profiles/releases/download/common-0.0.1/common-0.0.1.tgz
+    version: 0.0.1
+  concourse:
+  - annotations:
+      weave.works/category: Infrastructure
+      weave.works/layer: layer-0
+      weave.works/links: |
+        - name: Chart Sources
+          url: https://charts.bitnami.com/bitnami
+        - name: Upstream Project
+          url: https://github.com/bitnami/containers/tree/main/bitnami/concourse
+      weave.works/operator: "true"
+      weave.works/profile: concourse
+      weave.works/profile-ci: |-
+        - "gke"
+        - "kind"
+        - "eks"
+    apiVersion: v2
+    created: "2022-10-17T20:08:24.464584013Z"
+    dependencies:
+    - name: concourse
+      repository: https://charts.bitnami.com/bitnami
+      version: 1.5.3
+    description: A Weaveworks Helm chart for the concourse Profile
+    digest: 95e6afaad6deab8f818ec04bc674df049debb71c16fdbe6fa0265d837899a14c
+    home: https://github.com/murillodigital/gitops-profiles
+    keywords:
+    - concourse
+    - ci
+    - cd
+    - http
+    - web
+    - application
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: support@weave.works
+      name: Weaveworks
+    name: concourse
+    sources:
+    - https://charts.bitnami.com/bitnami
+    type: application
+    urls:
+    - https://github.com/murillodigital/gitops-profiles/releases/download/concourse-0.0.1/concourse-0.0.1.tgz
+    version: 0.0.1
+  consul:
+  - annotations:
+      weave.works/category: DeveloperTools
+      weave.works/layer: layer-0
+      weave.works/links: |
+        - name: Chart Sources
+          url: https://charts.bitnami.com/bitnami
+        - name: Upstream Project
+          url: https://github.com/bitnami/containers/tree/main/bitnami/consul
+      weave.works/operator: "true"
+      weave.works/profile: consul
+      weave.works/profile-ci: |-
+        - "gke"
+        - "kind"
+        - "eks"
+    apiVersion: v2
+    created: "2022-10-17T20:08:24.715295736Z"
+    dependencies:
+    - name: consul
+      repository: https://charts.bitnami.com/bitnami
+      version: 10.9.2
+    description: A Weaveworks Helm chart for the consul Profile
+    digest: 365c58f535795601757d9036ca45b627e92a8fbaa837bf7dca780c4377c43a57
+    home: https://github.com/murillodigital/gitops-profiles
+    keywords:
+    - discovering
+    - configuring
+    - services
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: support@weave.works
+      name: Weaveworks
+    name: consul
+    sources:
+    - https://charts.bitnami.com/bitnami
+    type: application
+    urls:
+    - https://github.com/murillodigital/gitops-profiles/releases/download/consul-0.0.1/consul-0.0.1.tgz
+    version: 0.0.1
+  contour:
+  - annotations:
+      weave.works/category: Infrastructure
+      weave.works/layer: layer-0
+      weave.works/links: |
+        - name: Chart Sources
+          url: https://charts.bitnami.com/bitnami
+        - name: Upstream Project
+          url: https://github.com/projectcontour/contour
+      weave.works/operator: "true"
+      weave.works/profile: contour
+      weave.works/profile-ci: |-
+        - "gke"
+        - "kind"
+        - "eks"
+    apiVersion: v2
+    created: "2022-10-17T20:08:24.981419993Z"
+    dependencies:
+    - name: contour
+      repository: https://charts.bitnami.com/bitnami
+      version: 9.1.6
+    description: A Weaveworks Helm chart for the contour Profile
+    digest: 389b29bdf916d647f557bdf1f5f60250c9c166526460c19b65dc16079c9ef0ef
+    home: https://github.com/murillodigital/gitops-profiles
+    keywords:
+    - ingress
+    - envoy
+    - contour
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: support@weave.works
+      name: Weaveworks
+    name: contour
+    sources:
+    - https://charts.bitnami.com/bitnami
+    type: application
+    urls:
+    - https://github.com/murillodigital/gitops-profiles/releases/download/contour-0.0.1/contour-0.0.1.tgz
+    version: 0.0.1
+  contour-operator:
+  - annotations:
+      weave.works/category: Infrastructure
+      weave.works/layer: layer-0
+      weave.works/links: |
+        - name: Chart Sources
+          url: https://charts.bitnami.com/bitnami
+        - name: Upstream Project
+          url: https://github.com/projectcontour/contour-operator
+      weave.works/operator: "true"
+      weave.works/profile: contour-operator
+      weave.works/profile-ci: |-
+        - "gke"
+        - "kind"
+        - "eks"
+    apiVersion: v2
+    created: "2022-10-17T20:08:25.223949766Z"
+    dependencies:
+    - name: contour-operator
+      repository: https://charts.bitnami.com/bitnami
+      version: 2.1.6
+    description: A Weaveworks Helm chart for the contour-operator Profile
+    digest: 56afd2dd55e8c84c0e97711fe1bd6fce99994169403f16ca10982e5b11597b3e
+    home: https://github.com/murillodigital/gitops-profiles
+    keywords:
+    - contour
+    - operator
+    - ingress
+    - envoy
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: support@weave.works
+      name: Weaveworks
+    name: contour-operator
+    sources:
+    - https://charts.bitnami.com/bitnami
+    type: application
+    urls:
+    - https://github.com/murillodigital/gitops-profiles/releases/download/contour-operator-0.0.1/contour-operator-0.0.1.tgz
+    version: 0.0.1
+  dataplatform-bp1:
+  - annotations:
+      weave.works/category: Infrastructure
+      weave.works/layer: layer-0
+      weave.works/links: |
+        - name: Chart Sources
+          url: https://charts.bitnami.com/bitnami
+        - name: Upstream Project
+          url: https://github.com/bitnami/bitnami-docker-kafka
+      weave.works/operator: "true"
+      weave.works/profile: dataplatform-bp1
+      weave.works/profile-ci: |-
+        - "gke"
+        - "kind"
+        - "eks"
+    apiVersion: v2
+    created: "2022-10-17T20:08:25.511852984Z"
+    dependencies:
+    - name: dataplatform-bp1
+      repository: https://charts.bitnami.com/bitnami
+      version: 12.0.2
+    description: A Weaveworks Helm chart for the dataplatform-bp1 Profile
+    digest: 6b4e80e189105c15de6fbf19dace9df820fa1a4517fc055a3c4893ef3caf374f
+    home: https://github.com/murillodigital/gitops-profiles
+    keywords:
+    - dataplatform
+    - kafka
+    - spark
+    - solr
+    - zookeeper
+    - wavefront
+    - observability
+    - apache
+    - tanzuobservability
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: support@weave.works
+      name: Weaveworks
+    name: dataplatform-bp1
+    sources:
+    - https://charts.bitnami.com/bitnami
+    type: application
+    urls:
+    - https://github.com/murillodigital/gitops-profiles/releases/download/dataplatform-bp1-0.0.1/dataplatform-bp1-0.0.1.tgz
+    version: 0.0.1
+  dataplatform-bp2:
+  - annotations:
+      weave.works/category: Infrastructure
+      weave.works/layer: layer-0
+      weave.works/links: |
+        - name: Chart Sources
+          url: https://charts.bitnami.com/bitnami
+        - name: Upstream Project
+          url: https://github.com/bitnami/bitnami-docker-kafka
+      weave.works/operator: "true"
+      weave.works/profile: dataplatform-bp2
+      weave.works/profile-ci: |-
+        - "gke"
+        - "kind"
+        - "eks"
+    apiVersion: v2
+    created: "2022-10-17T20:08:25.79610373Z"
+    dependencies:
+    - name: dataplatform-bp2
+      repository: https://charts.bitnami.com/bitnami
+      version: 12.0.5
+    description: A Weaveworks Helm chart for the dataplatform-bp2 Profile
+    digest: a276d80c0eca196be1c3fc17dd64f65915614eddeb62dfd62d753450459a32bc
+    home: https://github.com/murillodigital/gitops-profiles
+    keywords:
+    - dataplatform
+    - kafka
+    - spark
+    - elasticsearch
+    - logstash
+    - kibana
+    - zookeeper
+    - apache
+    - tanzuobservability
+    - wavefront
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: support@weave.works
+      name: Weaveworks
+    name: dataplatform-bp2
+    sources:
+    - https://charts.bitnami.com/bitnami
+    type: application
+    urls:
+    - https://github.com/murillodigital/gitops-profiles/releases/download/dataplatform-bp2-0.0.1/dataplatform-bp2-0.0.1.tgz
+    version: 0.0.1
+  discourse:
+  - annotations:
+      weave.works/category: Forum
+      weave.works/layer: layer-0
+      weave.works/links: |
+        - name: Chart Sources
+          url: https://charts.bitnami.com/bitnami
+        - name: Upstream Project
+          url: https://github.com/bitnami/containers/tree/main/bitnami/discourse
+      weave.works/operator: "true"
+      weave.works/profile: discourse
+      weave.works/profile-ci: |-
+        - "gke"
+        - "kind"
+        - "eks"
+    apiVersion: v2
+    created: "2022-10-17T20:08:26.078652022Z"
+    dependencies:
+    - name: discourse
+      repository: https://charts.bitnami.com/bitnami
+      version: 8.1.8
+    description: A Weaveworks Helm chart for the discourse Profile
+    digest: bbda1dc4a3dd0a94843f408ec54da86e15980ee041ef300213e3996c607c9dcf
+    home: https://github.com/murillodigital/gitops-profiles
+    keywords:
+    - community
+    - forum
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: support@weave.works
+      name: Weaveworks
+    name: discourse
+    sources:
+    - https://charts.bitnami.com/bitnami
+    type: application
+    urls:
+    - https://github.com/murillodigital/gitops-profiles/releases/download/discourse-0.0.1/discourse-0.0.1.tgz
+    version: 0.0.1
+  dokuwiki:
+  - annotations:
+      weave.works/category: Wiki
+      weave.works/layer: layer-0
+      weave.works/links: |
+        - name: Chart Sources
+          url: https://charts.bitnami.com/bitnami
+        - name: Upstream Project
+          url: https://github.com/bitnami/containers/tree/main/bitnami/dokuwiki
+      weave.works/operator: "true"
+      weave.works/profile: dokuwiki
+      weave.works/profile-ci: |-
+        - "gke"
+        - "kind"
+        - "eks"
+    apiVersion: v2
+    created: "2022-10-17T20:08:26.316235123Z"
+    dependencies:
+    - name: dokuwiki
+      repository: https://charts.bitnami.com/bitnami
+      version: 13.1.7
+    description: A Weaveworks Helm chart for the dokuwiki Profile
+    digest: 12fbec0ff6f92ad2194566437160db16932ac9f044d65f61354518d4b3764458
+    home: https://github.com/murillodigital/gitops-profiles
+    keywords:
+    - dokuwiki
+    - wiki
+    - http
+    - web
+    - application
+    - php
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: support@weave.works
+      name: Weaveworks
+    name: dokuwiki
+    sources:
+    - https://charts.bitnami.com/bitnami
+    type: application
+    urls:
+    - https://github.com/murillodigital/gitops-profiles/releases/download/dokuwiki-0.0.1/dokuwiki-0.0.1.tgz
+    version: 0.0.1
+  drupal:
+  - annotations:
+      weave.works/category: CMS
+      weave.works/layer: layer-0
+      weave.works/links: |
+        - name: Chart Sources
+          url: https://charts.bitnami.com/bitnami
+        - name: Upstream Project
+          url: https://github.com/bitnami/containers/tree/main/bitnami/drupal
+      weave.works/operator: "true"
+      weave.works/profile: drupal
+      weave.works/profile-ci: |-
+        - "gke"
+        - "kind"
+        - "eks"
+    apiVersion: v2
+    created: "2022-10-17T20:08:26.577826921Z"
+    dependencies:
+    - name: drupal
+      repository: https://charts.bitnami.com/bitnami
+      version: 12.5.9
+    description: A Weaveworks Helm chart for the drupal Profile
+    digest: 43c93d9460ab8e12b598bc0b16e928c75058f63ad93623b5d73499f32b5eaa06
+    home: https://github.com/murillodigital/gitops-profiles
+    keywords:
+    - drupal
+    - cms
+    - blog
+    - http
+    - web
+    - application
+    - php
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: support@weave.works
+      name: Weaveworks
+    name: drupal
+    sources:
+    - https://charts.bitnami.com/bitnami
+    type: application
+    urls:
+    - https://github.com/murillodigital/gitops-profiles/releases/download/drupal-0.0.1/drupal-0.0.1.tgz
+    version: 0.0.1
+  ejbca:
+  - annotations:
+      weave.works/category: CertificateAuthority
+      weave.works/layer: layer-0
+      weave.works/links: |
+        - name: Chart Sources
+          url: https://charts.bitnami.com/bitnami
+        - name: Upstream Project
+          url: https://github.com/bitnami/containers/tree/main/bitnami/ejbca
+      weave.works/operator: "true"
+      weave.works/profile: ejbca
+      weave.works/profile-ci: |-
+        - "gke"
+        - "kind"
+        - "eks"
+    apiVersion: v2
+    created: "2022-10-17T20:08:26.829641068Z"
+    dependencies:
+    - name: ejbca
+      repository: https://charts.bitnami.com/bitnami
+      version: 6.3.6
+    description: A Weaveworks Helm chart for the ejbca Profile
+    digest: 52e09af5ed7eeaea41984deddbeec0b8fe48d584e63e18f98595a64fab595c33
+    home: https://github.com/murillodigital/gitops-profiles
+    keywords:
+    - ejbca
+    - ca
+    - pki
+    - certificate
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: support@weave.works
+      name: Weaveworks
+    name: ejbca
+    sources:
+    - https://charts.bitnami.com/bitnami
+    type: application
+    urls:
+    - https://github.com/murillodigital/gitops-profiles/releases/download/ejbca-0.0.1/ejbca-0.0.1.tgz
+    version: 0.0.1
+  elasticsearch:
+  - annotations:
+      weave.works/category: Analytics
+      weave.works/layer: layer-0
+      weave.works/links: |
+        - name: Chart Sources
+          url: https://charts.bitnami.com/bitnami
+        - name: Upstream Project
+          url: https://github.com/bitnami/containers/tree/main/bitnami/elasticsearch
+      weave.works/operator: "true"
+      weave.works/profile: elasticsearch
+      weave.works/profile-ci: |-
+        - "gke"
+        - "kind"
+        - "eks"
+    apiVersion: v2
+    created: "2022-10-17T20:08:27.079044555Z"
+    dependencies:
+    - name: elasticsearch
+      repository: https://charts.bitnami.com/bitnami
+      version: 19.4.4
+    description: A Weaveworks Helm chart for the elasticsearch Profile
+    digest: d59ff0df32d8639df7366d6e37f228cc0c627915567768634cd3dfb812da5172
+    home: https://github.com/murillodigital/gitops-profiles
+    keywords:
+    - elasticsearch
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: support@weave.works
+      name: Weaveworks
+    name: elasticsearch
+    sources:
+    - https://charts.bitnami.com/bitnami
+    type: application
+    urls:
+    - https://github.com/murillodigital/gitops-profiles/releases/download/elasticsearch-0.0.1/elasticsearch-0.0.1.tgz
+    version: 0.0.1
+  etcd:
+  - annotations:
+      weave.works/category: Database
+      weave.works/layer: layer-0
+      weave.works/links: |
+        - name: Chart Sources
+          url: https://charts.bitnami.com/bitnami
+        - name: Upstream Project
+          url: https://github.com/bitnami/containers/tree/main/bitnami/etcd
+      weave.works/operator: "true"
+      weave.works/profile: etcd
+      weave.works/profile-ci: |-
+        - "gke"
+        - "kind"
+        - "eks"
+    apiVersion: v2
+    created: "2022-10-17T20:08:27.302817238Z"
+    dependencies:
+    - name: etcd
+      repository: https://charts.bitnami.com/bitnami
+      version: 8.5.6
+    description: A Weaveworks Helm chart for the etcd Profile
+    digest: a1a5a0076f99aa731ad8e41d9b63ba14284094c33cf427548f71832f5795e1ab
+    home: https://github.com/murillodigital/gitops-profiles
+    keywords:
+    - etcd
+    - cluster
+    - database
+    - cache
+    - key-value
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: support@weave.works
+      name: Weaveworks
+    name: etcd
+    sources:
+    - https://charts.bitnami.com/bitnami
+    type: application
+    urls:
+    - https://github.com/murillodigital/gitops-profiles/releases/download/etcd-0.0.1/etcd-0.0.1.tgz
+    version: 0.0.1
+  external-dns:
+  - annotations:
+      weave.works/category: DeveloperTools
+      weave.works/layer: layer-0
+      weave.works/links: |
+        - name: Chart Sources
+          url: https://charts.bitnami.com/bitnami
+        - name: Upstream Project
+          url: https://github.com/kubernetes-sigs/external-dns
+      weave.works/operator: "true"
+      weave.works/profile: external-dns
+      weave.works/profile-ci: |-
+        - "gke"
+        - "kind"
+        - "eks"
+    apiVersion: v2
+    created: "2022-10-17T20:08:27.545301365Z"
+    dependencies:
+    - name: external-dns
+      repository: https://charts.bitnami.com/bitnami
+      version: 6.10.2
+    description: A Weaveworks Helm chart for the external-dns Profile
+    digest: 25e3d7e3d1154837eb0978a0ba0163aabe7434420795cf16d943ee6ee07ecb8b
+    home: https://github.com/murillodigital/gitops-profiles
+    keywords:
+    - external-dns
+    - network
+    - dns
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: support@weave.works
+      name: Weaveworks
+    name: external-dns
+    sources:
+    - https://charts.bitnami.com/bitnami
+    type: application
+    urls:
+    - https://github.com/murillodigital/gitops-profiles/releases/download/external-dns-0.0.1/external-dns-0.0.1.tgz
+    version: 0.0.1
+  fluentd:
+  - annotations:
+      weave.works/category: Analytics
+      weave.works/layer: layer-0
+      weave.works/links: |
+        - name: Chart Sources
+          url: https://charts.bitnami.com/bitnami
+        - name: Upstream Project
+          url: https://github.com/bitnami/containers/tree/main/bitnami/fluentd
+      weave.works/operator: "true"
+      weave.works/profile: fluentd
+      weave.works/profile-ci: |-
+        - "gke"
+        - "kind"
+        - "eks"
+    apiVersion: v2
+    created: "2022-10-17T20:08:27.803391729Z"
+    dependencies:
+    - name: fluentd
+      repository: https://charts.bitnami.com/bitnami
+      version: 5.5.3
+    description: A Weaveworks Helm chart for the fluentd Profile
+    digest: 1e799683e3220da2ac8cf2fc84e3975dc7d1da593edc7083aa068be3edb11a5b
+    home: https://github.com/murillodigital/gitops-profiles
+    keywords:
+    - fluentd
+    - logging
+    - logs
+    - data
+    - collector
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: support@weave.works
+      name: Weaveworks
+    name: fluentd
+    sources:
+    - https://charts.bitnami.com/bitnami
+    type: application
+    urls:
+    - https://github.com/murillodigital/gitops-profiles/releases/download/fluentd-0.0.1/fluentd-0.0.1.tgz
+    version: 0.0.1
+  geode:
+  - annotations:
+      weave.works/category: Database
+      weave.works/layer: layer-0
+      weave.works/links: |
+        - name: Chart Sources
+          url: https://charts.bitnami.com/bitnami
+        - name: Upstream Project
+          url: https://github.com/bitnami/containers/tree/main/bitnami/geode
+      weave.works/operator: "true"
+      weave.works/profile: geode
+      weave.works/profile-ci: |-
+        - "gke"
+        - "kind"
+        - "eks"
+    apiVersion: v2
+    created: "2022-10-17T20:08:28.076071564Z"
+    dependencies:
+    - name: geode
+      repository: https://charts.bitnami.com/bitnami
+      version: 1.1.4
+    description: A Weaveworks Helm chart for the geode Profile
+    digest: 8d1f79c1d0f06f5896d0c726da0460fbb7c007f2edd9ce61c6af5ac6ef84dcdb
+    home: https://github.com/murillodigital/gitops-profiles
+    keywords:
+    - apache
+    - geode
+    - database
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: support@weave.works
+      name: Weaveworks
+    name: geode
+    sources:
+    - https://charts.bitnami.com/bitnami
+    type: application
+    urls:
+    - https://github.com/murillodigital/gitops-profiles/releases/download/geode-0.0.1/geode-0.0.1.tgz
+    version: 0.0.1
+  ghost:
+  - annotations:
+      weave.works/category: CMS
+      weave.works/layer: layer-0
+      weave.works/links: |
+        - name: Chart Sources
+          url: https://charts.bitnami.com/bitnami
+        - name: Upstream Project
+          url: https://github.com/bitnami/containers/tree/main/bitnami/ghost
+      weave.works/operator: "true"
+      weave.works/profile: ghost
+      weave.works/profile-ci: |-
+        - "gke"
+        - "kind"
+        - "eks"
+    apiVersion: v2
+    created: "2022-10-17T20:08:28.34469673Z"
+    dependencies:
+    - name: ghost
+      repository: https://charts.bitnami.com/bitnami
+      version: 19.1.20
+    description: A Weaveworks Helm chart for the ghost Profile
+    digest: f5f175da730da1f78879005bbe38c2f331283d4a2647f8580517161c491b9f82
+    home: https://github.com/murillodigital/gitops-profiles
+    keywords:
+    - ghost
+    - blog
+    - http
+    - web
+    - application
+    - nodejs
+    - javascript
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: support@weave.works
+      name: Weaveworks
+    name: ghost
+    sources:
+    - https://charts.bitnami.com/bitnami
+    type: application
+    urls:
+    - https://github.com/murillodigital/gitops-profiles/releases/download/ghost-0.0.1/ghost-0.0.1.tgz
+    version: 0.0.1
+  grafana:
+  - annotations:
+      weave.works/category: Analytics
+      weave.works/layer: layer-0
+      weave.works/links: |
+        - name: Chart Sources
+          url: https://charts.bitnami.com/bitnami
+        - name: Upstream Project
+          url: https://github.com/bitnami/containers/tree/main/bitnami/grafana
+      weave.works/operator: "true"
+      weave.works/profile: grafana
+      weave.works/profile-ci: |-
+        - "gke"
+        - "kind"
+        - "eks"
+    apiVersion: v2
+    created: "2022-10-17T20:08:28.580415607Z"
+    dependencies:
+    - name: grafana
+      repository: https://charts.bitnami.com/bitnami
+      version: 8.2.11
+    description: A Weaveworks Helm chart for the grafana Profile
+    digest: 06b5d245fa3e55d8d92288a3daf2219d47b013ed4ec0740e1fa0564c3448ef21
+    home: https://github.com/murillodigital/gitops-profiles
+    keywords:
+    - analytics
+    - monitoring
+    - metrics
+    - logs
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: support@weave.works
+      name: Weaveworks
+    name: grafana
+    sources:
+    - https://charts.bitnami.com/bitnami
+    type: application
+    urls:
+    - https://github.com/murillodigital/gitops-profiles/releases/download/grafana-0.0.1/grafana-0.0.1.tgz
+    version: 0.0.1
+  grafana-loki:
+  - annotations:
+      weave.works/category: Infrastructure
+      weave.works/layer: layer-0
+      weave.works/links: |
+        - name: Chart Sources
+          url: https://charts.bitnami.com/bitnami
+        - name: Upstream Project
+          url: https://github.com/bitnami/containers/tree/main/bitnami/grafana-loki
+      weave.works/operator: "true"
+      weave.works/profile: grafana-loki
+      weave.works/profile-ci: |-
+        - "gke"
+        - "kind"
+        - "eks"
+    apiVersion: v2
+    created: "2022-10-17T20:08:28.83156301Z"
+    dependencies:
+    - name: grafana-loki
+      repository: https://charts.bitnami.com/bitnami
+      version: 2.4.5
+    description: A Weaveworks Helm chart for the grafana-loki Profile
+    digest: aeea749642ea9741d491652ea57befbc6e9747a01ebe7b869a709400fa750e59
+    home: https://github.com/murillodigital/gitops-profiles
+    keywords:
+    - grafana
+    - tracing
+    - metrics
+    - infrastructure
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: support@weave.works
+      name: Weaveworks
+    name: grafana-loki
+    sources:
+    - https://charts.bitnami.com/bitnami
+    type: application
+    urls:
+    - https://github.com/murillodigital/gitops-profiles/releases/download/grafana-loki-0.0.1/grafana-loki-0.0.1.tgz
+    version: 0.0.1
+  grafana-operator:
+  - annotations:
+      weave.works/category: Analytics
+      weave.works/layer: layer-0
+      weave.works/links: |
+        - name: Chart Sources
+          url: https://charts.bitnami.com/bitnami
+        - name: Upstream Project
+          url: https://github.com/grafana-operator/grafana-operator
+      weave.works/operator: "true"
+      weave.works/profile: grafana-operator
+      weave.works/profile-ci: |-
+        - "gke"
+        - "kind"
+        - "eks"
+    apiVersion: v2
+    created: "2022-10-17T20:08:29.069721449Z"
+    dependencies:
+    - name: grafana-operator
+      repository: https://charts.bitnami.com/bitnami
+      version: 2.7.7
+    description: A Weaveworks Helm chart for the grafana-operator Profile
+    digest: 3c1234afad2e9b6057a5f3df8546a84b1ebae32964b356e58241991e3ccc89f3
+    home: https://github.com/murillodigital/gitops-profiles
+    keywords:
+    - grafana
+    - operator
+    - monitoring
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: support@weave.works
+      name: Weaveworks
+    name: grafana-operator
+    sources:
+    - https://charts.bitnami.com/bitnami
+    type: application
+    urls:
+    - https://github.com/murillodigital/gitops-profiles/releases/download/grafana-operator-0.0.1/grafana-operator-0.0.1.tgz
+    version: 0.0.1
+  grafana-tempo:
+  - annotations:
+      weave.works/category: Infrastructure
+      weave.works/layer: layer-0
+      weave.works/links: |
+        - name: Chart Sources
+          url: https://charts.bitnami.com/bitnami
+        - name: Upstream Project
+          url: https://github.com/bitnami/containers/tree/main/bitnami/grafana-tempo
+      weave.works/operator: "true"
+      weave.works/profile: grafana-tempo
+      weave.works/profile-ci: |-
+        - "gke"
+        - "kind"
+        - "eks"
+    apiVersion: v2
+    created: "2022-10-17T20:08:29.295978597Z"
+    dependencies:
+    - name: grafana-tempo
+      repository: https://charts.bitnami.com/bitnami
+      version: 1.4.4
+    description: A Weaveworks Helm chart for the grafana-tempo Profile
+    digest: 2eb0088c783f202e41736dbbc211013577b0317286babfa0a9de44e1a844abc9
+    home: https://github.com/murillodigital/gitops-profiles
+    keywords:
+    - grafana
+    - tracing
+    - metrics
+    - infrastructure
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: support@weave.works
+      name: Weaveworks
+    name: grafana-tempo
+    sources:
+    - https://charts.bitnami.com/bitnami
+    type: application
+    urls:
+    - https://github.com/murillodigital/gitops-profiles/releases/download/grafana-tempo-0.0.1/grafana-tempo-0.0.1.tgz
+    version: 0.0.1
+  haproxy:
+  - annotations:
+      weave.works/category: Infrastructure
+      weave.works/layer: layer-0
+      weave.works/links: |
+        - name: Chart Sources
+          url: https://charts.bitnami.com/bitnami
+        - name: Upstream Project
+          url: https://github.com/bitnami/containers/tree/main/bitnami/haproxy
+      weave.works/operator: "true"
+      weave.works/profile: haproxy
+      weave.works/profile-ci: |-
+        - "gke"
+        - "kind"
+        - "eks"
+    apiVersion: v2
+    created: "2022-10-17T20:08:29.518475395Z"
+    dependencies:
+    - name: haproxy
+      repository: https://charts.bitnami.com/bitnami
+      version: 0.5.5
+    description: A Weaveworks Helm chart for the haproxy Profile
+    digest: bf2dc4b57ad9dd18f161c2938f4a41aca834e38c29e344c07245ec730349b695
+    home: https://github.com/murillodigital/gitops-profiles
+    keywords:
+    - haproxy
+    - proxy
+    - infrastructure
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: support@weave.works
+      name: Weaveworks
+    name: haproxy
+    sources:
+    - https://charts.bitnami.com/bitnami
+    type: application
+    urls:
+    - https://github.com/murillodigital/gitops-profiles/releases/download/haproxy-0.0.1/haproxy-0.0.1.tgz
+    version: 0.0.1
+  haproxy-intel:
+  - annotations:
+      weave.works/category: Infrastructure
+      weave.works/layer: layer-0
+      weave.works/links: |
+        - name: Chart Sources
+          url: https://charts.bitnami.com/bitnami
+        - name: Upstream Project
+          url: https://github.com/bitnami/containers/tree/main/bitnami/haproxy-intel
+      weave.works/operator: "true"
+      weave.works/profile: haproxy-intel
+      weave.works/profile-ci: |-
+        - "gke"
+        - "kind"
+        - "eks"
+    apiVersion: v2
+    created: "2022-10-17T20:08:30.194904182Z"
+    dependencies:
+    - name: haproxy-intel
+      repository: https://charts.bitnami.com/bitnami
+      version: 0.2.6
+    description: A Weaveworks Helm chart for the haproxy-intel Profile
+    digest: 13730def6c6c825be415521ed1f9f1733ea7acb08591d27f464f47522f1e6161
+    home: https://github.com/murillodigital/gitops-profiles
+    keywords:
+    - haproxy
+    - proxy
+    - infrastructure
+    - intel
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: support@weave.works
+      name: Weaveworks
+    name: haproxy-intel
+    sources:
+    - https://charts.bitnami.com/bitnami
+    type: application
+    urls:
+    - https://github.com/murillodigital/gitops-profiles/releases/download/haproxy-intel-0.0.1/haproxy-intel-0.0.1.tgz
+    version: 0.0.1
+  harbor:
+  - annotations:
+      weave.works/category: Infrastructure
+      weave.works/layer: layer-0
+      weave.works/links: |
+        - name: Chart Sources
+          url: https://charts.bitnami.com/bitnami
+        - name: Upstream Project
+          url: https://github.com/bitnami/containers/tree/main/bitnami/harbor-core
+      weave.works/operator: "true"
+      weave.works/profile: harbor
+      weave.works/profile-ci: |-
+        - "gke"
+        - "kind"
+        - "eks"
+    apiVersion: v2
+    created: "2022-10-17T20:08:30.437029085Z"
+    dependencies:
+    - name: harbor
+      repository: https://charts.bitnami.com/bitnami
+      version: 15.2.5
+    description: A Weaveworks Helm chart for the harbor Profile
+    digest: 6321ba416530c65d990daf47d931ffff95cb72ae0b11cb99a907428472ca6c84
+    home: https://github.com/murillodigital/gitops-profiles
+    keywords:
+    - docker
+    - registry
+    - vulnerability
+    - scan
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: support@weave.works
+      name: Weaveworks
+    name: harbor
+    sources:
+    - https://charts.bitnami.com/bitnami
+    type: application
+    urls:
+    - https://github.com/murillodigital/gitops-profiles/releases/download/harbor-0.0.1/harbor-0.0.1.tgz
+    version: 0.0.1
+  influxdb:
+  - annotations:
+      weave.works/category: Database
+      weave.works/layer: layer-0
+      weave.works/links: |
+        - name: Chart Sources
+          url: https://charts.bitnami.com/bitnami
+        - name: Upstream Project
+          url: https://github.com/bitnami/containers/tree/main/bitnami/influxdb
+      weave.works/operator: "true"
+      weave.works/profile: influxdb
+      weave.works/profile-ci: |-
+        - "gke"
+        - "kind"
+        - "eks"
+    apiVersion: v2
+    created: "2022-10-17T20:08:30.67016339Z"
+    dependencies:
+    - name: influxdb
+      repository: https://charts.bitnami.com/bitnami
+      version: 5.4.6
+    description: A Weaveworks Helm chart for the influxdb Profile
+    digest: 3247bc83adde73ab7ae2f61b8700f46a5224468b8b594a661af6d006632396aa
+    home: https://github.com/murillodigital/gitops-profiles
+    keywords:
+    - influxdb
+    - tick
+    - database
+    - timeseries
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: support@weave.works
+      name: Weaveworks
+    name: influxdb
+    sources:
+    - https://charts.bitnami.com/bitnami
+    type: application
+    urls:
+    - https://github.com/murillodigital/gitops-profiles/releases/download/influxdb-0.0.1/influxdb-0.0.1.tgz
+    version: 0.0.1
+  jasperreports:
+  - annotations:
+      weave.works/category: Infrastructure
+      weave.works/layer: layer-0
+      weave.works/links: |
+        - name: Chart Sources
+          url: https://charts.bitnami.com/bitnami
+        - name: Upstream Project
+          url: https://github.com/bitnami/containers/tree/main/bitnami/jasperreports
+      weave.works/operator: "true"
+      weave.works/profile: jasperreports
+      weave.works/profile-ci: |-
+        - "gke"
+        - "kind"
+        - "eks"
+    apiVersion: v2
+    created: "2022-10-17T20:08:30.917174318Z"
+    dependencies:
+    - name: jasperreports
+      repository: https://charts.bitnami.com/bitnami
+      version: 14.3.4
+    description: A Weaveworks Helm chart for the jasperreports Profile
+    digest: cfcd138557e17eb0e76f0c7ac836e9f0a81fa2c2612b8e3d1cdc8a6b7134eb60
+    home: https://github.com/murillodigital/gitops-profiles
+    keywords:
+    - business intelligence
+    - java
+    - jasper
+    - reporting
+    - analytic
+    - visualization
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: support@weave.works
+      name: Weaveworks
+    name: jasperreports
+    sources:
+    - https://charts.bitnami.com/bitnami
+    type: application
+    urls:
+    - https://github.com/murillodigital/gitops-profiles/releases/download/jasperreports-0.0.1/jasperreports-0.0.1.tgz
+    version: 0.0.1
+  jenkins:
+  - annotations:
+      weave.works/category: Infrastructure
+      weave.works/layer: layer-0
+      weave.works/links: |
+        - name: Chart Sources
+          url: https://charts.bitnami.com/bitnami
+        - name: Upstream Project
+          url: https://github.com/bitnami/containers/tree/main/bitnami/jenkins
+      weave.works/operator: "true"
+      weave.works/profile: jenkins
+      weave.works/profile-ci: |-
+        - "gke"
+        - "kind"
+        - "eks"
+    apiVersion: v2
+    created: "2022-10-17T20:08:31.145696616Z"
+    dependencies:
+    - name: jenkins
+      repository: https://charts.bitnami.com/bitnami
+      version: 11.0.6
+    description: A Weaveworks Helm chart for the jenkins Profile
+    digest: 81df7e58f1cf027d599faf1bc011e2163fa221d94af9a8d3dfb78066edbe89b7
+    home: https://github.com/murillodigital/gitops-profiles
+    keywords:
+    - jenkins
+    - ci
+    - cd
+    - http
+    - web
+    - application
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: support@weave.works
+      name: Weaveworks
+    name: jenkins
+    sources:
+    - https://charts.bitnami.com/bitnami
+    type: application
+    urls:
+    - https://github.com/murillodigital/gitops-profiles/releases/download/jenkins-0.0.1/jenkins-0.0.1.tgz
+    version: 0.0.1
+  joomla:
+  - annotations:
+      weave.works/category: CMS
+      weave.works/layer: layer-0
+      weave.works/links: |
+        - name: Chart Sources
+          url: https://charts.bitnami.com/bitnami
+        - name: Upstream Project
+          url: https://github.com/bitnami/containers/tree/main/bitnami/joomla
+      weave.works/operator: "true"
+      weave.works/profile: joomla
+      weave.works/profile-ci: |-
+        - "gke"
+        - "kind"
+        - "eks"
+    apiVersion: v2
+    created: "2022-10-17T20:08:31.382606172Z"
+    dependencies:
+    - name: joomla
+      repository: https://charts.bitnami.com/bitnami
+      version: 13.3.7
+    description: A Weaveworks Helm chart for the joomla Profile
+    digest: dd976b897a70525d6e2fdd15704cdae4c72375d83eb9978b4ca6c99cd8277a4b
+    home: https://github.com/murillodigital/gitops-profiles
+    keywords:
+    - joomla
+    - cms
+    - blog
+    - http
+    - php
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: support@weave.works
+      name: Weaveworks
+    name: joomla
+    sources:
+    - https://charts.bitnami.com/bitnami
+    type: application
+    urls:
+    - https://github.com/murillodigital/gitops-profiles/releases/download/joomla-0.0.1/joomla-0.0.1.tgz
+    version: 0.0.1
+  jupyterhub:
+  - annotations:
+      weave.works/category: MachineLearning
+      weave.works/layer: layer-0
+      weave.works/links: |
+        - name: Chart Sources
+          url: https://charts.bitnami.com/bitnami
+        - name: Upstream Project
+          url: https://github.com/bitnami/containers/tree/main/bitnami/jupyterhub
+      weave.works/operator: "true"
+      weave.works/profile: jupyterhub
+      weave.works/profile-ci: |-
+        - "gke"
+        - "kind"
+        - "eks"
+    apiVersion: v2
+    created: "2022-10-17T20:08:31.644686503Z"
+    dependencies:
+    - name: jupyterhub
+      repository: https://charts.bitnami.com/bitnami
+      version: 2.0.1
+    description: A Weaveworks Helm chart for the jupyterhub Profile
+    digest: 016da19bfc48c5142d0abb294d2476fe2594b5051e826ed0c52db017476d103b
+    home: https://github.com/murillodigital/gitops-profiles
+    keywords:
+    - python
+    - scientific
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: support@weave.works
+      name: Weaveworks
+    name: jupyterhub
+    sources:
+    - https://charts.bitnami.com/bitnami
+    type: application
+    urls:
+    - https://github.com/murillodigital/gitops-profiles/releases/download/jupyterhub-0.0.1/jupyterhub-0.0.1.tgz
+    version: 0.0.1
+  kafka:
+  - annotations:
+      weave.works/category: Infrastructure
+      weave.works/layer: layer-0
+      weave.works/links: |
+        - name: Chart Sources
+          url: https://charts.bitnami.com/bitnami
+        - name: Upstream Project
+          url: https://github.com/bitnami/containers/tree/main/bitnami/kafka
+      weave.works/operator: "true"
+      weave.works/profile: kafka
+      weave.works/profile-ci: |-
+        - "gke"
+        - "kind"
+        - "eks"
+    apiVersion: v2
+    created: "2022-10-17T20:08:31.899547153Z"
+    dependencies:
+    - name: kafka
+      repository: https://charts.bitnami.com/bitnami
+      version: 19.0.0
+    description: A Weaveworks Helm chart for the kafka Profile
+    digest: 2d4ab03708589e28b0bbe961b7bd988af6e9031a4fa39429934fc25842437b47
+    home: https://github.com/murillodigital/gitops-profiles
+    keywords:
+    - kafka
+    - zookeeper
+    - streaming
+    - producer
+    - consumer
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: support@weave.works
+      name: Weaveworks
+    name: kafka
+    sources:
+    - https://charts.bitnami.com/bitnami
+    type: application
+    urls:
+    - https://github.com/murillodigital/gitops-profiles/releases/download/kafka-0.0.1/kafka-0.0.1.tgz
+    version: 0.0.1
+  keycloak:
+  - annotations:
+      weave.works/category: DeveloperTools
+      weave.works/layer: layer-0
+      weave.works/links: |
+        - name: Chart Sources
+          url: https://charts.bitnami.com/bitnami
+        - name: Upstream Project
+          url: https://github.com/bitnami/containers/tree/main/bitnami/keycloak
+      weave.works/operator: "true"
+      weave.works/profile: keycloak
+      weave.works/profile-ci: |-
+        - "gke"
+        - "kind"
+        - "eks"
+    apiVersion: v2
+    created: "2022-10-17T20:08:32.134738195Z"
+    dependencies:
+    - name: keycloak
+      repository: https://charts.bitnami.com/bitnami
+      version: 10.1.5
+    description: A Weaveworks Helm chart for the keycloak Profile
+    digest: 283557cf309b59e2fad005a2d3d8af5a8ce7d2c46bc54cdbefc18fe870af1c0b
+    home: https://github.com/murillodigital/gitops-profiles
+    keywords:
+    - keycloak
+    - access-management
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: support@weave.works
+      name: Weaveworks
+    name: keycloak
+    sources:
+    - https://charts.bitnami.com/bitnami
+    type: application
+    urls:
+    - https://github.com/murillodigital/gitops-profiles/releases/download/keycloak-0.0.1/keycloak-0.0.1.tgz
+    version: 0.0.1
+  kiam:
+  - annotations:
+      weave.works/category: Infrastructure
+      weave.works/layer: layer-0
+      weave.works/links: |
+        - name: Chart Sources
+          url: https://charts.bitnami.com/bitnami
+        - name: Upstream Project
+          url: https://github.com/bitnami/containers/tree/main/bitnami/kiam
+      weave.works/operator: "true"
+      weave.works/profile: kiam
+      weave.works/profile-ci: |-
+        - "gke"
+        - "kind"
+        - "eks"
+    apiVersion: v2
+    created: "2022-10-17T20:08:32.368258425Z"
+    dependencies:
+    - name: kiam
+      repository: https://charts.bitnami.com/bitnami
+      version: 1.1.4
+    description: A Weaveworks Helm chart for the kiam Profile
+    digest: f22837eaf9a4079229419866c4b153b223460c29d37cb3338ab1265683483dec
+    home: https://github.com/murillodigital/gitops-profiles
+    keywords:
+    - aws
+    - iam
+    - security
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: support@weave.works
+      name: Weaveworks
+    name: kiam
+    sources:
+    - https://charts.bitnami.com/bitnami
+    type: application
+    urls:
+    - https://github.com/murillodigital/gitops-profiles/releases/download/kiam-0.0.1/kiam-0.0.1.tgz
+    version: 0.0.1
+  kibana:
+  - annotations:
+      weave.works/category: Analytics
+      weave.works/layer: layer-0
+      weave.works/links: |
+        - name: Chart Sources
+          url: https://charts.bitnami.com/bitnami
+        - name: Upstream Project
+          url: https://github.com/bitnami/containers/tree/main/bitnami/kibana
+      weave.works/operator: "true"
+      weave.works/profile: kibana
+      weave.works/profile-ci: |-
+        - "gke"
+        - "kind"
+        - "eks"
+    apiVersion: v2
+    created: "2022-10-17T20:08:32.660905788Z"
+    dependencies:
+    - name: kibana
+      repository: https://charts.bitnami.com/bitnami
+      version: 10.2.6
+    description: A Weaveworks Helm chart for the kibana Profile
+    digest: e6d1a95aa05af2f2eb5e587cb4981e9f3b053aa08be86781a65210c01939aafa
+    home: https://github.com/murillodigital/gitops-profiles
+    keywords:
+    - kibana
+    - analytics
+    - monitoring
+    - metrics
+    - logs
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: support@weave.works
+      name: Weaveworks
+    name: kibana
+    sources:
+    - https://charts.bitnami.com/bitnami
+    type: application
+    urls:
+    - https://github.com/murillodigital/gitops-profiles/releases/download/kibana-0.0.1/kibana-0.0.1.tgz
+    version: 0.0.1
+  kong:
+  - annotations:
+      weave.works/category: Infrastructure
+      weave.works/layer: layer-0
+      weave.works/links: |
+        - name: Chart Sources
+          url: https://charts.bitnami.com/bitnami
+        - name: Upstream Project
+          url: https://github.com/bitnami/containers/tree/main/bitnami/kong
+      weave.works/operator: "true"
+      weave.works/profile: kong
+      weave.works/profile-ci: |-
+        - "gke"
+        - "kind"
+        - "eks"
+    apiVersion: v2
+    created: "2022-10-17T20:08:32.936014685Z"
+    dependencies:
+    - name: kong
+      repository: https://charts.bitnami.com/bitnami
+      version: 7.0.0
+    description: A Weaveworks Helm chart for the kong Profile
+    digest: ccf774243c443692cce07bacd3a6a07988b778fb5e79d5127c1ac4846b435cd0
+    home: https://github.com/murillodigital/gitops-profiles
+    keywords:
+    - kong
+    - ingress
+    - openresty
+    - controller
+    - http
+    - web
+    - www
+    - reverse proxy
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: support@weave.works
+      name: Weaveworks
+    name: kong
+    sources:
+    - https://charts.bitnami.com/bitnami
+    type: application
+    urls:
+    - https://github.com/murillodigital/gitops-profiles/releases/download/kong-0.0.1/kong-0.0.1.tgz
+    version: 0.0.1
+  kube-prometheus:
+  - annotations:
+      weave.works/category: Analytics
+      weave.works/layer: layer-0
+      weave.works/links: |
+        - name: Chart Sources
+          url: https://charts.bitnami.com/bitnami
+        - name: Upstream Project
+          url: https://github.com/bitnami/containers/tree/main/bitnami/prometheus-operator
+      weave.works/operator: "true"
+      weave.works/profile: kube-prometheus
+      weave.works/profile-ci: |-
+        - "gke"
+        - "kind"
+        - "eks"
+    apiVersion: v2
+    created: "2022-10-17T20:08:33.20447874Z"
+    dependencies:
+    - name: kube-prometheus
+      repository: https://charts.bitnami.com/bitnami
+      version: 8.1.11
+    description: A Weaveworks Helm chart for the kube-prometheus Profile
+    digest: f470b5df24b94d4c8ec94b864a15e892811c1632960858a27b744a7856561582
+    home: https://github.com/murillodigital/gitops-profiles
+    keywords:
+    - prometheus
+    - alertmanager
+    - operator
+    - monitoring
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: support@weave.works
+      name: Weaveworks
+    name: kube-prometheus
+    sources:
+    - https://charts.bitnami.com/bitnami
+    type: application
+    urls:
+    - https://github.com/murillodigital/gitops-profiles/releases/download/kube-prometheus-0.0.1/kube-prometheus-0.0.1.tgz
+    version: 0.0.1
+  kube-state-metrics:
+  - annotations:
+      weave.works/category: Analytics
+      weave.works/layer: layer-0
+      weave.works/links: |
+        - name: Chart Sources
+          url: https://charts.bitnami.com/bitnami
+        - name: Upstream Project
+          url: https://github.com/bitnami/containers/tree/main/bitnami/kube-state-metrics
+      weave.works/operator: "true"
+      weave.works/profile: kube-state-metrics
+      weave.works/profile-ci: |-
+        - "gke"
+        - "kind"
+        - "eks"
+    apiVersion: v2
+    created: "2022-10-17T20:08:33.684677307Z"
+    dependencies:
+    - name: kube-state-metrics
+      repository: https://charts.bitnami.com/bitnami
+      version: 3.2.4
+    description: A Weaveworks Helm chart for the kube-state-metrics Profile
+    digest: 12806913c29ad640271a11ff940b742561c4a14dca982da14c27e5ec8f5a142f
+    home: https://github.com/murillodigital/gitops-profiles
+    keywords:
+    - prometheus
+    - kube-state-metrics
+    - monitoring
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: support@weave.works
+      name: Weaveworks
+    name: kube-state-metrics
+    sources:
+    - https://charts.bitnami.com/bitnami
+    type: application
+    urls:
+    - https://github.com/murillodigital/gitops-profiles/releases/download/kube-state-metrics-0.0.1/kube-state-metrics-0.0.1.tgz
+    version: 0.0.1
+  kubeapps:
+  - annotations:
+      weave.works/category: Infrastructure
+      weave.works/layer: layer-0
+      weave.works/links: |
+        - name: Chart Sources
+          url: https://charts.bitnami.com/bitnami
+        - name: Upstream Project
+          url: https://github.com/vmware-tanzu/kubeapps
+      weave.works/operator: "true"
+      weave.works/profile: kubeapps
+      weave.works/profile-ci: |-
+        - "gke"
+        - "kind"
+        - "eks"
+    apiVersion: v2
+    created: "2022-10-17T20:08:33.929028741Z"
+    dependencies:
+    - name: kubeapps
+      repository: https://charts.bitnami.com/bitnami
+      version: 10.3.5
+    description: A Weaveworks Helm chart for the kubeapps Profile
+    digest: c02bf425b43b9c437ac6aeb8cb11c7761cc852cf1404438ed410f6230f8b6a8e
+    home: https://github.com/murillodigital/gitops-profiles
+    keywords:
+    - helm
+    - dashboard
+    - service catalog
+    - deployment
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: support@weave.works
+      name: Weaveworks
+    name: kubeapps
+    sources:
+    - https://charts.bitnami.com/bitnami
+    type: application
+    urls:
+    - https://github.com/murillodigital/gitops-profiles/releases/download/kubeapps-0.0.1/kubeapps-0.0.1.tgz
+    version: 0.0.1
+  kubernetes-event-exporter:
+  - annotations:
+      weave.works/category: Infrastructure
+      weave.works/layer: layer-0
+      weave.works/links: |
+        - name: Chart Sources
+          url: https://charts.bitnami.com/bitnami
+        - name: Upstream Project
+          url: https://github.com/bitnami/containers/tree/main/bitnami/kubernetes-event-exporter
+      weave.works/operator: "true"
+      weave.works/profile: kubernetes-event-exporter
+      weave.works/profile-ci: |-
+        - "gke"
+        - "kind"
+        - "eks"
+    apiVersion: v2
+    created: "2022-10-17T20:08:34.17256512Z"
+    dependencies:
+    - name: kubernetes-event-exporter
+      repository: https://charts.bitnami.com/bitnami
+      version: 2.0.0
+    description: A Weaveworks Helm chart for the kubernetes-event-exporter Profile
+    digest: e27ea04b9f2c1ea83c2d53d44f4f849eef32661f3b856e09af9844354ad5ccd6
+    home: https://github.com/murillodigital/gitops-profiles
+    keywords:
+    - alerting
+    - event exporting
+    - events
+    - kubernetes events
+    - monitoring
+    - observability
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: support@weave.works
+      name: Weaveworks
+    name: kubernetes-event-exporter
+    sources:
+    - https://charts.bitnami.com/bitnami
+    type: application
+    urls:
+    - https://github.com/murillodigital/gitops-profiles/releases/download/kubernetes-event-exporter-0.0.1/kubernetes-event-exporter-0.0.1.tgz
+    version: 0.0.1
+  kubewatch:
+  - annotations:
+      weave.works/category: Infrastructure
+      weave.works/layer: layer-0
+      weave.works/links: |
+        - name: Chart Sources
+          url: https://charts.bitnami.com/bitnami
+        - name: Upstream Project
+          url: https://github.com/bitnami/bitnami-docker-kubewatch
+      weave.works/operator: "true"
+      weave.works/profile: kubewatch
+      weave.works/profile-ci: |-
+        - "gke"
+        - "kind"
+        - "eks"
+    apiVersion: v2
+    created: "2022-10-17T20:08:34.465756019Z"
+    dependencies:
+    - name: kubewatch
+      repository: https://charts.bitnami.com/bitnami
+      version: 3.3.4
+    description: A Weaveworks Helm chart for the kubewatch Profile
+    digest: 259f8e2761943c63a42100f174e39ccfb925b293c5637c74210e91771bae147c
+    home: https://github.com/murillodigital/gitops-profiles
+    keywords:
+    - kubernetes
+    - slack
+    - hipchat
+    - mattermost
+    - flock
+    - msteams
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: support@weave.works
+      name: Weaveworks
+    name: kubewatch
+    sources:
+    - https://charts.bitnami.com/bitnami
+    type: application
+    urls:
+    - https://github.com/murillodigital/gitops-profiles/releases/download/kubewatch-0.0.1/kubewatch-0.0.1.tgz
+    version: 0.0.1
+  logstash:
+  - annotations:
+      weave.works/category: LogManagement
+      weave.works/layer: layer-0
+      weave.works/links: |
+        - name: Chart Sources
+          url: https://charts.bitnami.com/bitnami
+        - name: Upstream Project
+          url: https://github.com/bitnami/containers/tree/main/bitnami/logstash
+      weave.works/operator: "true"
+      weave.works/profile: logstash
+      weave.works/profile-ci: |-
+        - "gke"
+        - "kind"
+        - "eks"
+    apiVersion: v2
+    created: "2022-10-17T20:08:34.790885253Z"
+    dependencies:
+    - name: logstash
+      repository: https://charts.bitnami.com/bitnami
+      version: 5.1.5
+    description: A Weaveworks Helm chart for the logstash Profile
+    digest: 7ab6114d6ddf4a82b4c8c09752b36fe8a9bb949a5273e680f0b4835082abefe2
+    home: https://github.com/murillodigital/gitops-profiles
+    keywords:
+    - logstash
+    - logging
+    - elk
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: support@weave.works
+      name: Weaveworks
+    name: logstash
+    sources:
+    - https://charts.bitnami.com/bitnami
+    type: application
+    urls:
+    - https://github.com/murillodigital/gitops-profiles/releases/download/logstash-0.0.1/logstash-0.0.1.tgz
+    version: 0.0.1
   loki:
   - annotations:
       weave.works/category: observability
@@ -228,7 +2167,88 @@ entries:
     urls:
     - https://github.com/murillodigital/gitops-profiles/releases/download/loki-0.0.2/loki-0.0.2.tgz
     version: 0.0.2
+  magento:
+  - annotations:
+      weave.works/category: E-Commerce
+      weave.works/layer: layer-0
+      weave.works/links: |
+        - name: Chart Sources
+          url: https://charts.bitnami.com/bitnami
+        - name: Upstream Project
+          url: https://github.com/bitnami/containers/tree/main/bitnami/magento
+      weave.works/operator: "true"
+      weave.works/profile: magento
+      weave.works/profile-ci: |-
+        - "gke"
+        - "kind"
+        - "eks"
+    apiVersion: v2
+    created: "2022-10-17T20:08:35.09197408Z"
+    dependencies:
+    - name: magento
+      repository: https://charts.bitnami.com/bitnami
+      version: 21.1.7
+    description: A Weaveworks Helm chart for the magento Profile
+    digest: 4a1db80d515e09cee5c3494e51c08d52c2182b68c7ec0d6bf414e0cc620f27e6
+    home: https://github.com/murillodigital/gitops-profiles
+    keywords:
+    - magento
+    - e-commerce
+    - http
+    - web
+    - php
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: support@weave.works
+      name: Weaveworks
+    name: magento
+    sources:
+    - https://charts.bitnami.com/bitnami
+    type: application
+    urls:
+    - https://github.com/murillodigital/gitops-profiles/releases/download/magento-0.0.1/magento-0.0.1.tgz
+    version: 0.0.1
   mariadb:
+  - annotations:
+      weave.works/category: Database
+      weave.works/layer: layer-0
+      weave.works/links: |
+        - name: Chart Sources
+          url: https://charts.bitnami.com/bitnami
+        - name: Upstream Project
+          url: https://github.com/bitnami/containers/tree/main/bitnami/mariadb
+      weave.works/operator: "true"
+      weave.works/profile: mariadb
+      weave.works/profile-ci: |-
+        - "gke"
+        - "kind"
+        - "eks"
+    apiVersion: v2
+    created: "2022-10-17T20:08:35.34450236Z"
+    dependencies:
+    - name: mariadb
+      repository: https://charts.bitnami.com/bitnami
+      version: 11.3.3
+    description: A Weaveworks Helm chart for the mariadb Profile
+    digest: 444d0cfda6a861b2275b1729fb86ae9c1da846911180b9800475b5b920d39798
+    home: https://github.com/murillodigital/gitops-profiles
+    keywords:
+    - mariadb
+    - mysql
+    - database
+    - sql
+    - prometheus
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: support@weave.works
+      name: Weaveworks
+    name: mariadb
+    sources:
+    - https://charts.bitnami.com/bitnami
+    type: application
+    urls:
+    - https://github.com/murillodigital/gitops-profiles/releases/download/mariadb-0.0.4/mariadb-0.0.4.tgz
+    version: 0.0.4
   - annotations:
       weave.works/category: data
       weave.works/layer: layer-0
@@ -307,7 +2327,1355 @@ entries:
     urls:
     - https://github.com/murillodigital/gitops-profiles/releases/download/mariadb-0.0.2/mariadb-0.0.2.tgz
     version: 0.0.2
+  mariadb-galera:
+  - annotations:
+      weave.works/category: Database
+      weave.works/layer: layer-0
+      weave.works/links: |
+        - name: Chart Sources
+          url: https://charts.bitnami.com/bitnami
+        - name: Upstream Project
+          url: https://github.com/bitnami/containers/tree/main/bitnami/mariadb-galera
+      weave.works/operator: "true"
+      weave.works/profile: mariadb-galera
+      weave.works/profile-ci: |-
+        - "gke"
+        - "kind"
+        - "eks"
+    apiVersion: v2
+    created: "2022-10-17T20:08:35.592393631Z"
+    dependencies:
+    - name: mariadb-galera
+      repository: https://charts.bitnami.com/bitnami
+      version: 7.4.5
+    description: A Weaveworks Helm chart for the mariadb-galera Profile
+    digest: 1e4318b53f8cf29586719c53d9ea8f082ced62462d10b9ff80a39f03bec49880
+    home: https://github.com/murillodigital/gitops-profiles
+    keywords:
+    - mariadb
+    - mysql
+    - database
+    - sql
+    - prometheus
+    - galera
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: support@weave.works
+      name: Weaveworks
+    name: mariadb-galera
+    sources:
+    - https://charts.bitnami.com/bitnami
+    type: application
+    urls:
+    - https://github.com/murillodigital/gitops-profiles/releases/download/mariadb-galera-0.0.1/mariadb-galera-0.0.1.tgz
+    version: 0.0.1
+  matomo:
+  - annotations:
+      weave.works/category: Analytics
+      weave.works/layer: layer-0
+      weave.works/links: |
+        - name: Chart Sources
+          url: https://charts.bitnami.com/bitnami
+        - name: Upstream Project
+          url: https://github.com/bitnami/containers/tree/main/bitnami/matomo
+      weave.works/operator: "true"
+      weave.works/profile: matomo
+      weave.works/profile-ci: |-
+        - "gke"
+        - "kind"
+        - "eks"
+    apiVersion: v2
+    created: "2022-10-17T20:08:35.83218116Z"
+    dependencies:
+    - name: matomo
+      repository: https://charts.bitnami.com/bitnami
+      version: 0.2.9
+    description: A Weaveworks Helm chart for the matomo Profile
+    digest: dbbe4433562b9c5143fe40b3c4e34b7f85c265227396c93a361dd51488fb4dce
+    home: https://github.com/murillodigital/gitops-profiles
+    keywords:
+    - matomo
+    - analytics
+    - http
+    - web
+    - application
+    - php
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: support@weave.works
+      name: Weaveworks
+    name: matomo
+    sources:
+    - https://charts.bitnami.com/bitnami
+    type: application
+    urls:
+    - https://github.com/murillodigital/gitops-profiles/releases/download/matomo-0.0.1/matomo-0.0.1.tgz
+    version: 0.0.1
+  mediawiki:
+  - annotations:
+      weave.works/category: Wiki
+      weave.works/layer: layer-0
+      weave.works/links: |
+        - name: Chart Sources
+          url: https://charts.bitnami.com/bitnami
+        - name: Upstream Project
+          url: https://github.com/bitnami/containers/tree/main/bitnami/mediawiki
+      weave.works/operator: "true"
+      weave.works/profile: mediawiki
+      weave.works/profile-ci: |-
+        - "gke"
+        - "kind"
+        - "eks"
+    apiVersion: v2
+    created: "2022-10-17T20:08:36.094086267Z"
+    dependencies:
+    - name: mediawiki
+      repository: https://charts.bitnami.com/bitnami
+      version: 14.3.7
+    description: A Weaveworks Helm chart for the mediawiki Profile
+    digest: f4766d422c7d7b52879b5721af471c97236e14e128717de5ca4ed1e6d1ca8662
+    home: https://github.com/murillodigital/gitops-profiles
+    keywords:
+    - mediawiki
+    - wiki
+    - http
+    - web
+    - application
+    - php
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: support@weave.works
+      name: Weaveworks
+    name: mediawiki
+    sources:
+    - https://charts.bitnami.com/bitnami
+    type: application
+    urls:
+    - https://github.com/murillodigital/gitops-profiles/releases/download/mediawiki-0.0.1/mediawiki-0.0.1.tgz
+    version: 0.0.1
+  memcached:
+  - annotations:
+      weave.works/category: Infrastructure
+      weave.works/layer: layer-0
+      weave.works/links: |
+        - name: Chart Sources
+          url: https://charts.bitnami.com/bitnami
+        - name: Upstream Project
+          url: https://github.com/bitnami/containers/tree/main/bitnami/memcached
+      weave.works/operator: "true"
+      weave.works/profile: memcached
+      weave.works/profile-ci: |-
+        - "gke"
+        - "kind"
+        - "eks"
+    apiVersion: v2
+    created: "2022-10-17T20:08:36.321047939Z"
+    dependencies:
+    - name: memcached
+      repository: https://charts.bitnami.com/bitnami
+      version: 6.2.7
+    description: A Weaveworks Helm chart for the memcached Profile
+    digest: 532ff45341b68aabac90758405f94eb0038acdb65223e39589aa6d42f5b9b0b7
+    home: https://github.com/murillodigital/gitops-profiles
+    keywords:
+    - memcached
+    - cache
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: support@weave.works
+      name: Weaveworks
+    name: memcached
+    sources:
+    - https://charts.bitnami.com/bitnami
+    type: application
+    urls:
+    - https://github.com/murillodigital/gitops-profiles/releases/download/memcached-0.0.1/memcached-0.0.1.tgz
+    version: 0.0.1
+  metallb:
+  - annotations:
+      weave.works/category: Infrastructure
+      weave.works/layer: layer-0
+      weave.works/links: |
+        - name: Chart Sources
+          url: https://charts.bitnami.com/bitnami
+        - name: Upstream Project
+          url: https://github.com/metallb/metallb
+      weave.works/operator: "true"
+      weave.works/profile: metallb
+      weave.works/profile-ci: |-
+        - "gke"
+        - "kind"
+        - "eks"
+    apiVersion: v2
+    created: "2022-10-17T20:08:36.59019133Z"
+    dependencies:
+    - name: metallb
+      repository: https://charts.bitnami.com/bitnami
+      version: 4.1.7
+    description: A Weaveworks Helm chart for the metallb Profile
+    digest: eb83f22d4d6864e3f876e44e3ece34646a49c5b1b6775b2a768f46a5724c7419
+    home: https://github.com/murillodigital/gitops-profiles
+    keywords:
+    - load-balancer
+    - balancer
+    - lb
+    - bgp
+    - arp
+    - vrrp
+    - vip
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: support@weave.works
+      name: Weaveworks
+    name: metallb
+    sources:
+    - https://charts.bitnami.com/bitnami
+    type: application
+    urls:
+    - https://github.com/murillodigital/gitops-profiles/releases/download/metallb-0.0.1/metallb-0.0.1.tgz
+    version: 0.0.1
+  metrics-server:
+  - annotations:
+      weave.works/category: Analytics
+      weave.works/layer: layer-0
+      weave.works/links: |
+        - name: Chart Sources
+          url: https://charts.bitnami.com/bitnami
+        - name: Upstream Project
+          url: https://github.com/bitnami/containers/tree/main/bitnami/metrics-server
+      weave.works/operator: "true"
+      weave.works/profile: metrics-server
+      weave.works/profile-ci: |-
+        - "gke"
+        - "kind"
+        - "eks"
+    apiVersion: v2
+    created: "2022-10-17T20:08:36.807837179Z"
+    dependencies:
+    - name: metrics-server
+      repository: https://charts.bitnami.com/bitnami
+      version: 6.2.1
+    description: A Weaveworks Helm chart for the metrics-server Profile
+    digest: 8618209bde2fbf1497f8e90e1b9842131bf49bee13aa264f6c31a871e5d4613b
+    home: https://github.com/murillodigital/gitops-profiles
+    keywords:
+    - metrics-server
+    - cluster
+    - metrics
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: support@weave.works
+      name: Weaveworks
+    name: metrics-server
+    sources:
+    - https://charts.bitnami.com/bitnami
+    type: application
+    urls:
+    - https://github.com/murillodigital/gitops-profiles/releases/download/metrics-server-0.0.1/metrics-server-0.0.1.tgz
+    version: 0.0.1
+  minio:
+  - annotations:
+      weave.works/category: Infrastructure
+      weave.works/layer: layer-0
+      weave.works/links: |
+        - name: Chart Sources
+          url: https://charts.bitnami.com/bitnami
+        - name: Upstream Project
+          url: https://github.com/bitnami/containers/tree/main/bitnami/minio
+      weave.works/operator: "true"
+      weave.works/profile: minio
+      weave.works/profile-ci: |-
+        - "gke"
+        - "kind"
+        - "eks"
+    apiVersion: v2
+    created: "2022-10-17T20:08:37.054399461Z"
+    dependencies:
+    - name: minio
+      repository: https://charts.bitnami.com/bitnami
+      version: 11.10.8
+    description: A Weaveworks Helm chart for the minio Profile
+    digest: 23850250e027b3c5a5519c4aaffe069f538bbce12b393ab0c3e42b5a782d1e99
+    home: https://github.com/murillodigital/gitops-profiles
+    keywords:
+    - minio
+    - storage
+    - object-storage
+    - s3
+    - cluster
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: support@weave.works
+      name: Weaveworks
+    name: minio
+    sources:
+    - https://charts.bitnami.com/bitnami
+    type: application
+    urls:
+    - https://github.com/murillodigital/gitops-profiles/releases/download/minio-0.0.1/minio-0.0.1.tgz
+    version: 0.0.1
+  mongodb:
+  - annotations:
+      weave.works/category: Database
+      weave.works/layer: layer-0
+      weave.works/links: |
+        - name: Chart Sources
+          url: https://charts.bitnami.com/bitnami
+        - name: Upstream Project
+          url: https://github.com/bitnami/containers/tree/main/bitnami/mongodb
+      weave.works/operator: "true"
+      weave.works/profile: mongodb
+      weave.works/profile-ci: |-
+        - "gke"
+        - "kind"
+        - "eks"
+    apiVersion: v2
+    created: "2022-10-17T20:08:37.298181757Z"
+    dependencies:
+    - name: mongodb
+      repository: https://charts.bitnami.com/bitnami
+      version: 13.1.7
+    description: A Weaveworks Helm chart for the mongodb Profile
+    digest: a665f3313a250fab7bc8f1392d4f36a0532940f72b52d978df4498bd30cbc869
+    home: https://github.com/murillodigital/gitops-profiles
+    keywords:
+    - mongodb
+    - database
+    - nosql
+    - cluster
+    - replicaset
+    - replication
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: support@weave.works
+      name: Weaveworks
+    name: mongodb
+    sources:
+    - https://charts.bitnami.com/bitnami
+    type: application
+    urls:
+    - https://github.com/murillodigital/gitops-profiles/releases/download/mongodb-0.0.4/mongodb-0.0.4.tgz
+    version: 0.0.4
+  mongodb-sharded:
+  - annotations:
+      weave.works/category: Database
+      weave.works/layer: layer-0
+      weave.works/links: |
+        - name: Chart Sources
+          url: https://charts.bitnami.com/bitnami
+        - name: Upstream Project
+          url: https://github.com/bitnami/containers/tree/main/bitnami/mongodb-sharded
+      weave.works/operator: "true"
+      weave.works/profile: mongodb-sharded
+      weave.works/profile-ci: |-
+        - "gke"
+        - "kind"
+        - "eks"
+    apiVersion: v2
+    created: "2022-10-17T20:08:37.540231637Z"
+    dependencies:
+    - name: mongodb-sharded
+      repository: https://charts.bitnami.com/bitnami
+      version: 6.1.6
+    description: A Weaveworks Helm chart for the mongodb-sharded Profile
+    digest: 44eff2996336f3587defa10cf753be76cb4fa3b346bb85467af9077d59840a0a
+    home: https://github.com/murillodigital/gitops-profiles
+    keywords:
+    - mongodb
+    - database
+    - nosql
+    - cluster
+    - replicaset
+    - replication
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: support@weave.works
+      name: Weaveworks
+    name: mongodb-sharded
+    sources:
+    - https://charts.bitnami.com/bitnami
+    type: application
+    urls:
+    - https://github.com/murillodigital/gitops-profiles/releases/download/mongodb-sharded-0.0.1/mongodb-sharded-0.0.1.tgz
+    version: 0.0.1
+  moodle:
+  - annotations:
+      weave.works/category: E-Learning
+      weave.works/layer: layer-0
+      weave.works/links: |
+        - name: Chart Sources
+          url: https://charts.bitnami.com/bitnami
+        - name: Upstream Project
+          url: https://github.com/bitnami/containers/tree/main/bitnami/moodle
+      weave.works/operator: "true"
+      weave.works/profile: moodle
+      weave.works/profile-ci: |-
+        - "gke"
+        - "kind"
+        - "eks"
+    apiVersion: v2
+    created: "2022-10-17T20:08:37.78098773Z"
+    dependencies:
+    - name: moodle
+      repository: https://charts.bitnami.com/bitnami
+      version: 14.3.0
+    description: A Weaveworks Helm chart for the moodle Profile
+    digest: 163a7713b22fde9c8a7cedaccd21bfb0d6b91dd5b48049de940898c7a085231f
+    home: https://github.com/murillodigital/gitops-profiles
+    keywords:
+    - moodle
+    - learning
+    - php
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: support@weave.works
+      name: Weaveworks
+    name: moodle
+    sources:
+    - https://charts.bitnami.com/bitnami
+    type: application
+    urls:
+    - https://github.com/murillodigital/gitops-profiles/releases/download/moodle-0.0.1/moodle-0.0.1.tgz
+    version: 0.0.1
+  mxnet:
+  - annotations:
+      weave.works/category: MachineLearning
+      weave.works/layer: layer-0
+      weave.works/links: |
+        - name: Chart Sources
+          url: https://charts.bitnami.com/bitnami
+        - name: Upstream Project
+          url: https://github.com/bitnami/containers/tree/main/bitnami/mxnet
+      weave.works/operator: "true"
+      weave.works/profile: mxnet
+      weave.works/profile-ci: |-
+        - "gke"
+        - "kind"
+        - "eks"
+    apiVersion: v2
+    created: "2022-10-17T20:08:38.023657552Z"
+    dependencies:
+    - name: mxnet
+      repository: https://charts.bitnami.com/bitnami
+      version: 3.1.5
+    description: A Weaveworks Helm chart for the mxnet Profile
+    digest: 40b3531b1dd7bd6e600e36333705f4faa81b5a9ba3edc86462da20bcf561dc9a
+    home: https://github.com/murillodigital/gitops-profiles
+    keywords:
+    - mxnet
+    - python
+    - machine
+    - learning
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: support@weave.works
+      name: Weaveworks
+    name: mxnet
+    sources:
+    - https://charts.bitnami.com/bitnami
+    type: application
+    urls:
+    - https://github.com/murillodigital/gitops-profiles/releases/download/mxnet-0.0.1/mxnet-0.0.1.tgz
+    version: 0.0.1
+  mysql:
+  - annotations:
+      weave.works/category: Database
+      weave.works/layer: layer-0
+      weave.works/links: |
+        - name: Chart Sources
+          url: https://charts.bitnami.com/bitnami
+        - name: Upstream Project
+          url: https://github.com/bitnami/containers/tree/main/bitnami/mysql
+      weave.works/operator: "true"
+      weave.works/profile: mysql
+      weave.works/profile-ci: |-
+        - "gke"
+        - "kind"
+        - "eks"
+    apiVersion: v2
+    created: "2022-10-17T20:08:38.243418842Z"
+    dependencies:
+    - name: mysql
+      repository: https://charts.bitnami.com/bitnami
+      version: 9.4.1
+    description: A Weaveworks Helm chart for the mysql Profile
+    digest: 2e6744bc45f6c5be93ffbef948f1fd38d272cee826e67e8ac6b20c4ffed1b76d
+    home: https://github.com/murillodigital/gitops-profiles
+    keywords:
+    - mysql
+    - database
+    - sql
+    - cluster
+    - high availability
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: support@weave.works
+      name: Weaveworks
+    name: mysql
+    sources:
+    - https://charts.bitnami.com/bitnami
+    type: application
+    urls:
+    - https://github.com/murillodigital/gitops-profiles/releases/download/mysql-0.0.1/mysql-0.0.1.tgz
+    version: 0.0.1
+  nats:
+  - annotations:
+      weave.works/category: Infrastructure
+      weave.works/layer: layer-0
+      weave.works/links: |
+        - name: Chart Sources
+          url: https://charts.bitnami.com/bitnami
+        - name: Upstream Project
+          url: https://github.com/bitnami/containers/tree/main/bitnami/nats
+      weave.works/operator: "true"
+      weave.works/profile: nats
+      weave.works/profile-ci: |-
+        - "gke"
+        - "kind"
+        - "eks"
+    apiVersion: v2
+    created: "2022-10-17T20:08:38.478616864Z"
+    dependencies:
+    - name: nats
+      repository: https://charts.bitnami.com/bitnami
+      version: 7.4.9
+    description: A Weaveworks Helm chart for the nats Profile
+    digest: cd4b2c6f1b053fb7c873ae6bef1c8b074d964f995154d17a26b960ea0cb4552e
+    home: https://github.com/murillodigital/gitops-profiles
+    keywords:
+    - nats
+    - messaging
+    - addressing
+    - discovery
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: support@weave.works
+      name: Weaveworks
+    name: nats
+    sources:
+    - https://charts.bitnami.com/bitnami
+    type: application
+    urls:
+    - https://github.com/murillodigital/gitops-profiles/releases/download/nats-0.0.1/nats-0.0.1.tgz
+    version: 0.0.1
+  nginx:
+  - annotations:
+      weave.works/category: Infrastructure
+      weave.works/layer: layer-0
+      weave.works/links: |
+        - name: Chart Sources
+          url: https://charts.bitnami.com/bitnami
+        - name: Upstream Project
+          url: https://github.com/bitnami/containers/tree/main/bitnami/nginx
+      weave.works/operator: "true"
+      weave.works/profile: nginx
+      weave.works/profile-ci: |-
+        - "gke"
+        - "kind"
+        - "eks"
+    apiVersion: v2
+    created: "2022-10-17T20:08:38.738665948Z"
+    dependencies:
+    - name: nginx
+      repository: https://charts.bitnami.com/bitnami
+      version: 13.2.10
+    description: A Weaveworks Helm chart for the nginx Profile
+    digest: 61d248c786b7ece7fd864d44c86260a34416becb6876543d197159458d08ed52
+    home: https://github.com/murillodigital/gitops-profiles
+    keywords:
+    - nginx
+    - http
+    - web
+    - www
+    - reverse proxy
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: support@weave.works
+      name: Weaveworks
+    name: nginx
+    sources:
+    - https://charts.bitnami.com/bitnami
+    type: application
+    urls:
+    - https://github.com/murillodigital/gitops-profiles/releases/download/nginx-0.0.1/nginx-0.0.1.tgz
+    version: 0.0.1
+  nginx-ingress-controller:
+  - annotations:
+      weave.works/category: Infrastructure
+      weave.works/layer: layer-0
+      weave.works/links: |
+        - name: Chart Sources
+          url: https://charts.bitnami.com/bitnami
+        - name: Upstream Project
+          url: https://github.com/bitnami/containers/tree/main/bitnami/nginx-ingress-controller
+      weave.works/operator: "true"
+      weave.works/profile: nginx-ingress-controller
+      weave.works/profile-ci: |-
+        - "gke"
+        - "kind"
+        - "eks"
+    apiVersion: v2
+    created: "2022-10-17T20:08:38.966226159Z"
+    dependencies:
+    - name: nginx-ingress-controller
+      repository: https://charts.bitnami.com/bitnami
+      version: 9.3.18
+    description: A Weaveworks Helm chart for the nginx-ingress-controller Profile
+    digest: 685d386526c49ff6450c4eadaf4b54937932636683f3f8090509accc6e21b291
+    home: https://github.com/murillodigital/gitops-profiles
+    keywords:
+    - ingress
+    - nginx
+    - http
+    - web
+    - www
+    - reverse proxy
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: support@weave.works
+      name: Weaveworks
+    name: nginx-ingress-controller
+    sources:
+    - https://charts.bitnami.com/bitnami
+    type: application
+    urls:
+    - https://github.com/murillodigital/gitops-profiles/releases/download/nginx-ingress-controller-0.0.1/nginx-ingress-controller-0.0.1.tgz
+    version: 0.0.1
+  nginx-intel:
+  - annotations:
+      weave.works/category: Infrastructure
+      weave.works/layer: layer-0
+      weave.works/links: |
+        - name: Chart Sources
+          url: https://charts.bitnami.com/bitnami
+        - name: Upstream Project
+          url: https://github.com/bitnami/containers/tree/main/bitnami/nginx-intel
+      weave.works/operator: "true"
+      weave.works/profile: nginx-intel
+      weave.works/profile-ci: |-
+        - "gke"
+        - "kind"
+        - "eks"
+    apiVersion: v2
+    created: "2022-10-17T20:08:39.195844608Z"
+    dependencies:
+    - name: nginx-intel
+      repository: https://charts.bitnami.com/bitnami
+      version: 2.1.9
+    description: A Weaveworks Helm chart for the nginx-intel Profile
+    digest: e474a627df0c6f74c13df16d6e1c44319d73dbd402b76b1a0221c3bc2216d298
+    home: https://github.com/murillodigital/gitops-profiles
+    keywords:
+    - nginx
+    - http
+    - web
+    - www
+    - reverse proxy
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: support@weave.works
+      name: Weaveworks
+    name: nginx-intel
+    sources:
+    - https://charts.bitnami.com/bitnami
+    type: application
+    urls:
+    - https://github.com/murillodigital/gitops-profiles/releases/download/nginx-intel-0.0.1/nginx-intel-0.0.1.tgz
+    version: 0.0.1
+  node:
+  - annotations:
+      weave.works/category: Infrastructure
+      weave.works/layer: layer-0
+      weave.works/links: |
+        - name: Chart Sources
+          url: https://charts.bitnami.com/bitnami
+        - name: Upstream Project
+          url: https://github.com/bitnami/containers/tree/main/bitnami/node
+      weave.works/operator: "true"
+      weave.works/profile: node
+      weave.works/profile-ci: |-
+        - "gke"
+        - "kind"
+        - "eks"
+    apiVersion: v2
+    created: "2022-10-17T20:08:39.449945294Z"
+    dependencies:
+    - name: node
+      repository: https://charts.bitnami.com/bitnami
+      version: 19.1.6
+    description: A Weaveworks Helm chart for the node Profile
+    digest: 8aaa78b83f1acee99f6fc3648618f4b5a40b3c052e313c56072a4f47eb8049a6
+    home: https://github.com/murillodigital/gitops-profiles
+    keywords:
+    - node
+    - javascript
+    - nodejs
+    - git
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: support@weave.works
+      name: Weaveworks
+    name: node
+    sources:
+    - https://charts.bitnami.com/bitnami
+    type: application
+    urls:
+    - https://github.com/murillodigital/gitops-profiles/releases/download/node-0.0.1/node-0.0.1.tgz
+    version: 0.0.1
+  node-exporter:
+  - annotations:
+      weave.works/category: Analytics
+      weave.works/layer: layer-0
+      weave.works/links: |
+        - name: Chart Sources
+          url: https://charts.bitnami.com/bitnami
+        - name: Upstream Project
+          url: https://github.com/bitnami/containers/tree/main/bitnami/node-exporter
+      weave.works/operator: "true"
+      weave.works/profile: node-exporter
+      weave.works/profile-ci: |-
+        - "gke"
+        - "kind"
+        - "eks"
+    apiVersion: v2
+    created: "2022-10-17T20:08:39.703265427Z"
+    dependencies:
+    - name: node-exporter
+      repository: https://charts.bitnami.com/bitnami
+      version: 3.2.1
+    description: A Weaveworks Helm chart for the node-exporter Profile
+    digest: 8fb2f6999985d12b6067ae4b9e6385fee2b3a26c1e7228017ae041576eb37751
+    home: https://github.com/murillodigital/gitops-profiles
+    keywords:
+    - prometheus
+    - node-exporter
+    - monitoring
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: support@weave.works
+      name: Weaveworks
+    name: node-exporter
+    sources:
+    - https://charts.bitnami.com/bitnami
+    type: application
+    urls:
+    - https://github.com/murillodigital/gitops-profiles/releases/download/node-exporter-0.0.1/node-exporter-0.0.1.tgz
+    version: 0.0.1
+  oauth2-proxy:
+  - annotations:
+      weave.works/category: Infrastructure
+      weave.works/layer: layer-0
+      weave.works/links: |
+        - name: Chart Sources
+          url: https://charts.bitnami.com/bitnami
+        - name: Upstream Project
+          url: https://github.com/bitnami/containers/tree/main/bitnami/oauth2-proxy
+      weave.works/operator: "true"
+      weave.works/profile: oauth2-proxy
+      weave.works/profile-ci: |-
+        - "gke"
+        - "kind"
+        - "eks"
+    apiVersion: v2
+    created: "2022-10-17T20:08:39.969895851Z"
+    dependencies:
+    - name: oauth2-proxy
+      repository: https://charts.bitnami.com/bitnami
+      version: 3.3.3
+    description: A Weaveworks Helm chart for the oauth2-proxy Profile
+    digest: 6ee7110dc13b7d253fad885e395d8d6c687a71012f3d4194a265344e358d39d6
+    home: https://github.com/murillodigital/gitops-profiles
+    keywords:
+    - kubernetes
+    - oauth
+    - oauth2
+    - authentication
+    - google
+    - github
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: support@weave.works
+      name: Weaveworks
+    name: oauth2-proxy
+    sources:
+    - https://charts.bitnami.com/bitnami
+    type: application
+    urls:
+    - https://github.com/murillodigital/gitops-profiles/releases/download/oauth2-proxy-0.0.1/oauth2-proxy-0.0.1.tgz
+    version: 0.0.1
+  odoo:
+  - annotations:
+      weave.works/category: CRM
+      weave.works/layer: layer-0
+      weave.works/links: |
+        - name: Chart Sources
+          url: https://charts.bitnami.com/bitnami
+        - name: Upstream Project
+          url: https://github.com/bitnami/containers/tree/main/bitnami/odoo
+      weave.works/operator: "true"
+      weave.works/profile: odoo
+      weave.works/profile-ci: |-
+        - "gke"
+        - "kind"
+        - "eks"
+    apiVersion: v2
+    created: "2022-10-17T20:08:40.197182244Z"
+    dependencies:
+    - name: odoo
+      repository: https://charts.bitnami.com/bitnami
+      version: 21.6.5
+    description: A Weaveworks Helm chart for the odoo Profile
+    digest: 6d6ff8775c9d68c461eef66dc9abe7314d74635777c4abdcb99c5c3a4e0e2844
+    home: https://github.com/murillodigital/gitops-profiles
+    keywords:
+    - odoo
+    - crm
+    - www
+    - http
+    - web
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: support@weave.works
+      name: Weaveworks
+    name: odoo
+    sources:
+    - https://charts.bitnami.com/bitnami
+    type: application
+    urls:
+    - https://github.com/murillodigital/gitops-profiles/releases/download/odoo-0.0.1/odoo-0.0.1.tgz
+    version: 0.0.1
+  opencart:
+  - annotations:
+      weave.works/category: E-Commerce
+      weave.works/layer: layer-0
+      weave.works/links: |
+        - name: Chart Sources
+          url: https://charts.bitnami.com/bitnami
+        - name: Upstream Project
+          url: https://github.com/bitnami/containers/tree/main/bitnami/opencart
+      weave.works/operator: "true"
+      weave.works/profile: opencart
+      weave.works/profile-ci: |-
+        - "gke"
+        - "kind"
+        - "eks"
+    apiVersion: v2
+    created: "2022-10-17T20:08:40.445059514Z"
+    dependencies:
+    - name: opencart
+      repository: https://charts.bitnami.com/bitnami
+      version: 13.0.2
+    description: A Weaveworks Helm chart for the opencart Profile
+    digest: d80263e0f99db675d99ede8907ddf622a908de2681c4e92e47478bfdcd63bb5e
+    home: https://github.com/murillodigital/gitops-profiles
+    keywords:
+    - opencart
+    - e-commerce
+    - http
+    - web
+    - php
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: support@weave.works
+      name: Weaveworks
+    name: opencart
+    sources:
+    - https://charts.bitnami.com/bitnami
+    type: application
+    urls:
+    - https://github.com/murillodigital/gitops-profiles/releases/download/opencart-0.0.1/opencart-0.0.1.tgz
+    version: 0.0.1
+  orangehrm:
+  - annotations:
+      weave.works/category: HumanResourceManagement
+      weave.works/layer: layer-0
+      weave.works/links: |
+        - name: Chart Sources
+          url: https://charts.bitnami.com/bitnami
+        - name: Upstream Project
+          url: https://github.com/bitnami/bitnami-docker-orangehrm
+      weave.works/operator: "true"
+      weave.works/profile: orangehrm
+      weave.works/profile-ci: |-
+        - "gke"
+        - "kind"
+        - "eks"
+    apiVersion: v2
+    created: "2022-10-17T20:08:40.673383476Z"
+    dependencies:
+    - name: orangehrm
+      repository: https://charts.bitnami.com/bitnami
+      version: 11.0.3
+    description: A Weaveworks Helm chart for the orangehrm Profile
+    digest: af6e80c3ea5d79be8feaa0b400ef466993c39609773a5be060d993b30863cbc8
+    home: https://github.com/murillodigital/gitops-profiles
+    keywords:
+    - orangehrm
+    - http
+    - https
+    - web
+    - application
+    - php
+    - human resources
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: support@weave.works
+      name: Weaveworks
+    name: orangehrm
+    sources:
+    - https://charts.bitnami.com/bitnami
+    type: application
+    urls:
+    - https://github.com/murillodigital/gitops-profiles/releases/download/orangehrm-0.0.1/orangehrm-0.0.1.tgz
+    version: 0.0.1
+  osclass:
+  - annotations:
+      weave.works/category: CMS
+      weave.works/layer: layer-0
+      weave.works/links: |
+        - name: Chart Sources
+          url: https://charts.bitnami.com/bitnami
+        - name: Upstream Project
+          url: https://github.com/bitnami/containers/tree/main/bitnami/osclass
+      weave.works/operator: "true"
+      weave.works/profile: osclass
+      weave.works/profile-ci: |-
+        - "gke"
+        - "kind"
+        - "eks"
+    apiVersion: v2
+    created: "2022-10-17T20:08:40.914172172Z"
+    dependencies:
+    - name: osclass
+      repository: https://charts.bitnami.com/bitnami
+      version: 14.2.5
+    description: A Weaveworks Helm chart for the osclass Profile
+    digest: a659785ab4922505139b74dbd4bc5799bf4265fbffe40bc5be080d3bac0f21a4
+    home: https://github.com/murillodigital/gitops-profiles
+    keywords:
+    - osclass
+    - classifieds
+    - http
+    - web
+    - php
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: support@weave.works
+      name: Weaveworks
+    name: osclass
+    sources:
+    - https://charts.bitnami.com/bitnami
+    type: application
+    urls:
+    - https://github.com/murillodigital/gitops-profiles/releases/download/osclass-0.0.1/osclass-0.0.1.tgz
+    version: 0.0.1
+  owncloud:
+  - annotations:
+      weave.works/category: Infrastructure
+      weave.works/layer: layer-0
+      weave.works/links: |
+        - name: Chart Sources
+          url: https://charts.bitnami.com/bitnami
+        - name: Upstream Project
+          url: https://github.com/bitnami/containers/tree/main/bitnami/owncloud
+      weave.works/operator: "true"
+      weave.works/profile: owncloud
+      weave.works/profile-ci: |-
+        - "gke"
+        - "kind"
+        - "eks"
+    apiVersion: v2
+    created: "2022-10-17T20:08:41.18041707Z"
+    dependencies:
+    - name: owncloud
+      repository: https://charts.bitnami.com/bitnami
+      version: 12.2.4
+    description: A Weaveworks Helm chart for the owncloud Profile
+    digest: 3cd185dc117a894c2316fdd12728073edfee1889e9a1d1c6872ce1153c8c647c
+    home: https://github.com/murillodigital/gitops-profiles
+    keywords:
+    - owncloud
+    - storage
+    - http
+    - web
+    - php
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: support@weave.works
+      name: Weaveworks
+    name: owncloud
+    sources:
+    - https://charts.bitnami.com/bitnami
+    type: application
+    urls:
+    - https://github.com/murillodigital/gitops-profiles/releases/download/owncloud-0.0.1/owncloud-0.0.1.tgz
+    version: 0.0.1
+  parse:
+  - annotations:
+      weave.works/category: DeveloperTools
+      weave.works/layer: layer-0
+      weave.works/links: |
+        - name: Chart Sources
+          url: https://charts.bitnami.com/bitnami
+        - name: Upstream Project
+          url: https://github.com/bitnami/containers/tree/main/bitnami/parse
+      weave.works/operator: "true"
+      weave.works/profile: parse
+      weave.works/profile-ci: |-
+        - "gke"
+        - "kind"
+        - "eks"
+    apiVersion: v2
+    created: "2022-10-17T20:08:41.418321873Z"
+    dependencies:
+    - name: parse
+      repository: https://charts.bitnami.com/bitnami
+      version: 19.1.7
+    description: A Weaveworks Helm chart for the parse Profile
+    digest: 9424e312ee164ff2503a10aaf0e9293a2071a58908d6ac3b7c6e020015ee14d4
+    home: https://github.com/murillodigital/gitops-profiles
+    keywords:
+    - parse
+    - backend
+    - serverless
+    - platform
+    - mbaas
+    - mobile
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: support@weave.works
+      name: Weaveworks
+    name: parse
+    sources:
+    - https://charts.bitnami.com/bitnami
+    type: application
+    urls:
+    - https://github.com/murillodigital/gitops-profiles/releases/download/parse-0.0.1/parse-0.0.1.tgz
+    version: 0.0.1
+  phpbb:
+  - annotations:
+      weave.works/category: Forum
+      weave.works/layer: layer-0
+      weave.works/links: |
+        - name: Chart Sources
+          url: https://charts.bitnami.com/bitnami
+        - name: Upstream Project
+          url: https://github.com/bitnami/containers/tree/main/bitnami/phpbb
+      weave.works/operator: "true"
+      weave.works/profile: phpbb
+      weave.works/profile-ci: |-
+        - "gke"
+        - "kind"
+        - "eks"
+    apiVersion: v2
+    created: "2022-10-17T20:08:41.653183867Z"
+    dependencies:
+    - name: phpbb
+      repository: https://charts.bitnami.com/bitnami
+      version: 12.3.6
+    description: A Weaveworks Helm chart for the phpbb Profile
+    digest: 2dfc224fe672c39295e06a89be0a36a0f47a67e3a7a156cfe028415771b04187
+    home: https://github.com/murillodigital/gitops-profiles
+    keywords:
+    - phpbb
+    - forum
+    - http
+    - php
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: support@weave.works
+      name: Weaveworks
+    name: phpbb
+    sources:
+    - https://charts.bitnami.com/bitnami
+    type: application
+    urls:
+    - https://github.com/murillodigital/gitops-profiles/releases/download/phpbb-0.0.1/phpbb-0.0.1.tgz
+    version: 0.0.1
+  phpmyadmin:
+  - annotations:
+      weave.works/category: Infrastructure
+      weave.works/layer: layer-0
+      weave.works/links: |
+        - name: Chart Sources
+          url: https://charts.bitnami.com/bitnami
+        - name: Upstream Project
+          url: https://github.com/bitnami/containers/tree/main/bitnami/phpmyadmin
+      weave.works/operator: "true"
+      weave.works/profile: phpmyadmin
+      weave.works/profile-ci: |-
+        - "gke"
+        - "kind"
+        - "eks"
+    apiVersion: v2
+    created: "2022-10-17T20:08:41.897593976Z"
+    dependencies:
+    - name: phpmyadmin
+      repository: https://charts.bitnami.com/bitnami
+      version: 10.3.5
+    description: A Weaveworks Helm chart for the phpmyadmin Profile
+    digest: ed4256eb8441e72af18db754b9404cff9ad951e1601d3d0f1e2caac8061c115c
+    home: https://github.com/murillodigital/gitops-profiles
+    keywords:
+    - mariadb
+    - mysql
+    - phpmyadmin
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: support@weave.works
+      name: Weaveworks
+    name: phpmyadmin
+    sources:
+    - https://charts.bitnami.com/bitnami
+    type: application
+    urls:
+    - https://github.com/murillodigital/gitops-profiles/releases/download/phpmyadmin-0.0.1/phpmyadmin-0.0.1.tgz
+    version: 0.0.1
+  pinniped:
+  - annotations:
+      weave.works/category: Infrastructure
+      weave.works/layer: layer-0
+      weave.works/links: |
+        - name: Chart Sources
+          url: https://charts.bitnami.com/bitnami
+        - name: Upstream Project
+          url: https://github.com/bitnami/containers/tree/main/bitnami/pinniped
+      weave.works/operator: "true"
+      weave.works/profile: pinniped
+      weave.works/profile-ci: |-
+        - "gke"
+        - "kind"
+        - "eks"
+    apiVersion: v2
+    created: "2022-10-17T20:08:42.141539153Z"
+    dependencies:
+    - name: pinniped
+      repository: https://charts.bitnami.com/bitnami
+      version: 0.4.1
+    description: A Weaveworks Helm chart for the pinniped Profile
+    digest: 6fcb8200f312820c763b75fb4a49e0657c3a6a00f5577e5c84b947101ac71fe4
+    home: https://github.com/murillodigital/gitops-profiles
+    keywords:
+    - identity
+    - infrastructure
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: support@weave.works
+      name: Weaveworks
+    name: pinniped
+    sources:
+    - https://charts.bitnami.com/bitnami
+    type: application
+    urls:
+    - https://github.com/murillodigital/gitops-profiles/releases/download/pinniped-0.0.1/pinniped-0.0.1.tgz
+    version: 0.0.1
+  postgresql:
+  - annotations:
+      weave.works/category: Database
+      weave.works/layer: layer-0
+      weave.works/links: |
+        - name: Chart Sources
+          url: https://charts.bitnami.com/bitnami
+        - name: Upstream Project
+          url: https://github.com/bitnami/containers/tree/main/bitnami/postgresql
+      weave.works/operator: "true"
+      weave.works/profile: postgresql
+      weave.works/profile-ci: |-
+        - "gke"
+        - "kind"
+        - "eks"
+    apiVersion: v2
+    created: "2022-10-17T20:08:42.416408995Z"
+    dependencies:
+    - name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 11.9.8
+    description: A Weaveworks Helm chart for the postgresql Profile
+    digest: 7e77bbce13f9200fc6cbabc883bd5b1db46d787e97f320c8c881d82791f960f3
+    home: https://github.com/murillodigital/gitops-profiles
+    keywords:
+    - postgresql
+    - postgres
+    - database
+    - sql
+    - replication
+    - cluster
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: support@weave.works
+      name: Weaveworks
+    name: postgresql
+    sources:
+    - https://charts.bitnami.com/bitnami
+    type: application
+    urls:
+    - https://github.com/murillodigital/gitops-profiles/releases/download/postgresql-0.0.1/postgresql-0.0.1.tgz
+    version: 0.0.1
+  postgresql-ha:
+  - annotations:
+      weave.works/category: Database
+      weave.works/layer: layer-0
+      weave.works/links: |
+        - name: Chart Sources
+          url: https://charts.bitnami.com/bitnami
+        - name: Upstream Project
+          url: https://github.com/bitnami/containers/tree/main/bitnami/postgresql
+      weave.works/operator: "true"
+      weave.works/profile: postgresql-ha
+      weave.works/profile-ci: |-
+        - "gke"
+        - "kind"
+        - "eks"
+    apiVersion: v2
+    created: "2022-10-17T20:08:42.649576053Z"
+    dependencies:
+    - name: postgresql-ha
+      repository: https://charts.bitnami.com/bitnami
+      version: 9.4.6
+    description: A Weaveworks Helm chart for the postgresql-ha Profile
+    digest: 68f59e8eaca376dc15870a5350639eed6b6ad83fb09e1de3fcb6aa29dfdb13a6
+    home: https://github.com/murillodigital/gitops-profiles
+    keywords:
+    - postgresql
+    - repmgr
+    - pgpool
+    - postgres
+    - database
+    - sql
+    - replication
+    - cluster
+    - high availability
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: support@weave.works
+      name: Weaveworks
+    name: postgresql-ha
+    sources:
+    - https://charts.bitnami.com/bitnami
+    type: application
+    urls:
+    - https://github.com/murillodigital/gitops-profiles/releases/download/postgresql-ha-0.0.1/postgresql-ha-0.0.1.tgz
+    version: 0.0.1
+  prestashop:
+  - annotations:
+      weave.works/category: E-Commerce
+      weave.works/layer: layer-0
+      weave.works/links: |
+        - name: Chart Sources
+          url: https://charts.bitnami.com/bitnami
+        - name: Upstream Project
+          url: https://github.com/bitnami/containers/tree/main/bitnami/prestashop
+      weave.works/operator: "true"
+      weave.works/profile: prestashop
+      weave.works/profile-ci: |-
+        - "gke"
+        - "kind"
+        - "eks"
+    apiVersion: v2
+    created: "2022-10-17T20:08:42.913723579Z"
+    dependencies:
+    - name: prestashop
+      repository: https://charts.bitnami.com/bitnami
+      version: 15.3.5
+    description: A Weaveworks Helm chart for the prestashop Profile
+    digest: c5ea4f842f7a74d0fae8713821e03feffa30f67691d7097345942883a1f25b46
+    home: https://github.com/murillodigital/gitops-profiles
+    keywords:
+    - prestashop
+    - e-commerce
+    - http
+    - web
+    - php
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: support@weave.works
+      name: Weaveworks
+    name: prestashop
+    sources:
+    - https://charts.bitnami.com/bitnami
+    type: application
+    urls:
+    - https://github.com/murillodigital/gitops-profiles/releases/download/prestashop-0.0.1/prestashop-0.0.1.tgz
+    version: 0.0.1
+  pytorch:
+  - annotations:
+      weave.works/category: MachineLearning
+      weave.works/layer: layer-0
+      weave.works/links: |
+        - name: Chart Sources
+          url: https://charts.bitnami.com/bitnami
+        - name: Upstream Project
+          url: https://github.com/bitnami/containers/tree/main/bitnami/pytorch
+      weave.works/operator: "true"
+      weave.works/profile: pytorch
+      weave.works/profile-ci: |-
+        - "gke"
+        - "kind"
+        - "eks"
+    apiVersion: v2
+    created: "2022-10-17T20:08:43.166341935Z"
+    dependencies:
+    - name: pytorch
+      repository: https://charts.bitnami.com/bitnami
+      version: 2.5.7
+    description: A Weaveworks Helm chart for the pytorch Profile
+    digest: 0c76e69daffa18e9cd58ce00e1911daef26f06e3bb0c13ddc2d24c7f0bb74b7c
+    home: https://github.com/murillodigital/gitops-profiles
+    keywords:
+    - pytorch
+    - python
+    - machine
+    - learning
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: support@weave.works
+      name: Weaveworks
+    name: pytorch
+    sources:
+    - https://charts.bitnami.com/bitnami
+    type: application
+    urls:
+    - https://github.com/murillodigital/gitops-profiles/releases/download/pytorch-0.0.1/pytorch-0.0.1.tgz
+    version: 0.0.1
   rabbitmq:
+  - annotations:
+      weave.works/category: Infrastructure
+      weave.works/layer: layer-0
+      weave.works/links: |
+        - name: Chart Sources
+          url: https://charts.bitnami.com/bitnami
+        - name: Upstream Project
+          url: https://github.com/bitnami/containers/tree/main/bitnami/rabbitmq
+      weave.works/operator: "true"
+      weave.works/profile: rabbitmq
+      weave.works/profile-ci: |-
+        - "gke"
+        - "kind"
+        - "eks"
+    apiVersion: v2
+    created: "2022-10-17T20:08:43.415550764Z"
+    dependencies:
+    - name: rabbitmq
+      repository: https://charts.bitnami.com/bitnami
+      version: 11.0.1
+    description: A Weaveworks Helm chart for the rabbitmq Profile
+    digest: d5769c69baeb6a2ec460af1dbc820b70d218490f8989c8edf9adf22651354615
+    home: https://github.com/murillodigital/gitops-profiles
+    keywords:
+    - rabbitmq
+    - message queue
+    - AMQP
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: support@weave.works
+      name: Weaveworks
+    name: rabbitmq
+    sources:
+    - https://charts.bitnami.com/bitnami
+    type: application
+    urls:
+    - https://github.com/murillodigital/gitops-profiles/releases/download/rabbitmq-0.0.4/rabbitmq-0.0.4.tgz
+    version: 0.0.4
   - annotations:
       weave.works/category: data
       weave.works/layer: layer-0
@@ -384,7 +3752,86 @@ entries:
     urls:
     - https://github.com/murillodigital/gitops-profiles/releases/download/rabbitmq-0.0.2/rabbitmq-0.0.2.tgz
     version: 0.0.2
+  rabbitmq-cluster-operator:
+  - annotations:
+      weave.works/category: Infrastructure
+      weave.works/layer: layer-0
+      weave.works/links: |
+        - name: Chart Sources
+          url: https://charts.bitnami.com/bitnami
+        - name: Upstream Project
+          url: https://github.com/bitnami/containers/tree/main/bitnami/rabbitmq-cluster-operator
+      weave.works/operator: "true"
+      weave.works/profile: rabbitmq-cluster-operator
+      weave.works/profile-ci: |-
+        - "gke"
+        - "kind"
+        - "eks"
+    apiVersion: v2
+    created: "2022-10-17T20:08:43.65825706Z"
+    dependencies:
+    - name: rabbitmq-cluster-operator
+      repository: https://charts.bitnami.com/bitnami
+      version: 3.1.0
+    description: A Weaveworks Helm chart for the rabbitmq-cluster-operator Profile
+    digest: 51f30aaaa0e467b9ff2b5e2dba8d2d727c3689dc969795c3736146f142343c84
+    home: https://github.com/murillodigital/gitops-profiles
+    keywords:
+    - rabbitmq
+    - operator
+    - infrastructure
+    - message queue
+    - AMQP
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: support@weave.works
+      name: Weaveworks
+    name: rabbitmq-cluster-operator
+    sources:
+    - https://charts.bitnami.com/bitnami
+    type: application
+    urls:
+    - https://github.com/murillodigital/gitops-profiles/releases/download/rabbitmq-cluster-operator-0.0.1/rabbitmq-cluster-operator-0.0.1.tgz
+    version: 0.0.1
   redis:
+  - annotations:
+      weave.works/category: Database
+      weave.works/layer: layer-0
+      weave.works/links: |
+        - name: Chart Sources
+          url: https://charts.bitnami.com/bitnami
+        - name: Upstream Project
+          url: https://github.com/bitnami/containers/tree/main/bitnami/redis
+      weave.works/operator: "true"
+      weave.works/profile: redis
+      weave.works/profile-ci: |-
+        - "gke"
+        - "kind"
+        - "eks"
+    apiVersion: v2
+    created: "2022-10-17T20:08:43.899209938Z"
+    dependencies:
+    - name: redis
+      repository: https://charts.bitnami.com/bitnami
+      version: 17.3.5
+    description: A Weaveworks Helm chart for the redis Profile
+    digest: ef8c930b1703550169a8c9810c5dc20125db07e8ed451afcd2ef56d5abceeea8
+    home: https://github.com/murillodigital/gitops-profiles
+    keywords:
+    - redis
+    - keyvalue
+    - database
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: support@weave.works
+      name: Weaveworks
+    name: redis
+    sources:
+    - https://charts.bitnami.com/bitnami
+    type: application
+    urls:
+    - https://github.com/murillodigital/gitops-profiles/releases/download/redis-0.0.4/redis-0.0.4.tgz
+    version: 0.0.4
   - annotations:
       weave.works/category: data
       weave.works/layer: layer-0
@@ -461,6 +3908,366 @@ entries:
     urls:
     - https://github.com/murillodigital/gitops-profiles/releases/download/redis-0.0.2/redis-0.0.2.tgz
     version: 0.0.2
+  redis-cluster:
+  - annotations:
+      weave.works/category: Database
+      weave.works/layer: layer-0
+      weave.works/links: |
+        - name: Chart Sources
+          url: https://charts.bitnami.com/bitnami
+        - name: Upstream Project
+          url: https://github.com/bitnami/containers/tree/main/bitnami/redis
+      weave.works/operator: "true"
+      weave.works/profile: redis-cluster
+      weave.works/profile-ci: |-
+        - "gke"
+        - "kind"
+        - "eks"
+    apiVersion: v2
+    created: "2022-10-17T20:08:44.14667675Z"
+    dependencies:
+    - name: redis-cluster
+      repository: https://charts.bitnami.com/bitnami
+      version: 8.2.4
+    description: A Weaveworks Helm chart for the redis-cluster Profile
+    digest: 89318c733ac59cee6bff9c898508b3224bef25bc945c063d8bd1144baa02c256
+    home: https://github.com/murillodigital/gitops-profiles
+    keywords:
+    - redis
+    - keyvalue
+    - database
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: support@weave.works
+      name: Weaveworks
+    name: redis-cluster
+    sources:
+    - https://charts.bitnami.com/bitnami
+    type: application
+    urls:
+    - https://github.com/murillodigital/gitops-profiles/releases/download/redis-cluster-0.0.1/redis-cluster-0.0.1.tgz
+    version: 0.0.1
+  redmine:
+  - annotations:
+      weave.works/category: ProjectManagement
+      weave.works/layer: layer-0
+      weave.works/links: |
+        - name: Chart Sources
+          url: https://charts.bitnami.com/bitnami
+        - name: Upstream Project
+          url: https://github.com/bitnami/containers/tree/main/bitnami/redmine
+      weave.works/operator: "true"
+      weave.works/profile: redmine
+      weave.works/profile-ci: |-
+        - "gke"
+        - "kind"
+        - "eks"
+    apiVersion: v2
+    created: "2022-10-17T20:08:44.412954118Z"
+    dependencies:
+    - name: redmine
+      repository: https://charts.bitnami.com/bitnami
+      version: 20.3.7
+    description: A Weaveworks Helm chart for the redmine Profile
+    digest: 54280b20dc5d3fc8632ee17fee41937f13150a299e7fc90b2b2b69de96d77dda
+    home: https://github.com/murillodigital/gitops-profiles
+    keywords:
+    - redmine
+    - project management
+    - www
+    - http
+    - web
+    - application
+    - ruby
+    - rails
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: support@weave.works
+      name: Weaveworks
+    name: redmine
+    sources:
+    - https://charts.bitnami.com/bitnami
+    type: application
+    urls:
+    - https://github.com/murillodigital/gitops-profiles/releases/download/redmine-0.0.1/redmine-0.0.1.tgz
+    version: 0.0.1
+  schema-registry:
+  - annotations:
+      weave.works/category: Infrastructure
+      weave.works/layer: layer-0
+      weave.works/links: |
+        - name: Chart Sources
+          url: https://charts.bitnami.com/bitnami
+        - name: Upstream Project
+          url: https://github.com/bitnami/containers/tree/main/bitnami/schema-registry
+      weave.works/operator: "true"
+      weave.works/profile: schema-registry
+      weave.works/profile-ci: |-
+        - "gke"
+        - "kind"
+        - "eks"
+    apiVersion: v2
+    created: "2022-10-17T20:08:44.65051957Z"
+    dependencies:
+    - name: schema-registry
+      repository: https://charts.bitnami.com/bitnami
+      version: 6.0.0
+    description: A Weaveworks Helm chart for the schema-registry Profile
+    digest: 46fc7b4e08949372a50589938172492cf91cab4bad248372203834a982472051
+    home: https://github.com/murillodigital/gitops-profiles
+    keywords:
+    - schema-registry
+    - confluent
+    - kafka
+    - zookeeper
+    - streaming
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: support@weave.works
+      name: Weaveworks
+    name: schema-registry
+    sources:
+    - https://charts.bitnami.com/bitnami
+    type: application
+    urls:
+    - https://github.com/murillodigital/gitops-profiles/releases/download/schema-registry-0.0.1/schema-registry-0.0.1.tgz
+    version: 0.0.1
+  sealed-secrets:
+  - annotations:
+      weave.works/category: DeveloperTools
+      weave.works/layer: layer-0
+      weave.works/links: |
+        - name: Chart Sources
+          url: https://charts.bitnami.com/bitnami
+        - name: Upstream Project
+          url: https://github.com/bitnami/containers/tree/main/bitnami/sealed-secrets
+      weave.works/operator: "true"
+      weave.works/profile: sealed-secrets
+      weave.works/profile-ci: |-
+        - "gke"
+        - "kind"
+        - "eks"
+    apiVersion: v2
+    created: "2022-10-17T20:08:44.887493583Z"
+    dependencies:
+    - name: sealed-secrets
+      repository: https://charts.bitnami.com/bitnami
+      version: 1.1.7
+    description: A Weaveworks Helm chart for the sealed-secrets Profile
+    digest: 626a36a7c10b73033b60de43bc84273998f387b7275c64fb6523702a4738b8f7
+    home: https://github.com/murillodigital/gitops-profiles
+    keywords:
+    - secrets
+    - sealed-secrets
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: support@weave.works
+      name: Weaveworks
+    name: sealed-secrets
+    sources:
+    - https://charts.bitnami.com/bitnami
+    type: application
+    urls:
+    - https://github.com/murillodigital/gitops-profiles/releases/download/sealed-secrets-0.0.1/sealed-secrets-0.0.1.tgz
+    version: 0.0.1
+  solr:
+  - annotations:
+      weave.works/category: Infrastructure
+      weave.works/layer: layer-0
+      weave.works/links: |
+        - name: Chart Sources
+          url: https://charts.bitnami.com/bitnami
+        - name: Upstream Project
+          url: https://github.com/bitnami/containers/tree/main/bitnami/solr
+      weave.works/operator: "true"
+      weave.works/profile: solr
+      weave.works/profile-ci: |-
+        - "gke"
+        - "kind"
+        - "eks"
+    apiVersion: v2
+    created: "2022-10-17T20:08:45.133719013Z"
+    dependencies:
+    - name: solr
+      repository: https://charts.bitnami.com/bitnami
+      version: 6.2.2
+    description: A Weaveworks Helm chart for the solr Profile
+    digest: a73d67d8efd22c62df53c48e9131433aa658105aa252767e8e40e1b5a1c104ed
+    home: https://github.com/murillodigital/gitops-profiles
+    keywords:
+    - solr
+    - zookeeper
+    - apache
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: support@weave.works
+      name: Weaveworks
+    name: solr
+    sources:
+    - https://charts.bitnami.com/bitnami
+    type: application
+    urls:
+    - https://github.com/murillodigital/gitops-profiles/releases/download/solr-0.0.1/solr-0.0.1.tgz
+    version: 0.0.1
+  sonarqube:
+  - annotations:
+      weave.works/category: DeveloperTools
+      weave.works/layer: layer-0
+      weave.works/links: |
+        - name: Chart Sources
+          url: https://charts.bitnami.com/bitnami
+        - name: Upstream Project
+          url: https://github.com/bitnami/containers/tree/main/bitnami/sonarqube
+      weave.works/operator: "true"
+      weave.works/profile: sonarqube
+      weave.works/profile-ci: |-
+        - "gke"
+        - "kind"
+        - "eks"
+    apiVersion: v2
+    created: "2022-10-17T20:08:45.375624455Z"
+    dependencies:
+    - name: sonarqube
+      repository: https://charts.bitnami.com/bitnami
+      version: 1.6.3
+    description: A Weaveworks Helm chart for the sonarqube Profile
+    digest: 6a2f7fd0c1fd7bcb663618a8d163169de08eb45f8a5190ef18c8a09ba849a7ca
+    home: https://github.com/murillodigital/gitops-profiles
+    keywords:
+    - sonarqube
+    - code-quality
+    - code-review
+    - static-analysis
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: support@weave.works
+      name: Weaveworks
+    name: sonarqube
+    sources:
+    - https://charts.bitnami.com/bitnami
+    type: application
+    urls:
+    - https://github.com/murillodigital/gitops-profiles/releases/download/sonarqube-0.0.1/sonarqube-0.0.1.tgz
+    version: 0.0.1
+  spark:
+  - annotations:
+      weave.works/category: Infrastructure
+      weave.works/layer: layer-0
+      weave.works/links: |
+        - name: Chart Sources
+          url: https://charts.bitnami.com/bitnami
+        - name: Upstream Project
+          url: https://github.com/bitnami/containers/tree/main/bitnami/spark
+      weave.works/operator: "true"
+      weave.works/profile: spark
+      weave.works/profile-ci: |-
+        - "gke"
+        - "kind"
+        - "eks"
+    apiVersion: v2
+    created: "2022-10-17T20:08:45.624044431Z"
+    dependencies:
+    - name: spark
+      repository: https://charts.bitnami.com/bitnami
+      version: 6.3.6
+    description: A Weaveworks Helm chart for the spark Profile
+    digest: aa0cad230df7412f5724dd309d83e44feebd96d614a1b9dcd41987d102f6ecb6
+    home: https://github.com/murillodigital/gitops-profiles
+    keywords:
+    - apache
+    - spark
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: support@weave.works
+      name: Weaveworks
+    name: spark
+    sources:
+    - https://charts.bitnami.com/bitnami
+    type: application
+    urls:
+    - https://github.com/murillodigital/gitops-profiles/releases/download/spark-0.0.1/spark-0.0.1.tgz
+    version: 0.0.1
+  spring-cloud-dataflow:
+  - annotations:
+      weave.works/category: DeveloperTools
+      weave.works/layer: layer-0
+      weave.works/links: |
+        - name: Chart Sources
+          url: https://charts.bitnami.com/bitnami
+        - name: Upstream Project
+          url: https://github.com/bitnami/containers/tree/main/bitnami/spring-cloud-dataflow
+      weave.works/operator: "true"
+      weave.works/profile: spring-cloud-dataflow
+      weave.works/profile-ci: |-
+        - "gke"
+        - "kind"
+        - "eks"
+    apiVersion: v2
+    created: "2022-10-17T20:08:45.894506078Z"
+    dependencies:
+    - name: spring-cloud-dataflow
+      repository: https://charts.bitnami.com/bitnami
+      version: 14.0.0
+    description: A Weaveworks Helm chart for the spring-cloud-dataflow Profile
+    digest: 9cfd3af78da98c4f1236d9767bc2f0dd4d3a7bc652211578416fa7027496855d
+    home: https://github.com/murillodigital/gitops-profiles
+    keywords:
+    - spring-cloud
+    - dataflow
+    - skipper
+    - spring
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: support@weave.works
+      name: Weaveworks
+    name: spring-cloud-dataflow
+    sources:
+    - https://charts.bitnami.com/bitnami
+    type: application
+    urls:
+    - https://github.com/murillodigital/gitops-profiles/releases/download/spring-cloud-dataflow-0.0.1/spring-cloud-dataflow-0.0.1.tgz
+    version: 0.0.1
+  suitecrm:
+  - annotations:
+      weave.works/category: CRM
+      weave.works/layer: layer-0
+      weave.works/links: |
+        - name: Chart Sources
+          url: https://charts.bitnami.com/bitnami
+        - name: Upstream Project
+          url: https://github.com/bitnami/containers/tree/main/bitnami/suitecrm
+      weave.works/operator: "true"
+      weave.works/profile: suitecrm
+      weave.works/profile-ci: |-
+        - "gke"
+        - "kind"
+        - "eks"
+    apiVersion: v2
+    created: "2022-10-17T20:08:46.148043496Z"
+    dependencies:
+    - name: suitecrm
+      repository: https://charts.bitnami.com/bitnami
+      version: 11.2.4
+    description: A Weaveworks Helm chart for the suitecrm Profile
+    digest: c53b3585e6119c9af186ef2c34ac4b2e1a18421b90fb5010fb7dd58dfacca1c3
+    home: https://github.com/murillodigital/gitops-profiles
+    keywords:
+    - suitecrm
+    - crm
+    - http
+    - web
+    - php
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: support@weave.works
+      name: Weaveworks
+    name: suitecrm
+    sources:
+    - https://charts.bitnami.com/bitnami
+    type: application
+    urls:
+    - https://github.com/murillodigital/gitops-profiles/releases/download/suitecrm-0.0.1/suitecrm-0.0.1.tgz
+    version: 0.0.1
   tekton-dashboard:
   - annotations:
       weave.works/category: CICD
@@ -734,4 +4541,501 @@ entries:
     urls:
     - https://github.com/murillodigital/gitops-profiles/releases/download/tekton-triggers-0.0.2/tekton-triggers-0.0.2.tgz
     version: 0.0.2
+  tensorflow-resnet:
+  - annotations:
+      weave.works/category: MachineLearning
+      weave.works/layer: layer-0
+      weave.works/links: |
+        - name: Chart Sources
+          url: https://charts.bitnami.com/bitnami
+        - name: Upstream Project
+          url: https://github.com/bitnami/containers/tree/main/bitnami/tensorflow-serving
+      weave.works/operator: "true"
+      weave.works/profile: tensorflow-resnet
+      weave.works/profile-ci: |-
+        - "gke"
+        - "kind"
+        - "eks"
+    apiVersion: v2
+    created: "2022-10-17T20:08:46.380967838Z"
+    dependencies:
+    - name: tensorflow-resnet
+      repository: https://charts.bitnami.com/bitnami
+      version: 3.6.6
+    description: A Weaveworks Helm chart for the tensorflow-resnet Profile
+    digest: baf3badb606fb3e61d28abafc8e66ad63bb462fccca2661787403efd458e6188
+    home: https://github.com/murillodigital/gitops-profiles
+    keywords:
+    - tensorflow
+    - serving
+    - resnet
+    - machine
+    - learning
+    - library
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: support@weave.works
+      name: Weaveworks
+    name: tensorflow-resnet
+    sources:
+    - https://charts.bitnami.com/bitnami
+    type: application
+    urls:
+    - https://github.com/murillodigital/gitops-profiles/releases/download/tensorflow-resnet-0.0.1/tensorflow-resnet-0.0.1.tgz
+    version: 0.0.1
+  testlink:
+  - annotations:
+      weave.works/category: DeveloperTools
+      weave.works/layer: layer-0
+      weave.works/links: |
+        - name: Chart Sources
+          url: https://charts.bitnami.com/bitnami
+        - name: Upstream Project
+          url: https://github.com/bitnami/bitnami-docker-testlink
+      weave.works/operator: "true"
+      weave.works/profile: testlink
+      weave.works/profile-ci: |-
+        - "gke"
+        - "kind"
+        - "eks"
+    apiVersion: v2
+    created: "2022-10-17T20:08:46.613340044Z"
+    dependencies:
+    - name: testlink
+      repository: https://charts.bitnami.com/bitnami
+      version: 10.0.16
+    description: A Weaveworks Helm chart for the testlink Profile
+    digest: 2c5882e6844a5ddd96655a4ffb54c2474825ed54b2aa622e716756f0bc642c48
+    home: https://github.com/murillodigital/gitops-profiles
+    keywords:
+    - testlink
+    - testing
+    - http
+    - php
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: support@weave.works
+      name: Weaveworks
+    name: testlink
+    sources:
+    - https://charts.bitnami.com/bitnami
+    type: application
+    urls:
+    - https://github.com/murillodigital/gitops-profiles/releases/download/testlink-0.0.1/testlink-0.0.1.tgz
+    version: 0.0.1
+  thanos:
+  - annotations:
+      weave.works/category: Analytics
+      weave.works/layer: layer-0
+      weave.works/links: |
+        - name: Chart Sources
+          url: https://charts.bitnami.com/bitnami
+        - name: Upstream Project
+          url: https://github.com/bitnami/containers/tree/main/bitnami/thanos
+      weave.works/operator: "true"
+      weave.works/profile: thanos
+      weave.works/profile-ci: |-
+        - "gke"
+        - "kind"
+        - "eks"
+    apiVersion: v2
+    created: "2022-10-17T20:08:46.869236819Z"
+    dependencies:
+    - name: thanos
+      repository: https://charts.bitnami.com/bitnami
+      version: 11.5.5
+    description: A Weaveworks Helm chart for the thanos Profile
+    digest: 402c1d391ac8534792c0d0ea84e8078bf25fb6ed2d06e966a1d7142de8caf8b2
+    home: https://github.com/murillodigital/gitops-profiles
+    keywords:
+    - analytics
+    - monitoring
+    - prometheus
+    - thanos
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: support@weave.works
+      name: Weaveworks
+    name: thanos
+    sources:
+    - https://charts.bitnami.com/bitnami
+    type: application
+    urls:
+    - https://github.com/murillodigital/gitops-profiles/releases/download/thanos-0.0.1/thanos-0.0.1.tgz
+    version: 0.0.1
+  tomcat:
+  - annotations:
+      weave.works/category: ApplicationServer
+      weave.works/layer: layer-0
+      weave.works/links: |
+        - name: Chart Sources
+          url: https://charts.bitnami.com/bitnami
+        - name: Upstream Project
+          url: https://github.com/bitnami/containers/tree/main/bitnami/tomcat
+      weave.works/operator: "true"
+      weave.works/profile: tomcat
+      weave.works/profile-ci: |-
+        - "gke"
+        - "kind"
+        - "eks"
+    apiVersion: v2
+    created: "2022-10-17T20:08:47.147221368Z"
+    dependencies:
+    - name: tomcat
+      repository: https://charts.bitnami.com/bitnami
+      version: 10.4.7
+    description: A Weaveworks Helm chart for the tomcat Profile
+    digest: 4857f0cbd91296b865e0518f55cf1737d98a0eb6acaf0668a2e541e889303203
+    home: https://github.com/murillodigital/gitops-profiles
+    keywords:
+    - tomcat
+    - java
+    - http
+    - web
+    - application server
+    - jsp
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: support@weave.works
+      name: Weaveworks
+    name: tomcat
+    sources:
+    - https://charts.bitnami.com/bitnami
+    type: application
+    urls:
+    - https://github.com/murillodigital/gitops-profiles/releases/download/tomcat-0.0.1/tomcat-0.0.1.tgz
+    version: 0.0.1
+  wavefront:
+  - annotations:
+      weave.works/category: Analytics
+      weave.works/layer: layer-0
+      weave.works/links: |
+        - name: Chart Sources
+          url: https://charts.bitnami.com/bitnami
+        - name: Upstream Project
+          url: https://github.com/bitnami/containers/tree/main/bitnami/wavefront-kubernetes-collector
+      weave.works/operator: "true"
+      weave.works/profile: wavefront
+      weave.works/profile-ci: |-
+        - "gke"
+        - "kind"
+        - "eks"
+    apiVersion: v2
+    created: "2022-10-17T20:08:47.426642613Z"
+    dependencies:
+    - name: wavefront
+      repository: https://charts.bitnami.com/bitnami
+      version: 4.2.5
+    description: A Weaveworks Helm chart for the wavefront Profile
+    digest: 1203913d75eaee8c931e848617dfc38d3201a77f86013b1cb91ae6eed4f106ad
+    home: https://github.com/murillodigital/gitops-profiles
+    keywords:
+    - metric
+    - monitoring
+    - observability
+    - alerting
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: support@weave.works
+      name: Weaveworks
+    name: wavefront
+    sources:
+    - https://charts.bitnami.com/bitnami
+    type: application
+    urls:
+    - https://github.com/murillodigital/gitops-profiles/releases/download/wavefront-0.0.1/wavefront-0.0.1.tgz
+    version: 0.0.1
+  wavefront-adapter-for-istio:
+  - annotations:
+      weave.works/category: Infrastructure
+      weave.works/layer: layer-0
+      weave.works/links: |
+        - name: Chart Sources
+          url: https://charts.bitnami.com/bitnami
+        - name: Upstream Project
+          url: https://github.com/bitnami/bitnami-docker-wavefront-adapter-for-istio
+      weave.works/operator: "true"
+      weave.works/profile: wavefront-adapter-for-istio
+      weave.works/profile-ci: |-
+        - "gke"
+        - "kind"
+        - "eks"
+    apiVersion: v2
+    created: "2022-10-17T20:08:47.660396611Z"
+    dependencies:
+    - name: wavefront-adapter-for-istio
+      repository: https://charts.bitnami.com/bitnami
+      version: 2.0.6
+    description: A Weaveworks Helm chart for the wavefront-adapter-for-istio Profile
+    digest: cc6431d5205d2756e97788555ac49cfae2a6aa5a6a089ac842ffec0b242e70c3
+    home: https://github.com/murillodigital/gitops-profiles
+    keywords:
+    - alerting
+    - adapter
+    - istio
+    - metrics
+    - monitoring
+    - observability
+    - wavefront
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: support@weave.works
+      name: Weaveworks
+    name: wavefront-adapter-for-istio
+    sources:
+    - https://charts.bitnami.com/bitnami
+    type: application
+    urls:
+    - https://github.com/murillodigital/gitops-profiles/releases/download/wavefront-adapter-for-istio-0.0.1/wavefront-adapter-for-istio-0.0.1.tgz
+    version: 0.0.1
+  wavefront-hpa-adapter:
+  - annotations:
+      weave.works/category: Infrastructure
+      weave.works/layer: layer-0
+      weave.works/links: |
+        - name: Chart Sources
+          url: https://charts.bitnami.com/bitnami
+        - name: Upstream Project
+          url: https://github.com/bitnami/containers/tree/main/bitnami/wavefront-hpa-adapter
+      weave.works/operator: "true"
+      weave.works/profile: wavefront-hpa-adapter
+      weave.works/profile-ci: |-
+        - "gke"
+        - "kind"
+        - "eks"
+    apiVersion: v2
+    created: "2022-10-17T20:08:47.898126474Z"
+    dependencies:
+    - name: wavefront-hpa-adapter
+      repository: https://charts.bitnami.com/bitnami
+      version: 1.3.4
+    description: A Weaveworks Helm chart for the wavefront-hpa-adapter Profile
+    digest: 380714f68bc1e5e703c3912261a33e9cad9f158ddf56f0467af27a43f526af88
+    home: https://github.com/murillodigital/gitops-profiles
+    keywords:
+    - alerting
+    - adapter
+    - metrics
+    - monitoring
+    - observability
+    - wavefront
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: support@weave.works
+      name: Weaveworks
+    name: wavefront-hpa-adapter
+    sources:
+    - https://charts.bitnami.com/bitnami
+    type: application
+    urls:
+    - https://github.com/murillodigital/gitops-profiles/releases/download/wavefront-hpa-adapter-0.0.1/wavefront-hpa-adapter-0.0.1.tgz
+    version: 0.0.1
+  wavefront-prometheus-storage-adapter:
+  - annotations:
+      weave.works/category: Infrastructure
+      weave.works/layer: layer-0
+      weave.works/links: |
+        - name: Chart Sources
+          url: https://charts.bitnami.com/bitnami
+        - name: Upstream Project
+          url: https://github.com/bitnami/containers/tree/main/bitnami/wavefront-prometheus-storage-adapter
+      weave.works/operator: "true"
+      weave.works/profile: wavefront-prometheus-storage-adapter
+      weave.works/profile-ci: |-
+        - "gke"
+        - "kind"
+        - "eks"
+    apiVersion: v2
+    created: "2022-10-17T20:08:48.201293003Z"
+    dependencies:
+    - name: wavefront-prometheus-storage-adapter
+      repository: https://charts.bitnami.com/bitnami
+      version: 2.1.4
+    description: A Weaveworks Helm chart for the wavefront-prometheus-storage-adapter
+      Profile
+    digest: ebf93c25a1d08e9ca670f88d911daae16b9e85553780814d0f5da57fa7ec2fbf
+    home: https://github.com/murillodigital/gitops-profiles
+    keywords:
+    - alerting
+    - adapter
+    - metrics
+    - monitoring
+    - observability
+    - wavefront
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: support@weave.works
+      name: Weaveworks
+    name: wavefront-prometheus-storage-adapter
+    sources:
+    - https://charts.bitnami.com/bitnami
+    type: application
+    urls:
+    - https://github.com/murillodigital/gitops-profiles/releases/download/wavefront-prometheus-storage-adapter-0.0.1/wavefront-prometheus-storage-adapter-0.0.1.tgz
+    version: 0.0.1
+  wildfly:
+  - annotations:
+      weave.works/category: ApplicationServer
+      weave.works/layer: layer-0
+      weave.works/links: |
+        - name: Chart Sources
+          url: https://charts.bitnami.com/bitnami
+        - name: Upstream Project
+          url: https://github.com/bitnami/containers/tree/main/bitnami/wildfly
+      weave.works/operator: "true"
+      weave.works/profile: wildfly
+      weave.works/profile-ci: |-
+        - "gke"
+        - "kind"
+        - "eks"
+    apiVersion: v2
+    created: "2022-10-17T20:08:48.438761949Z"
+    dependencies:
+    - name: wildfly
+      repository: https://charts.bitnami.com/bitnami
+      version: 13.5.5
+    description: A Weaveworks Helm chart for the wildfly Profile
+    digest: 4dd1fb085c742f7125f82d78c25cb028233ee1649f27ef6aecd348b176de287e
+    home: https://github.com/murillodigital/gitops-profiles
+    keywords:
+    - wildfly
+    - java
+    - http
+    - web
+    - application server
+    - jsp
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: support@weave.works
+      name: Weaveworks
+    name: wildfly
+    sources:
+    - https://charts.bitnami.com/bitnami
+    type: application
+    urls:
+    - https://github.com/murillodigital/gitops-profiles/releases/download/wildfly-0.0.1/wildfly-0.0.1.tgz
+    version: 0.0.1
+  wordpress:
+  - annotations:
+      weave.works/category: CMS
+      weave.works/layer: layer-0
+      weave.works/links: |
+        - name: Chart Sources
+          url: https://charts.bitnami.com/bitnami
+        - name: Upstream Project
+          url: https://github.com/bitnami/containers/tree/main/bitnami/wordpress
+      weave.works/operator: "true"
+      weave.works/profile: wordpress
+      weave.works/profile-ci: |-
+        - "gke"
+        - "kind"
+        - "eks"
+    apiVersion: v2
+    created: "2022-10-17T20:08:48.692371472Z"
+    dependencies:
+    - name: wordpress
+      repository: https://charts.bitnami.com/bitnami
+      version: 15.2.5
+    description: A Weaveworks Helm chart for the wordpress Profile
+    digest: 04b756a608bb9cf1dd64405efcf610badde48152de844b814049cdd02546afca
+    home: https://github.com/murillodigital/gitops-profiles
+    keywords:
+    - application
+    - blog
+    - cms
+    - http
+    - php
+    - web
+    - wordpress
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: support@weave.works
+      name: Weaveworks
+    name: wordpress
+    sources:
+    - https://charts.bitnami.com/bitnami
+    type: application
+    urls:
+    - https://github.com/murillodigital/gitops-profiles/releases/download/wordpress-0.0.1/wordpress-0.0.1.tgz
+    version: 0.0.1
+  wordpress-intel:
+  - annotations:
+      weave.works/category: CMS
+      weave.works/layer: layer-0
+      weave.works/links: |
+        - name: Chart Sources
+          url: https://charts.bitnami.com/bitnami
+        - name: Upstream Project
+          url: https://github.com/bitnami/containers/tree/main/bitnami/wordpress-intel
+      weave.works/operator: "true"
+      weave.works/profile: wordpress-intel
+      weave.works/profile-ci: |-
+        - "gke"
+        - "kind"
+        - "eks"
+    apiVersion: v2
+    created: "2022-10-17T20:08:48.949677741Z"
+    dependencies:
+    - name: wordpress-intel
+      repository: https://charts.bitnami.com/bitnami
+      version: 2.1.11
+    description: A Weaveworks Helm chart for the wordpress-intel Profile
+    digest: 801a0e925d6cfe46d25cc3fe522055f597842fadf3eb65c0f3a49b0149043e18
+    home: https://github.com/murillodigital/gitops-profiles
+    keywords:
+    - application
+    - blog
+    - cms
+    - http
+    - php
+    - web
+    - wordpress
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: support@weave.works
+      name: Weaveworks
+    name: wordpress-intel
+    sources:
+    - https://charts.bitnami.com/bitnami
+    type: application
+    urls:
+    - https://github.com/murillodigital/gitops-profiles/releases/download/wordpress-intel-0.0.1/wordpress-intel-0.0.1.tgz
+    version: 0.0.1
+  zookeeper:
+  - annotations:
+      weave.works/category: Infrastructure
+      weave.works/layer: layer-0
+      weave.works/links: |
+        - name: Chart Sources
+          url: https://charts.bitnami.com/bitnami
+        - name: Upstream Project
+          url: https://github.com/bitnami/containers/tree/main/bitnami/zookeeper
+      weave.works/operator: "true"
+      weave.works/profile: zookeeper
+      weave.works/profile-ci: |-
+        - "gke"
+        - "kind"
+        - "eks"
+    apiVersion: v2
+    created: "2022-10-17T20:08:49.172953839Z"
+    dependencies:
+    - name: zookeeper
+      repository: https://charts.bitnami.com/bitnami
+      version: 10.2.3
+    description: A Weaveworks Helm chart for the zookeeper Profile
+    digest: b2ff3d4b1c10b1b25b876f3f5fe33728cda2961c05a8c410b1daca31ae4931a6
+    home: https://github.com/murillodigital/gitops-profiles
+    keywords:
+    - zookeeper
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: support@weave.works
+      name: Weaveworks
+    name: zookeeper
+    sources:
+    - https://charts.bitnami.com/bitnami
+    type: application
+    urls:
+    - https://github.com/murillodigital/gitops-profiles/releases/download/zookeeper-0.0.1/zookeeper-0.0.1.tgz
+    version: 0.0.1
 generated: "2022-09-20T22:13:40.292449019Z"
