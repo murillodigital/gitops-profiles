@@ -1,0 +1,41 @@
+apiVersion: v2
+name: tomcat
+description: A Weaveworks Helm chart for the tomcat Profile
+type: application
+version: 0.0.1
+dependencies:
+  - name: tomcat
+    version: "10.4.7"
+    repository: "https://charts.bitnami.com/bitnami"
+kubeVersion: ">=1.16.0-0"
+home: https://github.com/murillodigital/gitops-profiles
+sources:
+  - https://charts.bitnami.com/bitnami
+
+keywords:
+- tomcat
+- java
+- http
+- web
+- application server
+- jsp
+
+
+maintainers:
+  - name: Weaveworks
+    email: support@weave.works
+
+annotations:
+  "weave.works/profile": tomcat
+  "weave.works/category": ApplicationServer
+  "weave.works/layer": layer-0
+  "weave.works/operator": "true"
+  "weave.works/links": |
+    - name: Chart Sources
+      url: https://charts.bitnami.com/bitnami
+    - name: Upstream Project
+      url: https://github.com/bitnami/containers/tree/main/bitnami/tomcat
+  "weave.works/profile-ci": |
+    - "gke"
+    - "kind"
+    - "eks"

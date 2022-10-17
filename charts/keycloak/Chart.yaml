@@ -1,0 +1,37 @@
+apiVersion: v2
+name: keycloak
+description: A Weaveworks Helm chart for the keycloak Profile
+type: application
+version: 0.0.1
+dependencies:
+  - name: keycloak
+    version: "10.1.5"
+    repository: "https://charts.bitnami.com/bitnami"
+kubeVersion: ">=1.16.0-0"
+home: https://github.com/murillodigital/gitops-profiles
+sources:
+  - https://charts.bitnami.com/bitnami
+
+keywords:
+- keycloak
+- access-management
+
+
+maintainers:
+  - name: Weaveworks
+    email: support@weave.works
+
+annotations:
+  "weave.works/profile": keycloak
+  "weave.works/category": DeveloperTools
+  "weave.works/layer": layer-0
+  "weave.works/operator": "true"
+  "weave.works/links": |
+    - name: Chart Sources
+      url: https://charts.bitnami.com/bitnami
+    - name: Upstream Project
+      url: https://github.com/bitnami/containers/tree/main/bitnami/keycloak
+  "weave.works/profile-ci": |
+    - "gke"
+    - "kind"
+    - "eks"

@@ -1,0 +1,39 @@
+apiVersion: v2
+name: phpbb
+description: A Weaveworks Helm chart for the phpbb Profile
+type: application
+version: 0.0.1
+dependencies:
+  - name: phpbb
+    version: "12.3.6"
+    repository: "https://charts.bitnami.com/bitnami"
+kubeVersion: ">=1.16.0-0"
+home: https://github.com/murillodigital/gitops-profiles
+sources:
+  - https://charts.bitnami.com/bitnami
+
+keywords:
+- phpbb
+- forum
+- http
+- php
+
+
+maintainers:
+  - name: Weaveworks
+    email: support@weave.works
+
+annotations:
+  "weave.works/profile": phpbb
+  "weave.works/category": Forum
+  "weave.works/layer": layer-0
+  "weave.works/operator": "true"
+  "weave.works/links": |
+    - name: Chart Sources
+      url: https://charts.bitnami.com/bitnami
+    - name: Upstream Project
+      url: https://github.com/bitnami/containers/tree/main/bitnami/phpbb
+  "weave.works/profile-ci": |
+    - "gke"
+    - "kind"
+    - "eks"

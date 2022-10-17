@@ -1,0 +1,39 @@
+apiVersion: v2
+name: sonarqube
+description: A Weaveworks Helm chart for the sonarqube Profile
+type: application
+version: 0.0.1
+dependencies:
+  - name: sonarqube
+    version: "1.6.3"
+    repository: "https://charts.bitnami.com/bitnami"
+kubeVersion: ">=1.16.0-0"
+home: https://github.com/murillodigital/gitops-profiles
+sources:
+  - https://charts.bitnami.com/bitnami
+
+keywords:
+- sonarqube
+- code-quality
+- code-review
+- static-analysis
+
+
+maintainers:
+  - name: Weaveworks
+    email: support@weave.works
+
+annotations:
+  "weave.works/profile": sonarqube
+  "weave.works/category": DeveloperTools
+  "weave.works/layer": layer-0
+  "weave.works/operator": "true"
+  "weave.works/links": |
+    - name: Chart Sources
+      url: https://charts.bitnami.com/bitnami
+    - name: Upstream Project
+      url: https://github.com/bitnami/containers/tree/main/bitnami/sonarqube
+  "weave.works/profile-ci": |
+    - "gke"
+    - "kind"
+    - "eks"

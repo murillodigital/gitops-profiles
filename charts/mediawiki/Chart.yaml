@@ -1,0 +1,41 @@
+apiVersion: v2
+name: mediawiki
+description: A Weaveworks Helm chart for the mediawiki Profile
+type: application
+version: 0.0.1
+dependencies:
+  - name: mediawiki
+    version: "14.3.7"
+    repository: "https://charts.bitnami.com/bitnami"
+kubeVersion: ">=1.16.0-0"
+home: https://github.com/murillodigital/gitops-profiles
+sources:
+  - https://charts.bitnami.com/bitnami
+
+keywords:
+- mediawiki
+- wiki
+- http
+- web
+- application
+- php
+
+
+maintainers:
+  - name: Weaveworks
+    email: support@weave.works
+
+annotations:
+  "weave.works/profile": mediawiki
+  "weave.works/category": Wiki
+  "weave.works/layer": layer-0
+  "weave.works/operator": "true"
+  "weave.works/links": |
+    - name: Chart Sources
+      url: https://charts.bitnami.com/bitnami
+    - name: Upstream Project
+      url: https://github.com/bitnami/containers/tree/main/bitnami/mediawiki
+  "weave.works/profile-ci": |
+    - "gke"
+    - "kind"
+    - "eks"

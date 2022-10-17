@@ -1,0 +1,39 @@
+apiVersion: v2
+name: thanos
+description: A Weaveworks Helm chart for the thanos Profile
+type: application
+version: 0.0.1
+dependencies:
+  - name: thanos
+    version: "11.5.5"
+    repository: "https://charts.bitnami.com/bitnami"
+kubeVersion: ">=1.16.0-0"
+home: https://github.com/murillodigital/gitops-profiles
+sources:
+  - https://charts.bitnami.com/bitnami
+
+keywords:
+- analytics
+- monitoring
+- prometheus
+- thanos
+
+
+maintainers:
+  - name: Weaveworks
+    email: support@weave.works
+
+annotations:
+  "weave.works/profile": thanos
+  "weave.works/category": Analytics
+  "weave.works/layer": layer-0
+  "weave.works/operator": "true"
+  "weave.works/links": |
+    - name: Chart Sources
+      url: https://charts.bitnami.com/bitnami
+    - name: Upstream Project
+      url: https://github.com/bitnami/containers/tree/main/bitnami/thanos
+  "weave.works/profile-ci": |
+    - "gke"
+    - "kind"
+    - "eks"

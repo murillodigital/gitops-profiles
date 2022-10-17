@@ -1,11 +1,11 @@
 apiVersion: v2
-name: rabbitmq
-description: A Weaveworks Helm chart for the MongoDB Profile
+name: mongodb
+description: A Weaveworks Helm chart for the mongodb Profile
 type: application
-version: 0.0.3
+version: 0.0.4
 dependencies:
   - name: mongodb
-    version: "13.1.5"
+    version: "13.1.7"
     repository: "https://charts.bitnami.com/bitnami"
 kubeVersion: ">=1.16.0-0"
 home: https://github.com/murillodigital/gitops-profiles
@@ -14,8 +14,12 @@ sources:
 
 keywords:
 - mongodb
-- nosql
 - database
+- nosql
+- cluster
+- replicaset
+- replication
+
 
 maintainers:
   - name: Weaveworks
@@ -23,14 +27,14 @@ maintainers:
 
 annotations:
   "weave.works/profile": mongodb
-  "weave.works/category": data
+  "weave.works/category": Database
   "weave.works/layer": layer-0
   "weave.works/operator": "true"
   "weave.works/links": |
     - name: Chart Sources
       url: https://charts.bitnami.com/bitnami
     - name: Upstream Project
-      url: https://github.com/bitnami/charts/blob/master/bitnami/mongodb
+      url: https://github.com/bitnami/containers/tree/main/bitnami/mongodb
   "weave.works/profile-ci": |
     - "gke"
     - "kind"

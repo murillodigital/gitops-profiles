@@ -1,0 +1,41 @@
+apiVersion: v2
+name: wildfly
+description: A Weaveworks Helm chart for the wildfly Profile
+type: application
+version: 0.0.1
+dependencies:
+  - name: wildfly
+    version: "13.5.5"
+    repository: "https://charts.bitnami.com/bitnami"
+kubeVersion: ">=1.16.0-0"
+home: https://github.com/murillodigital/gitops-profiles
+sources:
+  - https://charts.bitnami.com/bitnami
+
+keywords:
+- wildfly
+- java
+- http
+- web
+- application server
+- jsp
+
+
+maintainers:
+  - name: Weaveworks
+    email: support@weave.works
+
+annotations:
+  "weave.works/profile": wildfly
+  "weave.works/category": ApplicationServer
+  "weave.works/layer": layer-0
+  "weave.works/operator": "true"
+  "weave.works/links": |
+    - name: Chart Sources
+      url: https://charts.bitnami.com/bitnami
+    - name: Upstream Project
+      url: https://github.com/bitnami/containers/tree/main/bitnami/wildfly
+  "weave.works/profile-ci": |
+    - "gke"
+    - "kind"
+    - "eks"

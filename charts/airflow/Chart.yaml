@@ -1,0 +1,39 @@
+apiVersion: v2
+name: airflow
+description: A Weaveworks Helm chart for the airflow Profile
+type: application
+version: 0.0.1
+dependencies:
+  - name: airflow
+    version: "13.1.7"
+    repository: "https://charts.bitnami.com/bitnami"
+kubeVersion: ">=1.16.0-0"
+home: https://github.com/murillodigital/gitops-profiles
+sources:
+  - https://charts.bitnami.com/bitnami
+
+keywords:
+- apache
+- airflow
+- workflow
+- dag
+
+
+maintainers:
+  - name: Weaveworks
+    email: support@weave.works
+
+annotations:
+  "weave.works/profile": airflow
+  "weave.works/category": WorkFlow
+  "weave.works/layer": layer-0
+  "weave.works/operator": "true"
+  "weave.works/links": |
+    - name: Chart Sources
+      url: https://charts.bitnami.com/bitnami
+    - name: Upstream Project
+      url: https://github.com/bitnami/containers/tree/main/bitnami/airflow
+  "weave.works/profile-ci": |
+    - "gke"
+    - "kind"
+    - "eks"

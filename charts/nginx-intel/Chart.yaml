@@ -1,0 +1,40 @@
+apiVersion: v2
+name: nginx-intel
+description: A Weaveworks Helm chart for the nginx-intel Profile
+type: application
+version: 0.0.1
+dependencies:
+  - name: nginx-intel
+    version: "2.1.9"
+    repository: "https://charts.bitnami.com/bitnami"
+kubeVersion: ">=1.16.0-0"
+home: https://github.com/murillodigital/gitops-profiles
+sources:
+  - https://charts.bitnami.com/bitnami
+
+keywords:
+- nginx
+- http
+- web
+- www
+- reverse proxy
+
+
+maintainers:
+  - name: Weaveworks
+    email: support@weave.works
+
+annotations:
+  "weave.works/profile": nginx-intel
+  "weave.works/category": Infrastructure
+  "weave.works/layer": layer-0
+  "weave.works/operator": "true"
+  "weave.works/links": |
+    - name: Chart Sources
+      url: https://charts.bitnami.com/bitnami
+    - name: Upstream Project
+      url: https://github.com/bitnami/containers/tree/main/bitnami/nginx-intel
+  "weave.works/profile-ci": |
+    - "gke"
+    - "kind"
+    - "eks"

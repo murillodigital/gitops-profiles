@@ -1,0 +1,43 @@
+apiVersion: v2
+name: redmine
+description: A Weaveworks Helm chart for the redmine Profile
+type: application
+version: 0.0.1
+dependencies:
+  - name: redmine
+    version: "20.3.7"
+    repository: "https://charts.bitnami.com/bitnami"
+kubeVersion: ">=1.16.0-0"
+home: https://github.com/murillodigital/gitops-profiles
+sources:
+  - https://charts.bitnami.com/bitnami
+
+keywords:
+- redmine
+- project management
+- www
+- http
+- web
+- application
+- ruby
+- rails
+
+
+maintainers:
+  - name: Weaveworks
+    email: support@weave.works
+
+annotations:
+  "weave.works/profile": redmine
+  "weave.works/category": ProjectManagement
+  "weave.works/layer": layer-0
+  "weave.works/operator": "true"
+  "weave.works/links": |
+    - name: Chart Sources
+      url: https://charts.bitnami.com/bitnami
+    - name: Upstream Project
+      url: https://github.com/bitnami/containers/tree/main/bitnami/redmine
+  "weave.works/profile-ci": |
+    - "gke"
+    - "kind"
+    - "eks"

@@ -1,0 +1,38 @@
+apiVersion: v2
+name: moodle
+description: A Weaveworks Helm chart for the moodle Profile
+type: application
+version: 0.0.1
+dependencies:
+  - name: moodle
+    version: "14.3.0"
+    repository: "https://charts.bitnami.com/bitnami"
+kubeVersion: ">=1.16.0-0"
+home: https://github.com/murillodigital/gitops-profiles
+sources:
+  - https://charts.bitnami.com/bitnami
+
+keywords:
+- moodle
+- learning
+- php
+
+
+maintainers:
+  - name: Weaveworks
+    email: support@weave.works
+
+annotations:
+  "weave.works/profile": moodle
+  "weave.works/category": E-Learning
+  "weave.works/layer": layer-0
+  "weave.works/operator": "true"
+  "weave.works/links": |
+    - name: Chart Sources
+      url: https://charts.bitnami.com/bitnami
+    - name: Upstream Project
+      url: https://github.com/bitnami/containers/tree/main/bitnami/moodle
+  "weave.works/profile-ci": |
+    - "gke"
+    - "kind"
+    - "eks"

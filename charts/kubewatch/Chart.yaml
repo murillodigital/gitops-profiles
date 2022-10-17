@@ -1,0 +1,41 @@
+apiVersion: v2
+name: kubewatch
+description: A Weaveworks Helm chart for the kubewatch Profile
+type: application
+version: 0.0.1
+dependencies:
+  - name: kubewatch
+    version: "3.3.4"
+    repository: "https://charts.bitnami.com/bitnami"
+kubeVersion: ">=1.16.0-0"
+home: https://github.com/murillodigital/gitops-profiles
+sources:
+  - https://charts.bitnami.com/bitnami
+
+keywords:
+- kubernetes
+- slack
+- hipchat
+- mattermost
+- flock
+- msteams
+
+
+maintainers:
+  - name: Weaveworks
+    email: support@weave.works
+
+annotations:
+  "weave.works/profile": kubewatch
+  "weave.works/category": Infrastructure
+  "weave.works/layer": layer-0
+  "weave.works/operator": "true"
+  "weave.works/links": |
+    - name: Chart Sources
+      url: https://charts.bitnami.com/bitnami
+    - name: Upstream Project
+      url: https://github.com/bitnami/bitnami-docker-kubewatch
+  "weave.works/profile-ci": |
+    - "gke"
+    - "kind"
+    - "eks"
