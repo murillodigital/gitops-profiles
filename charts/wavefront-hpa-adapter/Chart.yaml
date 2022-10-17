@@ -1,0 +1,41 @@
+apiVersion: v2
+name: wavefront-hpa-adapter
+description: A Weaveworks Helm chart for the wavefront-hpa-adapter Profile
+type: application
+version: 0.0.1
+dependencies:
+  - name: wavefront-hpa-adapter
+    version: "1.3.4"
+    repository: "https://charts.bitnami.com/bitnami"
+kubeVersion: ">=1.16.0-0"
+home: https://github.com/murillodigital/gitops-profiles
+sources:
+  - https://charts.bitnami.com/bitnami
+
+keywords:
+- alerting
+- adapter
+- metrics
+- monitoring
+- observability
+- wavefront
+
+
+maintainers:
+  - name: Weaveworks
+    email: support@weave.works
+
+annotations:
+  "weave.works/profile": wavefront-hpa-adapter
+  "weave.works/category": Infrastructure
+  "weave.works/layer": layer-0
+  "weave.works/operator": "true"
+  "weave.works/links": |
+    - name: Chart Sources
+      url: https://charts.bitnami.com/bitnami
+    - name: Upstream Project
+      url: https://github.com/bitnami/containers/tree/main/bitnami/wavefront-hpa-adapter
+  "weave.works/profile-ci": |
+    - "gke"
+    - "kind"
+    - "eks"

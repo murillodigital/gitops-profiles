@@ -1,0 +1,36 @@
+apiVersion: v2
+name: zookeeper
+description: A Weaveworks Helm chart for the zookeeper Profile
+type: application
+version: 0.0.1
+dependencies:
+  - name: zookeeper
+    version: "10.2.3"
+    repository: "https://charts.bitnami.com/bitnami"
+kubeVersion: ">=1.16.0-0"
+home: https://github.com/murillodigital/gitops-profiles
+sources:
+  - https://charts.bitnami.com/bitnami
+
+keywords:
+- zookeeper
+
+
+maintainers:
+  - name: Weaveworks
+    email: support@weave.works
+
+annotations:
+  "weave.works/profile": zookeeper
+  "weave.works/category": Infrastructure
+  "weave.works/layer": layer-0
+  "weave.works/operator": "true"
+  "weave.works/links": |
+    - name: Chart Sources
+      url: https://charts.bitnami.com/bitnami
+    - name: Upstream Project
+      url: https://github.com/bitnami/containers/tree/main/bitnami/zookeeper
+  "weave.works/profile-ci": |
+    - "gke"
+    - "kind"
+    - "eks"

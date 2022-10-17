@@ -1,0 +1,40 @@
+apiVersion: v2
+name: prestashop
+description: A Weaveworks Helm chart for the prestashop Profile
+type: application
+version: 0.0.1
+dependencies:
+  - name: prestashop
+    version: "15.3.5"
+    repository: "https://charts.bitnami.com/bitnami"
+kubeVersion: ">=1.16.0-0"
+home: https://github.com/murillodigital/gitops-profiles
+sources:
+  - https://charts.bitnami.com/bitnami
+
+keywords:
+- prestashop
+- e-commerce
+- http
+- web
+- php
+
+
+maintainers:
+  - name: Weaveworks
+    email: support@weave.works
+
+annotations:
+  "weave.works/profile": prestashop
+  "weave.works/category": E-Commerce
+  "weave.works/layer": layer-0
+  "weave.works/operator": "true"
+  "weave.works/links": |
+    - name: Chart Sources
+      url: https://charts.bitnami.com/bitnami
+    - name: Upstream Project
+      url: https://github.com/bitnami/containers/tree/main/bitnami/prestashop
+  "weave.works/profile-ci": |
+    - "gke"
+    - "kind"
+    - "eks"

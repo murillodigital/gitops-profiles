@@ -1,0 +1,38 @@
+apiVersion: v2
+name: metrics-server
+description: A Weaveworks Helm chart for the metrics-server Profile
+type: application
+version: 0.0.1
+dependencies:
+  - name: metrics-server
+    version: "6.2.1"
+    repository: "https://charts.bitnami.com/bitnami"
+kubeVersion: ">=1.16.0-0"
+home: https://github.com/murillodigital/gitops-profiles
+sources:
+  - https://charts.bitnami.com/bitnami
+
+keywords:
+- metrics-server
+- cluster
+- metrics
+
+
+maintainers:
+  - name: Weaveworks
+    email: support@weave.works
+
+annotations:
+  "weave.works/profile": metrics-server
+  "weave.works/category": Analytics
+  "weave.works/layer": layer-0
+  "weave.works/operator": "true"
+  "weave.works/links": |
+    - name: Chart Sources
+      url: https://charts.bitnami.com/bitnami
+    - name: Upstream Project
+      url: https://github.com/bitnami/containers/tree/main/bitnami/metrics-server
+  "weave.works/profile-ci": |
+    - "gke"
+    - "kind"
+    - "eks"

@@ -1,0 +1,37 @@
+apiVersion: v2
+name: sealed-secrets
+description: A Weaveworks Helm chart for the sealed-secrets Profile
+type: application
+version: 0.0.1
+dependencies:
+  - name: sealed-secrets
+    version: "1.1.7"
+    repository: "https://charts.bitnami.com/bitnami"
+kubeVersion: ">=1.16.0-0"
+home: https://github.com/murillodigital/gitops-profiles
+sources:
+  - https://charts.bitnami.com/bitnami
+
+keywords:
+- secrets
+- sealed-secrets
+
+
+maintainers:
+  - name: Weaveworks
+    email: support@weave.works
+
+annotations:
+  "weave.works/profile": sealed-secrets
+  "weave.works/category": DeveloperTools
+  "weave.works/layer": layer-0
+  "weave.works/operator": "true"
+  "weave.works/links": |
+    - name: Chart Sources
+      url: https://charts.bitnami.com/bitnami
+    - name: Upstream Project
+      url: https://github.com/bitnami/containers/tree/main/bitnami/sealed-secrets
+  "weave.works/profile-ci": |
+    - "gke"
+    - "kind"
+    - "eks"

@@ -1,0 +1,41 @@
+apiVersion: v2
+name: oauth2-proxy
+description: A Weaveworks Helm chart for the oauth2-proxy Profile
+type: application
+version: 0.0.1
+dependencies:
+  - name: oauth2-proxy
+    version: "3.3.3"
+    repository: "https://charts.bitnami.com/bitnami"
+kubeVersion: ">=1.16.0-0"
+home: https://github.com/murillodigital/gitops-profiles
+sources:
+  - https://charts.bitnami.com/bitnami
+
+keywords:
+- kubernetes
+- oauth
+- oauth2
+- authentication
+- google
+- github
+
+
+maintainers:
+  - name: Weaveworks
+    email: support@weave.works
+
+annotations:
+  "weave.works/profile": oauth2-proxy
+  "weave.works/category": Infrastructure
+  "weave.works/layer": layer-0
+  "weave.works/operator": "true"
+  "weave.works/links": |
+    - name: Chart Sources
+      url: https://charts.bitnami.com/bitnami
+    - name: Upstream Project
+      url: https://github.com/bitnami/containers/tree/main/bitnami/oauth2-proxy
+  "weave.works/profile-ci": |
+    - "gke"
+    - "kind"
+    - "eks"

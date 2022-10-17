@@ -1,11 +1,11 @@
 apiVersion: v2
 name: redis
-description: A Weaveworks Helm chart for the Redis Profile
+description: A Weaveworks Helm chart for the redis Profile
 type: application
-version: 0.0.3
+version: 0.0.4
 dependencies:
   - name: redis
-    version: "17.1.7"
+    version: "17.3.5"
     repository: "https://charts.bitnami.com/bitnami"
 kubeVersion: ">=1.16.0-0"
 home: https://github.com/murillodigital/gitops-profiles
@@ -13,9 +13,10 @@ sources:
   - https://charts.bitnami.com/bitnami
 
 keywords:
-- tekton
-- tekton-pipelines
-- cicd
+- redis
+- keyvalue
+- database
+
 
 maintainers:
   - name: Weaveworks
@@ -23,14 +24,14 @@ maintainers:
 
 annotations:
   "weave.works/profile": redis
-  "weave.works/category": data
+  "weave.works/category": Database
   "weave.works/layer": layer-0
   "weave.works/operator": "true"
   "weave.works/links": |
     - name: Chart Sources
-      url: https://bitnami.com/stack/redis/helm
+      url: https://charts.bitnami.com/bitnami
     - name: Upstream Project
-      url: https://bitnami.com/stack/redis/helm
+      url: https://github.com/bitnami/containers/tree/main/bitnami/redis
   "weave.works/profile-ci": |
     - "gke"
     - "kind"

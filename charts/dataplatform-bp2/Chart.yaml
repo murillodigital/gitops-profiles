@@ -1,0 +1,45 @@
+apiVersion: v2
+name: dataplatform-bp2
+description: A Weaveworks Helm chart for the dataplatform-bp2 Profile
+type: application
+version: 0.0.1
+dependencies:
+  - name: dataplatform-bp2
+    version: "12.0.5"
+    repository: "https://charts.bitnami.com/bitnami"
+kubeVersion: ">=1.16.0-0"
+home: https://github.com/murillodigital/gitops-profiles
+sources:
+  - https://charts.bitnami.com/bitnami
+
+keywords:
+- dataplatform
+- kafka
+- spark
+- elasticsearch
+- logstash
+- kibana
+- zookeeper
+- apache
+- tanzuobservability
+- wavefront
+
+
+maintainers:
+  - name: Weaveworks
+    email: support@weave.works
+
+annotations:
+  "weave.works/profile": dataplatform-bp2
+  "weave.works/category": Infrastructure
+  "weave.works/layer": layer-0
+  "weave.works/operator": "true"
+  "weave.works/links": |
+    - name: Chart Sources
+      url: https://charts.bitnami.com/bitnami
+    - name: Upstream Project
+      url: https://github.com/bitnami/bitnami-docker-kafka
+  "weave.works/profile-ci": |
+    - "gke"
+    - "kind"
+    - "eks"

@@ -1,0 +1,42 @@
+apiVersion: v2
+name: orangehrm
+description: A Weaveworks Helm chart for the orangehrm Profile
+type: application
+version: 0.0.1
+dependencies:
+  - name: orangehrm
+    version: "11.0.3"
+    repository: "https://charts.bitnami.com/bitnami"
+kubeVersion: ">=1.16.0-0"
+home: https://github.com/murillodigital/gitops-profiles
+sources:
+  - https://charts.bitnami.com/bitnami
+
+keywords:
+- orangehrm
+- http
+- https
+- web
+- application
+- php
+- human resources
+
+
+maintainers:
+  - name: Weaveworks
+    email: support@weave.works
+
+annotations:
+  "weave.works/profile": orangehrm
+  "weave.works/category": HumanResourceManagement
+  "weave.works/layer": layer-0
+  "weave.works/operator": "true"
+  "weave.works/links": |
+    - name: Chart Sources
+      url: https://charts.bitnami.com/bitnami
+    - name: Upstream Project
+      url: https://github.com/bitnami/bitnami-docker-orangehrm
+  "weave.works/profile-ci": |
+    - "gke"
+    - "kind"
+    - "eks"

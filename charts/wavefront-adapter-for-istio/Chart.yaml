@@ -1,0 +1,42 @@
+apiVersion: v2
+name: wavefront-adapter-for-istio
+description: A Weaveworks Helm chart for the wavefront-adapter-for-istio Profile
+type: application
+version: 0.0.1
+dependencies:
+  - name: wavefront-adapter-for-istio
+    version: "2.0.6"
+    repository: "https://charts.bitnami.com/bitnami"
+kubeVersion: ">=1.16.0-0"
+home: https://github.com/murillodigital/gitops-profiles
+sources:
+  - https://charts.bitnami.com/bitnami
+
+keywords:
+- alerting
+- adapter
+- istio
+- metrics
+- monitoring
+- observability
+- wavefront
+
+
+maintainers:
+  - name: Weaveworks
+    email: support@weave.works
+
+annotations:
+  "weave.works/profile": wavefront-adapter-for-istio
+  "weave.works/category": Infrastructure
+  "weave.works/layer": layer-0
+  "weave.works/operator": "true"
+  "weave.works/links": |
+    - name: Chart Sources
+      url: https://charts.bitnami.com/bitnami
+    - name: Upstream Project
+      url: https://github.com/bitnami/bitnami-docker-wavefront-adapter-for-istio
+  "weave.works/profile-ci": |
+    - "gke"
+    - "kind"
+    - "eks"

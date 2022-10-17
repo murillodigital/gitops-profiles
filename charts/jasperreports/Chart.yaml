@@ -1,0 +1,41 @@
+apiVersion: v2
+name: jasperreports
+description: A Weaveworks Helm chart for the jasperreports Profile
+type: application
+version: 0.0.1
+dependencies:
+  - name: jasperreports
+    version: "14.3.4"
+    repository: "https://charts.bitnami.com/bitnami"
+kubeVersion: ">=1.16.0-0"
+home: https://github.com/murillodigital/gitops-profiles
+sources:
+  - https://charts.bitnami.com/bitnami
+
+keywords:
+- business intelligence
+- java
+- jasper
+- reporting
+- analytic
+- visualization
+
+
+maintainers:
+  - name: Weaveworks
+    email: support@weave.works
+
+annotations:
+  "weave.works/profile": jasperreports
+  "weave.works/category": Infrastructure
+  "weave.works/layer": layer-0
+  "weave.works/operator": "true"
+  "weave.works/links": |
+    - name: Chart Sources
+      url: https://charts.bitnami.com/bitnami
+    - name: Upstream Project
+      url: https://github.com/bitnami/containers/tree/main/bitnami/jasperreports
+  "weave.works/profile-ci": |
+    - "gke"
+    - "kind"
+    - "eks"

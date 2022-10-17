@@ -1,0 +1,41 @@
+apiVersion: v2
+name: postgresql
+description: A Weaveworks Helm chart for the postgresql Profile
+type: application
+version: 0.0.1
+dependencies:
+  - name: postgresql
+    version: "11.9.8"
+    repository: "https://charts.bitnami.com/bitnami"
+kubeVersion: ">=1.16.0-0"
+home: https://github.com/murillodigital/gitops-profiles
+sources:
+  - https://charts.bitnami.com/bitnami
+
+keywords:
+- postgresql
+- postgres
+- database
+- sql
+- replication
+- cluster
+
+
+maintainers:
+  - name: Weaveworks
+    email: support@weave.works
+
+annotations:
+  "weave.works/profile": postgresql
+  "weave.works/category": Database
+  "weave.works/layer": layer-0
+  "weave.works/operator": "true"
+  "weave.works/links": |
+    - name: Chart Sources
+      url: https://charts.bitnami.com/bitnami
+    - name: Upstream Project
+      url: https://github.com/bitnami/containers/tree/main/bitnami/postgresql
+  "weave.works/profile-ci": |
+    - "gke"
+    - "kind"
+    - "eks"

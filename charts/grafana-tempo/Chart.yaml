@@ -1,0 +1,39 @@
+apiVersion: v2
+name: grafana-tempo
+description: A Weaveworks Helm chart for the grafana-tempo Profile
+type: application
+version: 0.0.1
+dependencies:
+  - name: grafana-tempo
+    version: "1.4.4"
+    repository: "https://charts.bitnami.com/bitnami"
+kubeVersion: ">=1.16.0-0"
+home: https://github.com/murillodigital/gitops-profiles
+sources:
+  - https://charts.bitnami.com/bitnami
+
+keywords:
+- grafana
+- tracing
+- metrics
+- infrastructure
+
+
+maintainers:
+  - name: Weaveworks
+    email: support@weave.works
+
+annotations:
+  "weave.works/profile": grafana-tempo
+  "weave.works/category": Infrastructure
+  "weave.works/layer": layer-0
+  "weave.works/operator": "true"
+  "weave.works/links": |
+    - name: Chart Sources
+      url: https://charts.bitnami.com/bitnami
+    - name: Upstream Project
+      url: https://github.com/bitnami/containers/tree/main/bitnami/grafana-tempo
+  "weave.works/profile-ci": |
+    - "gke"
+    - "kind"
+    - "eks"

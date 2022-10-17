@@ -1,0 +1,38 @@
+apiVersion: v2
+name: cassandra
+description: A Weaveworks Helm chart for the cassandra Profile
+type: application
+version: 0.0.1
+dependencies:
+  - name: cassandra
+    version: "9.7.2"
+    repository: "https://charts.bitnami.com/bitnami"
+kubeVersion: ">=1.16.0-0"
+home: https://github.com/murillodigital/gitops-profiles
+sources:
+  - https://charts.bitnami.com/bitnami
+
+keywords:
+- cassandra
+- database
+- nosql
+
+
+maintainers:
+  - name: Weaveworks
+    email: support@weave.works
+
+annotations:
+  "weave.works/profile": cassandra
+  "weave.works/category": Database
+  "weave.works/layer": layer-0
+  "weave.works/operator": "true"
+  "weave.works/links": |
+    - name: Chart Sources
+      url: https://charts.bitnami.com/bitnami
+    - name: Upstream Project
+      url: https://github.com/bitnami/containers/tree/main/bitnami/cassandra
+  "weave.works/profile-ci": |
+    - "gke"
+    - "kind"
+    - "eks"

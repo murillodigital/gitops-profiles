@@ -1,0 +1,42 @@
+apiVersion: v2
+name: wordpress
+description: A Weaveworks Helm chart for the wordpress Profile
+type: application
+version: 0.0.1
+dependencies:
+  - name: wordpress
+    version: "15.2.5"
+    repository: "https://charts.bitnami.com/bitnami"
+kubeVersion: ">=1.16.0-0"
+home: https://github.com/murillodigital/gitops-profiles
+sources:
+  - https://charts.bitnami.com/bitnami
+
+keywords:
+- application
+- blog
+- cms
+- http
+- php
+- web
+- wordpress
+
+
+maintainers:
+  - name: Weaveworks
+    email: support@weave.works
+
+annotations:
+  "weave.works/profile": wordpress
+  "weave.works/category": CMS
+  "weave.works/layer": layer-0
+  "weave.works/operator": "true"
+  "weave.works/links": |
+    - name: Chart Sources
+      url: https://charts.bitnami.com/bitnami
+    - name: Upstream Project
+      url: https://github.com/bitnami/containers/tree/main/bitnami/wordpress
+  "weave.works/profile-ci": |
+    - "gke"
+    - "kind"
+    - "eks"
