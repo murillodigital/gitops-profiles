@@ -4,8 +4,11 @@ metadata:
   name: vcluster-test-profile
   namespace: default
   annotations:
-    #capi.weave.works/profile-0: '{"name": "cert-manager"}'
-    #capi.weave.works/profile-1: '{"name": "weave-policy-agent", "editable": true, "version": "0.5.0", "namespace": "policy-system", "values": "policy-agent:\n  config:\n    AGENT_ENABLE_ADMISSION: \"0\"\n  accountId: sademo\n  clusterId: ${CLUSTER_NAME}" }'
+    templates.weave.works/profiles-enabled: true
+    templates.weave.works/kustomizations-enabled: true
+    templates.weave.works/credentials-enabled: true    
+  labels:
+    weave.works/template-type: cluster
 spec:
   description: VCluster Environment For Profile Testing 
   params:
