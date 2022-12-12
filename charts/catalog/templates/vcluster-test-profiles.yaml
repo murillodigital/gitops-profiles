@@ -116,9 +116,9 @@ spec:
           port: 0
         helmRelease:
           chart:
-            name: 'null'
-            repo: 'null'
-            version: 'null'
+            name: "vcluster"
+            repo: "https://charts.loft.sh"
+            version: "0.13.0"
           values: |-
             service:
               type: NodePort
