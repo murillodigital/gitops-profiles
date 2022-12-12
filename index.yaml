@@ -243,6 +243,16 @@ entries:
   catalog:
   - apiVersion: v2
     appVersion: 0.0.1
+    created: "2022-12-12T14:52:41.150452683Z"
+    description: Weaveworks Template Catalog
+    digest: 9be849628d8693a3ffd1cebe6441250d3370a9a389b120abfb1df091b964d47d
+    name: catalog
+    type: application
+    urls:
+    - https://github.com/murillodigital/gitops-profiles/releases/download/catalog-0.0.20/catalog-0.0.20.tgz
+    version: 0.0.20
+  - apiVersion: v2
+    appVersion: 0.0.1
     created: "2022-12-09T03:41:14.871007882Z"
     description: Weaveworks Template Catalog
     digest: ef9ba68fc44dc1c7d0493baefdb9d7c21c9cb8b5ff9774f4b07021fed4e241fa
