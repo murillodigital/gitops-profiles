@@ -4344,6 +4344,41 @@ entries:
       weave.works/layer: layer-0
       weave.works/links: |
         - name: Chart Sources
+          url: https://storage.googleapis.com/tekton-releases/dashboard/latest
+        - name: Upstream Project
+          url: https://github.com/tektoncd/dashboard
+      weave.works/operator: "true"
+      weave.works/profile: tekton-dashboard
+      weave.works/profile-ci: |
+        - "gke"
+        - "kind"
+        - "eks"
+    apiVersion: v2
+    created: "2022-12-12T19:52:52.360276259Z"
+    description: A Weaveworks Helm chart for the Tekton Dashboard Profile
+    digest: 4b244b3c2d6523798a63f0ae59b70f802d215d06f7f696a31224e65595848631
+    home: https://github.com/murillodigital/gitops-profiles
+    keywords:
+    - tekton
+    - tekton-pipelines
+    - tekton-dashboard
+    - cicd
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: support@weave.works
+      name: Weaveworks
+    name: tekton-dashboard
+    sources:
+    - https://storage.googleapis.com/tekton-releases/dashboard/latest
+    type: application
+    urls:
+    - https://github.com/murillodigital/gitops-profiles/releases/download/tekton-dashboard-0.0.4/tekton-dashboard-0.0.4.tgz
+    version: 0.0.4
+  - annotations:
+      weave.works/category: CICD
+      weave.works/layer: layer-0
+      weave.works/links: |
+        - name: Chart Sources
           url: https://eddycharly.github.io/tekton-helm
         - name: Upstream Project
           url: https://github.com/tektoncd/dashboard
@@ -4533,6 +4568,41 @@ entries:
     - https://github.com/murillodigital/gitops-profiles/releases/download/tekton-pipeline-0.0.1/tekton-pipeline-0.0.1.tgz
     version: 0.0.1
   tekton-triggers:
+  - annotations:
+      weave.works/category: CICD
+      weave.works/layer: layer-0
+      weave.works/links: |
+        - name: Chart Sources
+          url: https://storage.googleapis.com/tekton-releases/triggers/latest
+        - name: Upstream Project
+          url: https://github.com/tektoncd/dashboard
+      weave.works/operator: "true"
+      weave.works/profile: tekton-triggers
+      weave.works/profile-ci: |
+        - "gke"
+        - "kind"
+        - "eks"
+    apiVersion: v2
+    created: "2022-12-12T19:52:52.464832937Z"
+    description: A Weaveworks Helm chart for the Tekton Triggers Profile
+    digest: 7ae5b8d0c22b3b2c3d333767a730b35be56a2ba0e07a30e7b04f05da648e9a77
+    home: https://github.com/murillodigital/gitops-profiles
+    keywords:
+    - tekton
+    - tekton-pipelines
+    - tekton-triggers
+    - cicd
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: support@weave.works
+      name: Weaveworks
+    name: tekton-triggers
+    sources:
+    - https://storage.googleapis.com/tekton-releases/triggers/latest
+    type: application
+    urls:
+    - https://github.com/murillodigital/gitops-profiles/releases/download/tekton-triggers-0.0.4/tekton-triggers-0.0.4.tgz
+    version: 0.0.4
   - annotations:
       weave.works/category: CICD
       weave.works/layer: layer-0
