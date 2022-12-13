@@ -59,7 +59,7 @@ spec:
       clientConfig:
         service:
           name: tekton-pipelines-webhook
-          namespace:  {{ .Release.Namespace }}
+          namespace:  tekton-pipelines
 
 ---
 # Copyright 2020 The Tekton Authors
@@ -206,7 +206,7 @@ spec:
       clientConfig:
         service:
           name: tekton-pipelines-webhook
-          namespace:  {{ .Release.Namespace }}
+          namespace:  tekton-pipelines
 
 ---
 # Copyright 2019 The Tekton Authors
@@ -316,7 +316,7 @@ spec:
       clientConfig:
         service:
           name: tekton-pipelines-webhook
-          namespace:  {{ .Release.Namespace }}
+          namespace:  tekton-pipelines
 
 ---
 # Copyright 2022 The Tekton Authors
@@ -419,7 +419,7 @@ spec:
       clientConfig:
         service:
           name: tekton-pipelines-webhook
-          namespace:  {{ .Release.Namespace }}
+          namespace:  tekton-pipelines
 
 ---
 # Copyright 2019 The Tekton Authors
@@ -623,7 +623,7 @@ spec:
       clientConfig:
         service:
           name: tekton-pipelines-webhook
-          namespace:  {{ .Release.Namespace }}
+          namespace:  tekton-pipelines
 
 ---
 # Copyright 2019 The Tekton Authors
@@ -733,5 +733,5 @@ spec:
       clientConfig:
         service:
           name: tekton-pipelines-webhook
-          namespace:  {{ .Release.Namespace }}
+          namespace:  tekton-pipelines
 ...

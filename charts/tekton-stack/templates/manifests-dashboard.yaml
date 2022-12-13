@@ -7,7 +7,7 @@ metadata:
     app.kubernetes.io/instance: default
     app.kubernetes.io/part-of: tekton-dashboard
   name: tekton-dashboard
-  namespace:  {{ .Release.Namespace }}
+  namespace:  tekton-pipelines
 ---
 apiVersion: rbac.authorization.k8s.io/v1
 kind: Role
@@ -16,7 +16,7 @@ metadata:
     app.kubernetes.io/instance: default
     app.kubernetes.io/part-of: tekton-dashboard
   name: tekton-dashboard-info
-  namespace:  {{ .Release.Namespace }}
+  namespace:  tekton-pipelines
 rules:
   - apiGroups:
       - ""
@@ -189,7 +189,7 @@ metadata:
     app.kubernetes.io/instance: default
     app.kubernetes.io/part-of: tekton-dashboard
   name: tekton-dashboard-info
-  namespace:  {{ .Release.Namespace }}
+  namespace:  tekton-pipelines
 roleRef:
   apiGroup: rbac.authorization.k8s.io
   kind: Role
@@ -215,7 +215,7 @@ roleRef:
 subjects:
   - kind: ServiceAccount
     name: tekton-dashboard
-    namespace:  {{ .Release.Namespace }}
+    namespace:  tekton-pipelines
 ---
 apiVersion: v1
 data:
@@ -226,7 +226,7 @@ metadata:
     app.kubernetes.io/instance: default
     app.kubernetes.io/part-of: tekton-dashboard
   name: dashboard-info
-  namespace:  {{ .Release.Namespace }}
+  namespace:  tekton-pipelines
 ---
 apiVersion: v1
 kind: Service
@@ -241,7 +241,7 @@ metadata:
     dashboard.tekton.dev/release: v0.30.0
     version: v0.30.0
   name: tekton-dashboard
-  namespace:  {{ .Release.Namespace }}
+  namespace:  tekton-pipelines
 spec:
   ports:
     - name: http
@@ -267,7 +267,7 @@ metadata:
     dashboard.tekton.dev/release: v0.30.0
     version: v0.30.0
   name: tekton-dashboard
-  namespace:  {{ .Release.Namespace }}
+  namespace:  tekton-pipelines
 spec:
   replicas: 1
   selector:
@@ -349,5 +349,5 @@ roleRef:
 subjects:
   - kind: ServiceAccount
     name: tekton-dashboard
-    namespace:  {{ .Release.Namespace }}
+    namespace:  tekton-pipelines
 ...
