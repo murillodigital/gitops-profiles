@@ -4338,6 +4338,41 @@ entries:
     urls:
     - https://github.com/murillodigital/gitops-profiles/releases/download/suitecrm-0.0.1/suitecrm-0.0.1.tgz
     version: 0.0.1
+  tekton-automation:
+  - annotations:
+      weave.works/category: CICD
+      weave.works/links: |
+        - name: Chart Sources
+          url: https://weave.works
+        - name: Upstream Project
+          url: https://github.com/tektoncd/
+      weave.works/operator: "true"
+      weave.works/profile: tekton-automation
+      weave.works/profile-ci: |
+        - "gke"
+        - "kind"
+        - "eks"
+    apiVersion: v2
+    created: "2022-12-13T16:25:57.485948958Z"
+    description: A Weaveworks Helm chart for a Cloudnative Buildpacks and Tekton Automation
+      Framework
+    digest: 64113d4edc27ba4a145f3846987d396538c286b4269c5a5b483aabaeab41935a
+    home: https://github.com/murillodigital/gitops-profiles
+    keywords:
+    - tekton
+    - tekton-pipelines
+    - cicd
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: support@weave.works
+      name: Weaveworks
+    name: tekton-automation
+    sources:
+    - https://weave.works
+    type: application
+    urls:
+    - https://github.com/murillodigital/gitops-profiles/releases/download/tekton-automation-0.0.1/tekton-automation-0.0.1.tgz
+    version: 0.0.1
   tekton-dashboard:
   - annotations:
       weave.works/category: CICD
