@@ -1,17 +1,16 @@
 apiVersion: v2
-name: tekton-dashboard
-description: A Weaveworks Helm chart for the Tekton Dashboard Profile
+name: tekton-stack
+description: A Weaveworks Helm chart for the Full Tekton Stack
 type: application
-version: 0.0.4
+version: 0.0.1
 kubeVersion: ">=1.16.0-0"
 home: https://github.com/murillodigital/gitops-profiles
 sources:
-  - https://storage.googleapis.com/tekton-releases/dashboard/latest
+  - https://tektonio
 
 keywords:
 - tekton
 - tekton-pipelines
-- tekton-dashboard
 - cicd
 
 maintainers:
@@ -19,15 +18,14 @@ maintainers:
     email: support@weave.works
 
 annotations:
-  "weave.works/profile": tekton-dashboard
+  "weave.works/profile": tekton-stack
   "weave.works/category": CICD
-  "weave.works/layer": layer-0
   "weave.works/operator": "true"
   "weave.works/links": |
     - name: Chart Sources
-      url: https://storage.googleapis.com/tekton-releases/dashboard/latest
+      url: https://tekton.io
     - name: Upstream Project
-      url: https://github.com/tektoncd/dashboard
+      url: https://github.com/tektoncd/
   "weave.works/profile-ci": |
     - "gke"
     - "kind"
