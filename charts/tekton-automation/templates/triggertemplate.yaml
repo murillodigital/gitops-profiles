@@ -1,0 +1,27 @@
+---
+apiVersion: triggers.tekton.dev/v1alpha1
+kind: TriggerTemplate
+metadata:
+  name: flux-tekton-triggertemplate
+  namespace: tekton-pipelines
+spec:
+  params:
+    - name: revision
+    - name: repository
+    - name: namespace
+  resourcetemplates:
+    - apiVersion: tekton.dev/v1beta1
+      kind: PipelineRun
+      metadata:
+        generateName: scan-$(tt.params.repository)-
+      spec:
+        serviceAccountName: pipeline
+        pipelineRef:
+          name: checkov-scan
+        params:
+          - name: repository
+            value: '$(tt.params.repository)'
+          - name: revision
+            value: '$(tt.params.revision)'
+          - name: namespace
+            value: '$(tt.params.namespace)'
