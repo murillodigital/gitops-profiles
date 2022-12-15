@@ -4353,6 +4353,40 @@ entries:
         - "kind"
         - "eks"
     apiVersion: v2
+    created: "2022-12-15T21:46:53.58708008Z"
+    description: A Weaveworks Helm chart for a Cloudnative Buildpacks and Tekton Automation
+      Framework
+    digest: f51b4b926d106566146c6bcc7fc2b8b2fbfa7aecf5505060e204fef4ee70023f
+    home: https://github.com/murillodigital/gitops-profiles
+    keywords:
+    - tekton
+    - tekton-pipelines
+    - cicd
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: support@weave.works
+      name: Weaveworks
+    name: tekton-automation
+    sources:
+    - https://weave.works
+    type: application
+    urls:
+    - https://github.com/murillodigital/gitops-profiles/releases/download/tekton-automation-0.0.5/tekton-automation-0.0.5.tgz
+    version: 0.0.5
+  - annotations:
+      weave.works/category: CICD
+      weave.works/links: |
+        - name: Chart Sources
+          url: https://weave.works
+        - name: Upstream Project
+          url: https://github.com/tektoncd/
+      weave.works/operator: "true"
+      weave.works/profile: tekton-automation
+      weave.works/profile-ci: |
+        - "gke"
+        - "kind"
+        - "eks"
+    apiVersion: v2
     created: "2022-12-15T17:34:31.457539955Z"
     description: A Weaveworks Helm chart for a Cloudnative Buildpacks and Tekton Automation
       Framework
