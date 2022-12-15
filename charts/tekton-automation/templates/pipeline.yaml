@@ -37,15 +37,13 @@ spec:
       workspaces:
         - name: source
           workspace: source-workspace
-        - name: cache
-          workspace: cache-workspace
       params:
         - name: APP_IMAGE
           value: "$(params.repository):$(params.revision)"
         - name: SOURCE_SUBPATH
-          value: "{{ .Values.defaultPath }}" # This is the path within the samples repo you want to build (OPTIONAL, default: "")
+          value: "{{ .Values.defaultPath }}"
         - name: BUILDER_IMAGE
-          value: paketobuildpacks/builder:base # This is the builder we want the task to use (REQUIRED)
+          value: paketobuildpacks/builder:base
     - name: display-results
       runAfter:
         - buildpacks

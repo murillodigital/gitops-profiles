@@ -27,8 +27,7 @@ spec:
         chmod 0400 ~/.ssh/id_rsa
         kubectl get secret $SECRET_NAME -n $(params.namespace) -o jsonpath='{.data.identity\.pub}' | base64 --decode > ~/.ssh/id_rsa.pub
         kubectl get secret $SECRET_NAME -n $(params.namespace) -o jsonpath='{.data.known_hosts}' | base64 --decode > ~/.ssh/known_hosts
-        git clone $GIT_URL ~/repo
-        cd ~/repo
+        git clone $GIT_URL ./
         git fetch
         git checkout $(echo "$(params.revision)" | cut -d "/" -f 2)
 ...
