@@ -1,3 +1,4 @@
+# CONFIRMED: triggertemplate receives proper parameters, calls buildpack-build pipeline and creates a new pip0eline run
 ---
 apiVersion: triggers.tekton.dev/v1beta1
 kind: TriggerTemplate
@@ -13,11 +14,16 @@ spec:
     - apiVersion: tekton.dev/v1beta1
       kind: PipelineRun
       metadata:
-        generateName: scan-$(tt.params.repository)-
+        generateName: build-$(tt.params.repository)-
       spec:
         serviceAccountName: pipeline
         pipelineRef:
-          name: checkov-scan
+          name: buildpack-build
+        workspaces:
+        - name: source-workspace
+          subPath: source
+          persistentVolumeClaim:
+            claimName: buildpacks-source-pvc
         params:
           - name: repository
             value: '$(tt.params.repository)'
@@ -25,3 +31,4 @@ spec:
             value: '$(tt.params.revision)'
           - name: namespace
             value: '$(tt.params.namespace)'
+        

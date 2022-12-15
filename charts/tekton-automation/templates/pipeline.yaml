@@ -1,0 +1,64 @@
+apiVersion: tekton.dev/v1beta1
+kind: Pipeline
+metadata:
+  name: buildpack-build
+  namespace: tekton-pipelines
+spec:
+  params:
+    - name: repository
+      type: string
+    - name: revision
+      type: string
+    - name: namespace
+      type: string
+  workspaces:
+    - name: source-workspace # Directory where application source is located. (REQUIRED)
+    - name: cache-workspace # Directory where cache is stored (OPTIONAL)
+  tasks:
+    - name: fetch-repository # This task fetches a repository from github, using the `git-clone` task you installed
+      taskRef:
+        name: flux-clone
+      workspaces:
+        - name: output
+          workspace: source-workspace
+      params:
+        - name: repository
+          type: string
+        - name: revision
+          type: string
+        - name: namespace
+          type: string
+
+    - name: buildpacks # This task uses the `buildpacks` task to build the application
+      taskRef:
+        name: buildpacks
+      runAfter:
+        - fetch-repository
+      workspaces:
+        - name: source
+          workspace: source-workspace
+        - name: cache
+          workspace: cache-workspace
+      params:
+        - name: APP_IMAGE
+          value: "$(params.repository):$(params.revision)"
+        - name: SOURCE_SUBPATH
+          value: "{{ .Values.defaultPath }}" # This is the path within the samples repo you want to build (OPTIONAL, default: "")
+        - name: BUILDER_IMAGE
+          value: paketobuildpacks/builder:base # This is the builder we want the task to use (REQUIRED)
+    - name: display-results
+      runAfter:
+        - buildpacks
+      taskSpec:
+        steps:
+          - name: print
+            image: docker.io/library/bash:5.1.4@sha256:b208215a4655538be652b2769d82e576bc4d0a2bb132144c060efc5be8c3f5d6
+            script: |
+              #!/usr/bin/env bash
+              set -e
+              echo "Digest of created app image: $(params.DIGEST)"              
+        params:
+          - name: DIGEST
+      params:
+        - name: DIGEST
+          value: $(tasks.buildpacks.results.APP_IMAGE_DIGEST)
