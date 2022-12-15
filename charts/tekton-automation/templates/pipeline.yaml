@@ -12,10 +12,9 @@ spec:
     - name: namespace
       type: string
   workspaces:
-    - name: source-workspace # Directory where application source is located. (REQUIRED)
-    - name: cache-workspace # Directory where cache is stored (OPTIONAL)
+    - name: source-workspace
   tasks:
-    - name: fetch-repository # This task fetches a repository from github, using the `git-clone` task you installed
+    - name: fetch-repository
       taskRef:
         name: flux-clone
       workspaces:
@@ -29,7 +28,7 @@ spec:
         - name: namespace
           type: string
 
-    - name: buildpacks # This task uses the `buildpacks` task to build the application
+    - name: buildpacks
       taskRef:
         name: buildpacks
       runAfter:
