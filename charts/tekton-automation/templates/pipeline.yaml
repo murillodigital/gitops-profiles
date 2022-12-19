@@ -22,11 +22,11 @@ spec:
           workspace: source-workspace
       params:
         - name: repository
-          type: string
+          value: "$(params.repository)"
         - name: revision
-          type: string
+          value: "$(params.revision)"
         - name: namespace
-          type: string
+          value: "$(params.namespace)"
 
     - name: buildpacks
       taskRef:

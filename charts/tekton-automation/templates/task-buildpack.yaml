@@ -19,9 +19,6 @@ spec:
   workspaces:
     - name: source
       description: Directory where application source is located.
-    - name: cache
-      description: Directory where cache is stored (when no cache image is provided).
-      optional: true
 
   params:
     - name: APP_IMAGE
@@ -76,11 +73,6 @@ spec:
         #!/usr/bin/env bash
         set -e
 
-        if [[ "$(workspaces.cache.bound)" == "true" ]]; then
-          echo "> Setting permissions on '$(workspaces.cache.path)'..."
-          chown -R "$(params.USER_ID):$(params.GROUP_ID)" "$(workspaces.cache.path)"
-        fi
-
         for path in "/tekton/home" "/layers" "$(workspaces.source.path)"; do
           echo "> Setting permissions on '$path'..."
           chown -R "$(params.USER_ID):$(params.GROUP_ID)" "$path"
@@ -126,7 +118,6 @@ spec:
       command: ["/cnb/lifecycle/creator"]
       args:
         - "-app=$(workspaces.source.path)/$(params.SOURCE_SUBPATH)"
-        - "-cache-dir=$(workspaces.cache.path)"
         - "-cache-image=$(params.CACHE_IMAGE)"
         - "-uid=$(params.USER_ID)"
         - "-gid=$(params.GROUP_ID)"
