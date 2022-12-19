@@ -38,7 +38,7 @@ spec:
           workspace: source-workspace
       params:
         - name: APP_IMAGE
-          value: "$(params.repository):$(params.revision)"
+          value: "$(tasks.fetch-repository.results.imageTag)"
         - name: SOURCE_SUBPATH
           value: "{{ .Values.defaultPath }}"
         - name: BUILDER_IMAGE

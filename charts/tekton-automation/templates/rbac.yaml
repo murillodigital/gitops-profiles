@@ -37,7 +37,7 @@ kind: ServiceAccount
 metadata:
   name: pipeline
   namespace: tekton-pipelines
-imagePullSecrets:
+secrets:
   - name: ci-template-registry-secret
 ---
 apiVersion: rbac.authorization.k8s.io/v1

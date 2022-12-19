@@ -1,5 +1,4 @@
-defaultPath: "/build"
-imageCredentials:
-  - registry: https://index.docker.io/v1/
-    username: "murillodigitalcr"
-    accessToken: "dckr_pat_5hdDiPV47zlvtw1uXC9FYjkwWH8"
+defaultPath: "/apps/java-maven"
+dockerHubUsername: ""
+registry: https://index.docker.io/v1/
+accessToken: ""

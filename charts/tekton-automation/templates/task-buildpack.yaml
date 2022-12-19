@@ -117,7 +117,7 @@ spec:
       imagePullPolicy: Always
       command: ["/cnb/lifecycle/creator"]
       args:
-        - "-app=$(workspaces.source.path)/$(params.SOURCE_SUBPATH)"
+        - "-app=$(workspaces.source.path)/repo$(params.SOURCE_SUBPATH)"
         - "-cache-image=$(params.CACHE_IMAGE)"
         - "-uid=$(params.USER_ID)"
         - "-gid=$(params.GROUP_ID)"
