@@ -4140,6 +4140,40 @@ entries:
     urls:
     - https://github.com/murillodigital/gitops-profiles/releases/download/sealed-secrets-0.0.1/sealed-secrets-0.0.1.tgz
     version: 0.0.1
+  snyk-automation:
+  - annotations:
+      weave.works/category: security
+      weave.works/links: |
+        - name: Chart Sources
+          url: https://weave.works
+        - name: Upstream Project
+          url: https://snyk.io/
+      weave.works/operator: "true"
+      weave.works/profile: snyk-automation
+      weave.works/profile-ci: |
+        - "gke"
+        - "kind"
+        - "eks"
+    apiVersion: v2
+    created: "2022-12-29T01:37:43.590482709Z"
+    description: A Weaveworks Helm chart for a Snyk Scan Automation (using Tekton)
+    digest: 12ce054538b78a92ef0eb1da10000e93b72810451b4e75fb0323ff7b08299dba
+    home: https://github.com/murillodigital/gitops-profiles
+    keywords:
+    - snyk
+    - tekston-pipelines
+    - security
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: support@weave.works
+      name: Weaveworks
+    name: snyk-automation
+    sources:
+    - https://weave.works
+    type: application
+    urls:
+    - https://github.com/murillodigital/gitops-profiles/releases/download/snyk-automation-0.0.1/snyk-automation-0.0.1.tgz
+    version: 0.0.1
   solr:
   - annotations:
       weave.works/category: Infrastructure
