@@ -1,0 +1,132 @@
+apiVersion: capi.weave.works/v1alpha1
+kind: CAPITemplate
+metadata:
+  name: vcluster-continuous-integration
+  namespace: default
+  annotations:
+    capi.weave.works/profile-0: '{"name": "tekton-stack", "namespace": "tekton-pipelines", "editable": false, "version": "0.0.2"}'
+    capi.weave.works/profile-1: '{"name": "tekton-automation", "namespace": "tekton-pipelines", "editable": false, "version": "0.0.7", "values": "defaultPath: ${DEFAULT_PATH}\ndockerHubUsername: ${DOCKERHUB_USERNAME}\nregistry: https://index.docker.io/v1/\naccessToken: ${DOCKERHUB_ACCESS_TOKEN}"}'
+    templates.weave.works/profiles-enabled: 'true'
+    templates.weave.works/kustomizations-enabled: 'true'
+    templates.weave.works/credentials-enabled: 'true'
+  labels:
+    weave.works/template-type: cluster
+spec:
+  description: Tekton + BuildPack Continuous Integration Environment 
+  params:
+    - name: CLUSTER_NAME
+      description: The name for this cluster.
+    - name: CLUSTER_NAMESPACE
+      description: The namespace for this cluster.
+    - name: REPOSITORY_NAME
+      description: The name of the repository used to hold the state for the cluster created by this template.
+    - name: REPOSITORY_OWNER
+      description: The GitHub handle of the user that owns the repository.
+    - name: GITHUB_TOKEN
+      description: GitHub Token to insert in secret with access to repo above.
+    - name: KUBERNETES_VERSION
+      description: EKS Kubernetes version to use
+      options: ['1.23.4']
+    - name: DEFAULT_PATH
+      description: Default path for application teams to store their source code. This will be used by BuildPack to automatically find and build a container artifact.
+    - name: DOCKERHUB_USERNAME
+      description: Username for your DockerHub account.
+    - name: DOCKERHUB_ACCESS_TOKEN
+      description: Access token with push rights to your Docker Hub Account
+  resourcetemplates:
+    - apiVersion: v1
+      kind: Secret
+      metadata:
+        name: "pat-${CLUSTER_NAME}"
+        namespace: default
+      type: Opaque
+      stringData:
+        GITHUB_TOKEN: "${GITHUB_TOKEN}"
+
+    - apiVersion: capi.weave.works/v1alpha1
+      kind: ClusterBootstrapConfig
+      metadata:
+        name: bootstrapper-${CLUSTER_NAME}
+        namespace: default 
+      spec:
+        clusterSelector:
+          matchLabels:
+            weave.works/capi: bootstrap-${CLUSTER_NAME}
+        clusterReadinessBackoff: 10s
+        jobTemplate:
+          generateName: "run-gitops-${CLUSTER_NAME}"
+          backoffLimit: 12
+          spec:
+            containers:
+              - image: ghcr.io/fluxcd/flux-cli:v0.33.0
+                imagePullPolicy: Always
+                name: flux-bootstrap-${CLUSTER_NAME}
+                resources: {}
+                volumeMounts:
+                  - name: kubeconfig
+                    mountPath: "/etc/gitops"
+                    readOnly: true
+                args:
+                  [
+                    "bootstrap",
+                    "github",
+                    "--kubeconfig=/etc/gitops/value",
+                    "--owner=${REPOSITORY_OWNER}",
+                    "--repository=${REPOSITORY_NAME}",
+                    "--path=./clusters/default/${CLUSTER_NAME}",
+                    "--personal",
+                    "--insecure-skip-tls-verify"
+                  ]
+                envFrom:
+                  - secretRef:
+                      name: "pat-${CLUSTER_NAME}"
+            restartPolicy: Never
+            volumes:
+              - name: kubeconfig
+                secret:
+                  secretName: "${CLUSTER_NAME}-kubeconfig"
+
+    - apiVersion: gitops.weave.works/v1alpha1
+      kind: GitopsCluster
+      metadata:
+        name: "${CLUSTER_NAME}"
+        namespace: default
+        labels:
+          weave.works/capi: bootstrap-${CLUSTER_NAME}
+      spec:
+        capiClusterRef:
+          name: "${CLUSTER_NAME}"
+
+    - apiVersion: cluster.x-k8s.io/v1beta1
+      kind: Cluster
+      metadata:
+        name: "${CLUSTER_NAME}"
+        namespace: "${CLUSTER_NAMESPACE}"
+      spec:
+        controlPlaneRef:
+          apiVersion: infrastructure.cluster.x-k8s.io/v1alpha1
+          kind: VCluster
+          name: "${CLUSTER_NAME}"
+        infrastructureRef:
+          apiVersion: infrastructure.cluster.x-k8s.io/v1alpha1
+          kind: VCluster
+          name: "${CLUSTER_NAME}"
+
+    - apiVersion: infrastructure.cluster.x-k8s.io/v1alpha1
+      kind: VCluster
+      metadata:
+        name: "${CLUSTER_NAME}"
+        namespace: "${CLUSTER_NAMESPACE}"
+      spec:
+        controlPlaneEndpoint:
+          host: ""
+          port: 0
+        helmRelease:
+          chart:
+            name: "vcluster"
+            repo: "https://charts.loft.sh"
+            version: "0.13.0"
+          values: |-
+            service:
+              type: NodePort
+        kubernetesVersion: ${KUBERNETES_VERSION}
